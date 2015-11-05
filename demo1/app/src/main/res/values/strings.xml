@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">demo1</string>
+
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="logoName">C BEER</string>
+    <string name="slogan" formatted="false">"Nous avons tous besoin d'une bière"</string>
+    <string name="start">"Démarrer"</string>
+    <string name="player1">Description: player1</string>
+    <string name="player2">Description: player2</string>
+    <string name="player3">Description: player3</string>
+    <string name="player4">Description: player4</string>
+    <string name="player5">Description: player5</string>
+    <string name="player6">Description: player6</string>
+    <string name="player7">Description: player7</string>
+    <string name="player8">Description: player8</string>
+    <string name="player9">Description: player9</string>
 </resources>
