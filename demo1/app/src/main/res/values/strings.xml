@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">demo1</string>
+    <string name="app_name">C BEER</string>
 
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="dummy_button">Dummy Button</string>
