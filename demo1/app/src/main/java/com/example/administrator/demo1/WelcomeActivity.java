@@ -2,55 +2,29 @@ package com.example.administrator.demo1;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
+
 public class WelcomeActivity extends Activity {
-    //Declaration des variables
-    private ImageView [] player = {null, null, null, null, null, null, null, null, null};
-    private int i;
+    //Variables declaration
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        Log.d("WelcomeActivity", "onCreate() returned: " + "true");
-
-        player[0] = (ImageView)findViewById(R.id.imagePlayer1);
-        player[1] = (ImageView)findViewById(R.id.imagePlayer2);
-        player[2] = (ImageView)findViewById(R.id.imagePlayer3);
-        player[3] = (ImageView)findViewById(R.id.imagePlayer4);
-        player[4] = (ImageView)findViewById(R.id.imagePlayer5);
-        player[5] = (ImageView)findViewById(R.id.imagePlayer6);
-        player[6] = (ImageView)findViewById(R.id.imagePlayer7);
-        player[7] = (ImageView)findViewById(R.id.imagePlayer8);
-        player[8] = (ImageView)findViewById(R.id.imagePlayer9);
-
-        int[] images = {R.drawable.player1, R.drawable.player2, R.drawable.player3,
-                R.drawable.player4, R.drawable.player5, R.drawable.player6,
-                R.drawable.player7, R.drawable.player8, R.drawable.player9};
-
-        for(i=0;i<9;i++){
-            player[i].setImageResource(images[i]);
-        }
-
-        for(i=0;i<9;i++){
-            player[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (player[i].getVisibility() == View.VISIBLE) player[i].setVisibility(View.INVISIBLE);
-                    else player[i].setVisibility(View.VISIBLE);
-                }
-            });
-         }
+        Log.d("WelcomeActivity", "onCreate");
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
       public void onResume() {
         super.onResume();
-        Log.d("WelcomeActivity", "onResume() returned: " + "true");
+        Log.d("WelcomeActivity", "onResume");
         //Pour cacher les buttons de navigation et le bar
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
@@ -62,16 +36,170 @@ public class WelcomeActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public void onPause() {
         super.onPause();
-        Log.d("WelcomeActivity", "onPause() returned: " + "true");
+        Log.d("WelcomeActivity", "onPause");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("WelcomeActivity", "onDestroy() returned: " + "true");
+        Log.d("WelcomeActivity", "onDestroy");
+        finish();
+    }
+
+    public void btStart(View view) throws InterruptedException{
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void btAdd3(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd3);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd4);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove3);
+        EditText editText = (EditText)findViewById(R.id.editPlayer3);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btAdd4(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd4);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd5);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove3);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove4);
+        EditText editText = (EditText)findViewById(R.id.editPlayer4);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btAdd5(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd5);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd6);
+        EditText editText = (EditText)findViewById(R.id.editPlayer5);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove4);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove5);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btAdd6(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd6);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd7);
+        EditText editText = (EditText)findViewById(R.id.editPlayer6);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove5);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove6);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btAdd7(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd7);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd8);
+        EditText editText = (EditText)findViewById(R.id.editPlayer7);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove6);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove7);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btAdd8(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd8);
+        EditText editText = (EditText)findViewById(R.id.editPlayer8);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove7);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove8);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+    }
+
+    public void btRemove3(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd3);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd4);
+        EditText editText = (EditText)findViewById(R.id.editPlayer3);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove3);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.GONE);
+    }
+
+    public void btRemove4(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd4);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd5);
+        EditText editText = (EditText)findViewById(R.id.editPlayer4);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove3);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove4);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+    }
+
+    public void btRemove5(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd5);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd6);
+        EditText editText = (EditText)findViewById(R.id.editPlayer5);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove4);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove5);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+    }
+
+    public void btRemove6(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd6);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd7);
+        EditText editText = (EditText)findViewById(R.id.editPlayer6);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove5);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove6);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+    }
+
+    public void btRemove7(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd7);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd8);
+        EditText editText = (EditText)findViewById(R.id.editPlayer7);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove6);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove7);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+    }
+
+    public void btRemove8(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd8);
+        EditText editText = (EditText)findViewById(R.id.editPlayer8);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove7);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove8);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
     }
 }

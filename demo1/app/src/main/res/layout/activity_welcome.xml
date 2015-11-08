@@ -43,11 +43,13 @@
         android:text="@string/start"
         android:textSize="20sp"
         android:id="@+id/buttonStart"
+        android:onClick="btStart"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:visibility="visible"
         android:width="130dp"
-        android:height="50dp" />
+        android:height="50dp"
+        android:layout_marginBottom="15pt"/>
 
     <TextClock
         android:layout_width="wrap_content"
@@ -57,129 +59,251 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer1"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_below="@+id/textSlogan"
-        android:layout_toLeftOf="@+id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:clickable="true"
-        android:contentDescription="@string/player1"
-        android:src="@drawable/player1"
-        android:visibility="visible" />
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer2"
-        android:background="#666666"
-        android:adjustViewBounds="true"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player1"
+        android:ems="12"
+        android:id="@+id/editPlayer1"
         android:layout_below="@+id/textSlogan"
         android:layout_centerHorizontal="true"
-        android:layout_margin = "10dp"
-        android:clickable="true"
-        android:contentDescription="@string/player2"
-        android:src="@drawable/player2"
+        android:textSize="14sp"
+        android:singleLine="true"
         android:visibility="visible" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer3"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_below="@+id/textSlogan"
-        android:layout_toRightOf="@+id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:clickable="true"
-        android:contentDescription="@string/player3"
-        android:src="@drawable/player3"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player2"
+        android:ems="12"
+        android:id="@+id/editPlayer2"
+        android:layout_below="@+id/editPlayer1"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:singleLine="true"
         android:visibility="visible" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer4"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_below="@+id/imagePlayer2"
-        android:layout_toLeftOf="@id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player4"
-        android:src="@drawable/player4"/>
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer5"
-        android:background="#666666"
-        android:adjustViewBounds="true"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player3"
+        android:ems="12"
+        android:id="@+id/editPlayer3"
+        android:layout_below="@+id/editPlayer2"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player5"
-        android:src="@drawable/player5"/>
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer6"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_toRightOf="@+id/imagePlayer2"
-        android:layout_below="@+id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player6"
-        android:src="@drawable/player6"/>
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer7"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_below="@+id/imagePlayer5"
-        android:layout_toLeftOf="@id/imagePlayer2"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player7"
-        android:src="@drawable/player7"/>
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer8"
-        android:background="#666666"
-        android:adjustViewBounds="true"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player4"
+        android:ems="12"
+        android:id="@+id/editPlayer4"
+        android:layout_below="@+id/editPlayer3"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/imagePlayer5"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player8"
-        android:src="@drawable/player8"/>
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:id="@+id/imagePlayer9"
-        android:background="#666666"
-        android:adjustViewBounds="true"
-        android:layout_toRightOf="@+id/imagePlayer2"
-        android:layout_below="@+id/imagePlayer5"
-        android:layout_margin = "10dp"
-        android:visibility="invisible"
-        android:clickable="true"
-        android:contentDescription="@string/player9"
-        android:src="@drawable/player1"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player5"
+        android:ems="12"
+        android:id="@+id/editPlayer5"
+        android:layout_below="@+id/editPlayer4"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player6"
+        android:ems="12"
+        android:id="@+id/editPlayer6"
+        android:layout_below="@+id/editPlayer5"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player7"
+        android:ems="12"
+        android:id="@+id/editPlayer7"
+        android:layout_below="@+id/editPlayer6"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/player8"
+        android:ems="12"
+        android:id="@+id/editPlayer8"
+        android:layout_below="@+id/editPlayer7"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd3"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="visible"
+        android:onClick="btAdd3"
+        android:layout_alignBottom="@+id/editPlayer2"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd4"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="gone"
+        android:onClick="btAdd4"
+        android:layout_alignBottom="@+id/editPlayer3"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd5"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="gone"
+        android:onClick="btAdd5"
+        android:layout_alignBottom="@+id/editPlayer4"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd6"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="gone"
+        android:onClick="btAdd6"
+        android:layout_alignBottom="@+id/editPlayer5"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd7"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="gone"
+        android:onClick="btAdd7"
+        android:layout_alignBottom="@+id/editPlayer6"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAdd"
+        android:id="@+id/buttonAdd8"
+        android:width="20pt"
+        android:height="20pt"
+        android:visibility="gone"
+        android:onClick="btAdd8"
+        android:layout_alignBottom="@+id/editPlayer7"
+        android:layout_toStartOf="@+id/editPlayer1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove3"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer2"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove3"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove4"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer3"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove4"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove5"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer4"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove5"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove6"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer5"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove6"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove7"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer6"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove7"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemove"
+        android:id="@+id/buttonRemove8"
+        android:width="20pt"
+        android:height="20pt"
+        android:layout_below="@+id/editPlayer7"
+        android:layout_toEndOf="@+id/editPlayer1"
+        android:visibility="gone"
+        android:onClick="btRemove8"/>
 </RelativeLayout>
