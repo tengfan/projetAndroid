@@ -9,14 +9,14 @@
     <string name="logoName">C BEER</string>
     <string name="slogan" formatted="false">"Nous avons tous besoin d'une bière"</string>
     <string name="start">"Démarrer"</string>
-    <string name="player1">"Player 1"</string>
-    <string name="player2">"Player 2"</string>
-    <string name="player3">"Player 3"</string>
-    <string name="player4">"Player 4"</string>
-    <string name="player5">"Player 5"</string>
-    <string name="player6">"Player 6"</string>
-    <string name="player7">"Player 7"</string>
-    <string name="player8">"Player 8"</string>
+    <string name="player1">"Joueur 1"</string>
+    <string name="player2">"Joueur 2"</string>
+    <string name="player3">"Joueur 3"</string>
+    <string name="player4">"Joueur 4"</string>
+    <string name="player5">"Joueur 5"</string>
+    <string name="player6">"Joueur 6"</string>
+    <string name="player7">"Joueur 7"</string>
+    <string name="player8">"Joueur 8"</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
