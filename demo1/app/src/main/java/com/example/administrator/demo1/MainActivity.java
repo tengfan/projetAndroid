@@ -6,7 +6,11 @@ import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends Activity {
+<<<<<<< HEAD
     // ÇA SENT VRAIMENT LE CHINOIS ICI! FDP DE TENG!!!!!
+=======
+
+>>>>>>> parent of a4c9ba2... Test de github clément ;)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("MainActivity", "onCreate");
