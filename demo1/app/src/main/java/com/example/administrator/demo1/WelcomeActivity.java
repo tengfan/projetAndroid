@@ -52,6 +52,7 @@ public class WelcomeActivity extends Activity {
     public void btStart(View view) throws InterruptedException{
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
         finish();
     }
 
