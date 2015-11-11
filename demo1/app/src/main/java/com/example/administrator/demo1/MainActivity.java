@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends Activity {
-    // ÇA SENT VRAIMENT LE CHINOIS ICI!
+    // ÇA SENT VRAIMENT LE CHINOIS ICI! FDP DE TENG!!!!!
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("MainActivity", "onCreate");
