@@ -52,6 +52,8 @@ public class WelcomeActivity extends Activity {
     public void btStart(View view) throws InterruptedException{
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        EditText editPlayer1 = (EditText) findViewById(R.id.editPlayer1);
+        cbeer application = (cbeer) getApplication();
         finish();
     }
 
