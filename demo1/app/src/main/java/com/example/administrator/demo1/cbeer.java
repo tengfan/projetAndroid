@@ -7,20 +7,25 @@ import android.app.Application;
  */
 public class cbeer extends Application {
     String [] players = new String[8];
-    void setPlayers(String [] players){
-        this.players = players;
+    int numberPlayers;
+
+    protected int getNumberPlayers() {
+        return numberPlayers;
     }
 
-    void setOnePlayer(int number, String player){
+    protected void setPlayers(String [] players){
+        this.players = players;
+    }
+    protected void setOnePlayer(int number, String player){
         players[number] = player;
     }
 
-    String getPlayerByNumber(int number){
+    protected String getPlayerByNumber(int number){
         return players[number];
     }
 
     //If return -1, that means it didn't find the player
-    int findPlayerNumberByName(String player){
+    protected int findPlayerNumberByName(String player){
         for(int i = 0;i<8;i++){
             if(player.equals(players[i])) return i;
         }
