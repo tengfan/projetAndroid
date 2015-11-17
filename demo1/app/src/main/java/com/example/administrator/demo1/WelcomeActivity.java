@@ -69,6 +69,7 @@ public class WelcomeActivity extends Activity {
         for (int i = 0; i < numberPlayers; i++){
             application.setOnePlayer(i,editPlayers[i].getText().toString());
         }
+        application.setNumberPlayers(numberPlayers);
         finish();
     }
 

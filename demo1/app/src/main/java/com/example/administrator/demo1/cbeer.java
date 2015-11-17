@@ -13,6 +13,10 @@ public class cbeer extends Application {
         return numberPlayers;
     }
 
+    protected void setNumberPlayers(int numberPlayers) {
+        this.numberPlayers = numberPlayers;
+    }
+
     protected void setPlayers(String [] players){
         this.players = players;
     }
