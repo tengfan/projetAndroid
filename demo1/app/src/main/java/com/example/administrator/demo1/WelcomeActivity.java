@@ -55,23 +55,14 @@ public class WelcomeActivity extends Activity {
         startActivity(intent);
         //Creation of table of players
         EditText [] editPlayers = new EditText[8];
-        EditText editPlayer1 = (EditText) findViewById(R.id.editPlayer1);
-        EditText editPlayer2 = (EditText) findViewById(R.id.editPlayer2);
-        EditText editPlayer3 = (EditText) findViewById(R.id.editPlayer3);
-        EditText editPlayer4 = (EditText) findViewById(R.id.editPlayer4);
-        EditText editPlayer5 = (EditText) findViewById(R.id.editPlayer5);
-        EditText editPlayer6 = (EditText) findViewById(R.id.editPlayer6);
-        EditText editPlayer7 = (EditText) findViewById(R.id.editPlayer7);
-        EditText editPlayer8 = (EditText) findViewById(R.id.editPlayer8);
-
-        editPlayers[0] = editPlayer1;
-        editPlayers[1] = editPlayer2;
-        editPlayers[2] = editPlayer3;
-        editPlayers[3] = editPlayer4;
-        editPlayers[4] = editPlayer5;
-        editPlayers[5] = editPlayer6;
-        editPlayers[6] = editPlayer7;
-        editPlayers[7] = editPlayer8;
+        editPlayers[0] = (EditText) findViewById(R.id.editPlayer1);
+        editPlayers[1] = (EditText) findViewById(R.id.editPlayer2);
+        editPlayers[2] = (EditText) findViewById(R.id.editPlayer3);
+        editPlayers[3] = (EditText) findViewById(R.id.editPlayer4);
+        editPlayers[4] = (EditText) findViewById(R.id.editPlayer5);
+        editPlayers[5] = (EditText) findViewById(R.id.editPlayer6);
+        editPlayers[6] = (EditText) findViewById(R.id.editPlayer7);
+        editPlayers[7] = (EditText) findViewById(R.id.editPlayer8);
 
         //Set players' names to application
         cbeer application = (cbeer) getApplication();
