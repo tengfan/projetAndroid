@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 public class WelcomeActivity extends Activity {
     //Variables declaration
-
+    int numberPlayers = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +49,35 @@ public class WelcomeActivity extends Activity {
         finish();
     }
 
+    //Process behind start button
     public void btStart(View view) throws InterruptedException{
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        //Creation of table of players
+        EditText [] editPlayers = new EditText[8];
         EditText editPlayer1 = (EditText) findViewById(R.id.editPlayer1);
+        EditText editPlayer2 = (EditText) findViewById(R.id.editPlayer2);
+        EditText editPlayer3 = (EditText) findViewById(R.id.editPlayer3);
+        EditText editPlayer4 = (EditText) findViewById(R.id.editPlayer4);
+        EditText editPlayer5 = (EditText) findViewById(R.id.editPlayer5);
+        EditText editPlayer6 = (EditText) findViewById(R.id.editPlayer6);
+        EditText editPlayer7 = (EditText) findViewById(R.id.editPlayer7);
+        EditText editPlayer8 = (EditText) findViewById(R.id.editPlayer8);
+
+        editPlayers[0] = editPlayer1;
+        editPlayers[1] = editPlayer2;
+        editPlayers[2] = editPlayer3;
+        editPlayers[3] = editPlayer4;
+        editPlayers[4] = editPlayer5;
+        editPlayers[5] = editPlayer6;
+        editPlayers[6] = editPlayer7;
+        editPlayers[7] = editPlayer8;
+
+        //Set players' names to application
         cbeer application = (cbeer) getApplication();
+        for (int i = 0; i < numberPlayers; i++){
+            application.setOnePlayer(i,editPlayers[i].getText().toString());
+        }
         finish();
     }
 
@@ -66,6 +90,7 @@ public class WelcomeActivity extends Activity {
         buttonAddPrev.setVisibility(View.GONE);
         buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 3;
     }
 
     public void btAdd4(View view) throws InterruptedException{
@@ -79,6 +104,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 4;
     }
 
     public void btAdd5(View view) throws InterruptedException{
@@ -92,6 +118,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 5;
     }
 
     public void btAdd6(View view) throws InterruptedException{
@@ -105,6 +132,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 6;
     }
 
     public void btAdd7(View view) throws InterruptedException{
@@ -118,6 +146,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 7;
     }
 
     public void btAdd8(View view) throws InterruptedException{
@@ -129,6 +158,7 @@ public class WelcomeActivity extends Activity {
         buttonAddPrev.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 8;
     }
 
     public void btRemove3(View view) throws InterruptedException{
@@ -140,6 +170,7 @@ public class WelcomeActivity extends Activity {
         buttonAddPrev.setVisibility(View.VISIBLE);
         buttonAddNext.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 2;
     }
 
     public void btRemove4(View view) throws InterruptedException{
@@ -153,6 +184,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 3;
     }
 
     public void btRemove5(View view) throws InterruptedException{
@@ -166,6 +198,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 4;
     }
 
     public void btRemove6(View view) throws InterruptedException{
@@ -179,6 +212,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 5;
     }
 
     public void btRemove7(View view) throws InterruptedException{
@@ -192,6 +226,7 @@ public class WelcomeActivity extends Activity {
         buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 6;
     }
 
     public void btRemove8(View view) throws InterruptedException{
@@ -203,5 +238,6 @@ public class WelcomeActivity extends Activity {
         buttonAddPrev.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 7;
     }
 }
