@@ -18,6 +18,15 @@ public class WelcomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         Log.d("WelcomeActivity", "onCreate");
+        //For hiding the navigation buttons and the bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
@@ -25,7 +34,7 @@ public class WelcomeActivity extends Activity {
       public void onResume() {
         super.onResume();
         Log.d("WelcomeActivity", "onResume");
-        //Pour cacher les buttons de navigation et le bar
+        //For hiding the navigation buttons and the bar
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE

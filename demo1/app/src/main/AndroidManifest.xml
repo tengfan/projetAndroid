@@ -25,9 +25,11 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity android:name=".GameOneActivity"
+            android:label="@string/title_activity_gameone"
+            android:launchMode="singleTask"
             android:screenOrientation="landscape">
         </activity>
     </application>
