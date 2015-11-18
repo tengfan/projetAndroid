@@ -1,9 +1,11 @@
 package com.example.administrator.demo1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
     @Override
@@ -32,6 +34,13 @@ public class MainActivity extends Activity {
     public void onDestroy() {
         super.onDestroy();
         Log.d("MainActivity", "onDestroy");
+        finish();
+    }
+
+    public void btGameOne(View view) throws InterruptedException{
+        Intent intent = new Intent(this, GameOneActivity.class);
+        startActivity(intent);
+
         finish();
     }
 }
