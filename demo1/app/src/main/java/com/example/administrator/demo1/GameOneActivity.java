@@ -46,10 +46,20 @@ public class GameOneActivity extends Activity {
 
     public void btNext(View view) throws InterruptedException{
         i++;
+        //Hide navigation bar and status bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                textView.setText("Value : "+ i);
+                textView.setText("Value : " + i);
             }
         });
     }
@@ -59,5 +69,17 @@ public class GameOneActivity extends Activity {
         super.onDestroy();
         Log.d("GameOneActivity", "onDestroy");
         finish();
+    }
+
+    public void layoutGameOne(View view) throws InterruptedException{
+        //Hide navigation bar and status bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 }
