@@ -97,7 +97,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="14sp"
         android:singleLine="true"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -168,22 +168,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd3"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="visible"
-        android:onClick="btAdd3"
-        android:layout_alignBottom="@+id/editPlayer2"
-        android:layout_toStartOf="@+id/editPlayer1" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
         android:id="@+id/buttonAdd4"
         android:width="20pt"
         android:height="20pt"
-        android:visibility="gone"
+        android:visibility="visible"
         android:onClick="btAdd4"
         android:layout_alignBottom="@+id/editPlayer3"
         android:layout_toStartOf="@+id/editPlayer1" />
@@ -235,18 +223,6 @@
         android:onClick="btAdd8"
         android:layout_alignBottom="@+id/editPlayer7"
         android:layout_toStartOf="@+id/editPlayer1" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove3"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer2"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove3"/>
 
     <Button
         android:layout_width="wrap_content"

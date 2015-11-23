@@ -88,8 +88,7 @@ public class GameOneActivity extends Activity {
 
     //Generate random type of phrases with C Group algorithm
     public int rndmType (int max){
-        Random randomGenerator = new Random();
-        int rndmInt = randomGenerator.nextInt(max);
+        int rndmInt = rndmGen(max);
         int type =0;
         double proba0 = 0, proba1 =0, proba2 =0, proba3 = 0, proba4 = 0;
 
