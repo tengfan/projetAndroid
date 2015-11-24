@@ -12,9 +12,9 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TEXXXXT"
+        android:text="On commence!!!"
         android:id="@+id/textGameOne"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:singleLine="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
