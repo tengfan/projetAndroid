@@ -1,6 +1,7 @@
 package com.example.administrator.demo1;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -60,8 +61,46 @@ public class GameOneActivity extends Activity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                textView.setText("Value : " + rndmType(1000));
-                Log.d("CONTRUCTION PHRASE", String.format("%s et %s sont des grosses C!!", "Clément", "Teng"));
+                cbeer classCbeer = (cbeer)getApplication();
+                String[] noPlayerPhrases = getResources().getStringArray(R.array.noPlayerArray);
+                String[] onePlayerPhrases = getResources().getStringArray(R.array.onePlayerArray);
+                String[] twoPlayersPhrases = getResources().getStringArray(R.array.twoPlayersArray);
+                String[] threePlayersPhrases = getResources().getStringArray(R.array.threePlayersArray);
+                int type = rndmType(1000);
+                if (type == 0) {
+                    int nmbr = rndmGen(noPlayerPhrases.length);
+                    textView.setText(String.format(noPlayerPhrases[nmbr]));
+                } else if (type == 1) {
+                    int nmbr = rndmGen(onePlayerPhrases.length);
+                    int player = rndmGen(numberPlayers);
+                    String playerName = classCbeer.getPlayerByNumber(player);
+                    textView.setText(String.format(onePlayerPhrases[nmbr], playerName));
+                } else if (type == 2) {
+                    int nmbr = rndmGen(twoPlayersPhrases.length);
+                    int player1 = rndmGen(numberPlayers);
+                    String player1Name = classCbeer.getPlayerByNumber(player1);
+                    int player2 = player1;
+                    while (player2 == player1) {
+                        player2 = rndmGen(numberPlayers);
+                    }
+                    String player2Name = classCbeer.getPlayerByNumber(player2);
+                    textView.setText(String.format(twoPlayersPhrases[nmbr], player1Name, player2Name));
+                } else {
+                    int nmbr = rndmGen(threePlayersPhrases.length);
+                    int player1 = rndmGen(numberPlayers);
+                    String player1Name = classCbeer.getPlayerByNumber(player1);
+                    int player2 = player1;
+                    while (player2 == player1) {
+                        player2 = rndmGen(numberPlayers);
+                    }
+                    String player2Name = classCbeer.getPlayerByNumber(player2);
+                    int player3 = player1;
+                    while (player3 == player1 || player3 == player2) {
+                        player3 = rndmGen(numberPlayers);
+                    }
+                    String player3Name = classCbeer.getPlayerByNumber(player3);
+                    textView.setText(String.format(threePlayersPhrases[nmbr], player1Name, player2Name, player3Name));
+                }
 
             }
         });

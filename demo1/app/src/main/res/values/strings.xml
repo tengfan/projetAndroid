@@ -8,21 +8,316 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="logoName">C BEER</string>
     <string name="slogan" formatted="false">"Nous avons tous besoin d'une bière"</string>
-    <string name="start">"Démarrer"</string>
-    <string name="next">"Suivant"</string>
-    <string name="gameone">"Ça PICOLE!"</string>
-    <string name="player1">"Joueur 1"</string>
-    <string name="player2">"Joueur 2"</string>
-    <string name="player3">"Joueur 3"</string>
-    <string name="player4">"Joueur 4"</string>
-    <string name="player5">"Joueur 5"</string>
-    <string name="player6">"Joueur 6"</string>
-    <string name="player7">"Joueur 7"</string>
-    <string name="player8">"Joueur 8"</string>
+    <string name="start">Démarrer</string>
+    <string name="next">Suivant</string>
+    <string name="gameone">Ça PICOLE!</string>
+    <string name="player1">Joueur 1</string>
+    <string name="player2">Joueur 2</string>
+    <string name="player3">Joueur 3</string>
+    <string name="player4">Joueur 4</string>
+    <string name="player5">Joueur 5</string>
+    <string name="player6">Joueur 6</string>
+    <string name="player7">Joueur 7</string>
+    <string name="player8">Joueur 8</string>
 
     <string name="choose_game">Choix du jeu</string>
     <string name="action_settings">Settings</string>
     <string name="buttonAdd">+</string>
     <string name="buttonRemove">-</string>
     <string name="title_activity_gameone">title_activity_gameone</string>
+
+    //Test functionality of phrases in string.xml
+    <string name="phraseTest" formatted="false">"%s et %s sont des grosses C!!"</string>
+    <string name="phraseTest2" formatted="false">"%s et %s sont toujours des grosses C!!"</string>
+    <string-array name="phrasesArray">
+        <item>@string/phraseTest</item>
+        <item>@string/phraseTest2</item>
+    </string-array>
+
+    //Phrases which have no player in it.
+    <string name="noPlayer1" formatted="false">"Celles et ceux qui ont déjà attaqué l’apéro avant 10h du matin boivent 2 gorgées!"</string>
+    <string name="noPlayer2" formatted="false">"Ceux/celles ayant un produit samsung boivent 2 gorgées"</string>
+    <string name="noPlayer3" formatted="false">"Ceux/celles qui se sont deja masturbé devant un clip de musique boivent 3 gorgées"</string>
+    <string name="noPlayer4" formatted="false">"Ceux/celles ayant un produit Apple boivent 2 gorgées"</string>
+    <string name="noPlayer5" formatted="false">"Cul sec pour les chauves et les roux"</string>
+    <string name="noPlayer6" formatted="false">"Cul sec pour les chinois"</string>
+    <string name="noPlayer7" formatted="false">"Vous êtes tous des grosses C, CUL SEC POUR TOUT LE MONDE!"</string>
+    <string name="noPlayer8" formatted="false">"2 gorgées pour tout le monde"</string>
+    <string name="noPlayer9" formatted="false">"3 gorgées pour tout le monde"</string>
+    <string name="noPlayer10" formatted="false">"4 gorgées pour tout le monde"</string>
+    <string name="noPlayer11" formatted="false">"Celui/celle qui enlève 2 vêtement en premier distribue 2 gorgées"</string>
+    <string name="noPlayer12" formatted="false">"Celles/ceux qui n’ont pas encore distribué de gorgées boivent 3 gorgées"</string>
+    <string name="noPlayer13" formatted="false">"Celles et ceux qui travaillent/étudient dans tout type d’ingénierie boivent 4 gorgées"</string>
+    <string name="noPlayer14" formatted="false">"La personne avec le plus gros cul boit 4 gorgées"</string>
+    <string name="noPlayer15" formatted="false">"Jusqu’à la fin du jeu, le premier joueur à dire “oui” prend un cul sec"</string>
+    <string name="noPlayer16" formatted="false">"Les personnes tatouées ou ayant un piercing boivent 3 gorgées"</string>
+    <string name="noPlayer17" formatted="false">"La première personne qui trouve le joueur le plus jeune distribue 3 gorgées"</string>
+    <string name="noPlayer18" formatted="false">"Tous les blonds/blondes boivent 2 gorgées"</string>
+    <string name="noPlayer19" formatted="false">"Le premier à envoyer un texto à un membre de sa famille distribue 2 gorgées"</string>
+    <string name="noPlayer20" formatted="false">"Celles et ceux qui ont déjà triché pendant un examen boivent 4 gorgées"</string>
+    <string name="noPlayer21" formatted="false">"Plus de téléphone ! la première personne à consulter son smartphone boit 5 gorgées"</string>
+    <string name="noPlayer22" formatted="false">"Ceux/celles qui arrivent à toucher leur nez avec leur langue distribuent 3 gorgées"</string>
+    <string name="noPlayer23" formatted="false">"Celles et ceux qui ont très mal fini à leur dernière soirée boivent 3 gorgées"</string>
+    <string name="noPlayer24" formatted="false">"Celles et ceux qui entendent cette phrase boivent 4 gorgées"</string>
+    <string name="noPlayer25" formatted="false">"Celles et ceux qui étaient saouls hier boivent 2 gorgées"</string>
+    <string name="noPlayer26" formatted="false">"Celui/celles avec le verre le plus rempli boit 4 gorgées"</string>
+    <string name="noPlayer27" formatted="false">"La dernière personne à être allée aux toilettes boit 2 gorgées"</string>
+    <string name="noPlayer28" formatted="false">"Ceux/celles qui n’ont pas pris de douche aujourd’hui boivent 4 gorgées"</string>
+    <string name="noPlayer29" formatted="false">"Il faut maintenant prononcer un gros mot à chaque phrase [10 TOURS]"</string>
+    <string name="noPlayer30" formatted="false">"Ni oui, ni non! celui/celle qui prononce l’un des deux mots boit 3 gorgées jusqu’à nouvel
+ordre  [ 10 TOURS]"</string>
+    <string name="noPlayer31" formatted="false">"Désignez tous ensemble le/la plus débile qui devra boire 4 gorgées
++ Fallait pas être débile, 1 gorgée de plus pour la peine "</string>
+    <string name="noPlayer32" formatted="false">"BUFFALO : tout le monde ne peut plus tenir son verre avec sa main directrice, sanction :
+CUL SEC [10 TOURS]"</string>
+    <string name="noPlayer33" formatted="false">"Interdiction de s’adresser à quelqu’un par son prénom [10 TOURS]"</string>
+    <string name="noPlayer34" formatted="false">"Il faut maintenant énoncer la ponctuation (ex : “tu bois une gorgée point”) [10 TOURS]"</string>
+    <string name="noPlayer35" formatted="false">Si ton jour d’anniversaire est un nombre impair, bois 3 gorgées"</string>
+    <string name="noPlayer36" formatted="false">"Si ton jour d’anniversaire est un nombre pair, bois 3 gorgées"</string>
+    <string name="noPlayer37" formatted="false">"3 gorgées pour les fumeurs/fumeuses"</string>
+    <string name="noPlayer38" formatted="false">"Le prochain joueur à devoir boire doublera son nombre de gorgées"</string>
+    <string name="noPlayer39" formatted="false">"Les gauchers/gauchères boivent 2 gorgées"</string>
+    <string name="noPlayer40" formatted="false">"Il faut maintenant finir de s’adresser à quelqu’un par “Grosse C” [20 tours]"</string>
+    <string name="noPlayer41" formatted="false">"Ceux/celles qui ont les chaussettes trouées boivent 3 gorgées"</string>
+    <string name="noPlayer42" formatted="false">"Les personnes en couple font boire 3 gorgées à une seule personne"</string>
+    <string name="noPlayer43" formatted="false">"Ceux/celles qui possèdent un paquet de clopes boivent leur nombre de cigarettes restantes
+en gorgées (8 maximum)"</string>
+    <string name="noPlayer44" formatted="false">"Les joueurs incapable de toucher le sol ­ debout,jambes tendus ­ boivent 3 gorgées"</string>
+    <string name="noPlayer45" formatted="false">"On doit maintenant agripper son/sa voisine de droite lorsqu’on boit"</string>
+    <string name="noPlayer46" formatted="false">"Le joueur le plus grand distribue 4 gorgées"</string>
+    <string name="noPlayer47" formatted="false">"Interdiction de boire de la main droite [10 tours]"</string>
+    <string name="noPlayer48" formatted="false">"Remplacer les son “a” par le son “i” (ex : “j’aime mon papa” devient “ j’aime mon pipi”)"</string>
+    <string name="noPlayer49" formatted="false">"Chaque mot commençant par C doit être dit "C" (ex : “C’est trop cool l’application de Cbeer”
+devient “C trop C l’application de C”)"</string>
+    <string name="noPlayer50" formatted="false">"Les mains en l’air ! la dernière personne boit 4 gorgées"</string>
+
+    //Array of phrases with no player in it.
+    <string-array name="noPlayerArray">
+        <item>@string/noPlayer1</item>
+        <item>@string/noPlayer2</item>
+        <item>@string/noPlayer3</item>
+        <item>@string/noPlayer4</item>
+        <item>@string/noPlayer5</item>
+        <item>@string/noPlayer6</item>
+        <item>@string/noPlayer7</item>
+        <item>@string/noPlayer8</item>
+        <item>@string/noPlayer9</item>
+        <item>@string/noPlayer10</item>
+        <item>@string/noPlayer11</item>
+        <item>@string/noPlayer12</item>
+        <item>@string/noPlayer13</item>
+        <item>@string/noPlayer14</item>
+        <item>@string/noPlayer15</item>
+        <item>@string/noPlayer16</item>
+        <item>@string/noPlayer17</item>
+        <item>@string/noPlayer18</item>
+        <item>@string/noPlayer19</item>
+        <item>@string/noPlayer20</item>
+        <item>@string/noPlayer21</item>
+        <item>@string/noPlayer22</item>
+        <item>@string/noPlayer23</item>
+        <item>@string/noPlayer24</item>
+        <item>@string/noPlayer25</item>
+        <item>@string/noPlayer26</item>
+        <item>@string/noPlayer27</item>
+        <item>@string/noPlayer28</item>
+        <item>@string/noPlayer29</item>
+        <item>@string/noPlayer30</item>
+        <item>@string/noPlayer31</item>
+        <item>@string/noPlayer32</item>
+        <item>@string/noPlayer33</item>
+        <item>@string/noPlayer34</item>
+        <item>@string/noPlayer35</item>
+        <item>@string/noPlayer36</item>
+        <item>@string/noPlayer37</item>
+        <item>@string/noPlayer38</item>
+        <item>@string/noPlayer39</item>
+        <item>@string/noPlayer40</item>
+        <item>@string/noPlayer41</item>
+        <item>@string/noPlayer42</item>
+        <item>@string/noPlayer43</item>
+        <item>@string/noPlayer44</item>
+        <item>@string/noPlayer45</item>
+        <item>@string/noPlayer46</item>
+        <item>@string/noPlayer47</item>
+        <item>@string/noPlayer48</item>
+        <item>@string/noPlayer49</item>
+        <item>@string/noPlayer50</item>
+    </string-array>
+
+
+    //Phrases which have only one player in it.
+    <string name="onePlayer1" formatted="false">"%s choisit un mot qu’il est maintenant interdit de prononcer [10 tours]"</string>
+    <string name="onePlayer2" formatted="false">"%s défis qui tu veux à la bataille de pouce, le/la perdante boit 4 gorgées"</string>
+    <string name="onePlayer3" formatted="false">"%s fait le service [10 tours]"</string>
+    <string name="onePlayer4" formatted="false">"%s bois autant de gorgées qu’il y a de joueurs"</string>
+    <string name="onePlayer5" formatted="false">"%s doit maintenant parler en chantant avec l’ai de “1,2,3 nous irons au bois” [10
+TOURS] "</string>
+    <string name="onePlayer6" formatted="false">"%s choisis ton esclave, tu pourra lui transférer 2 fois tes gorgées"</string>
+    <string name="onePlayer7" formatted="false">"%s nomme un accessoire (ceinture, tongues, vernis ...). Les personnes portant cet
+accessoire boivent 2 gorgées"</string>
+    <string name="onePlayer8" formatted="false">"%s l’horloge parlante ! tu dois annoncer l’heure à chaque nouvelle minute, 3 gorgées
+à chaque manque [10 tours]"</string>
+    <string name="onePlayer9" formatted="false">"%s pose une question. La première personne à répondre distribue 3 gorgées"</string>
+    <string name="onePlayer10" formatted="false">"%s doit maintenant dire “c’est clair” à chaque fois que quelqu’un finit de parler sous
+peine d’une gorgée"</string>
+    <string name="onePlayer11" formatted="false">"Jeu du loup jusqu’à la fin du jeu ! le loup touche un joueur qui boit une gorgée et qui devient
+loup, ainsi de suite.C’est %s le loup!"</string>
+    <string name="onePlayer12" formatted="false">"1 minute de sourire non stop pour %s, 4 gorgées à chaque manque"</string>
+    <string name="onePlayer13" formatted="false">"%s doit maintenant parler avec un accent africain [10 tours]"</string>
+    <string name="onePlayer14" formatted="false">"%s doit maintenant parler avec un accent chinois [10 tours] "</string>
+    <string name="onePlayer15" formatted="false">"%s est borgne ! ferme un oeil [10 tours]"</string>
+    <string name="onePlayer16" formatted="false">"%s tu as 2 secondes pour donner le nombre exact de personnes dans la pièce.
+Echoue et tu boiras 4 gorgées"</string>
+    <string name="onePlayer17" formatted="false">"Cul sec pour %s "</string>
+    <string name="onePlayer18" formatted="false">"%s roi des pouces. Tu peux poser ton pouce sur la table à n’importe quel moment.
+Le/la dernière à t’imiter boit [10 tours]"</string>
+    <string name="onePlayer19" formatted="false">"%s a la tourette ! Quand tu cries un gros mot la dernière personne à t’imiter boit 4
+gorgées [10 tours] "</string>
+    <string name="onePlayer20" formatted="false">"%s si tu as bus moins de 2 verres, tu bois 3 gorgées"</string>
+    <string name="onePlayer21" formatted="false">"Honneur à %s qui distribue 4 gorgées"</string>
+    <string name="onePlayer22" formatted="false">"%s dit un truc que t’as jamais fait, ceux qui l’ont fait boivent 4 gorgées"</string>
+    <string name="onePlayer23" formatted="false">"%s est maintenant obligé d’attendre 2 secondes entre chaque mot prononcé ! 2
+gorgées a chaque manque"</string>
+    <string name="onePlayer24" formatted="false">"%s est la sous merde ! Adressez vous à lui/elle en l’insultant de tous les noms, il/elle
+n’a pas le droit de protester"</string>
+    <string name="onePlayer25" formatted="false">"À tour de rôle,rajouter un peu d’alcool dans votre verre, %s commence"</string>
+    <string name="onePlayer26" formatted="false">"%s si tu as déjà été viré de bar/boîte bois 4 gorgées, autrement distribue les"</string>
+    <string name="onePlayer27" formatted="false">"%s  si tu as déjà menti sur ton âge pour chopper bois 4 gorgées, sinon distribue les"</string>
+    <string name="onePlayer28" formatted="false">"%s  le clapeur fou ! à chaque fois que tu claques des mains tout le monde boit
+(même toi)"</string>
+    <string name="onePlayer29" formatted="false">"%s  chante une chanson avec la bouche pleine, la premiere personne à trouver
+distribue 2 gorgées"</string>
+    <string name="onePlayer30" formatted="false">"%s parle maintenant uniquement anglais! 3 gorgées à chaque erreurs!"</string>
+    <string name="onePlayer31" formatted="false">"%s cite le titre d'un film, ceux qui ne l'ont pas vu boivent 3 gorgées."</string>
+    <string name="onePlayer32" formatted="false">"%s sifflote un chanson, le premier à trouver le titre distribue 2 gorgées."</string>
+    <string name="onePlayer33" formatted="false">"%s échange de verre avec la personne de son choix."</string>
+    <string name="onePlayer34" formatted="false">"%s donne son téléphone (dévérouillé) à la personne de son choix pendant 5 minutes."</string>
+    <string name="onePlayer35" formatted="false">"%s donne plein accès a ton compte facebook à la personne de ton choix pendant 10 minutes"</string>
+    <string name="onePlayer36" formatted="false">"%s fait une blague, si personne ne rigole il boit 4 gorgées."</string>
+    <string name="onePlayer37" formatted="false">"%s énonce un calcule, le dernier à donner la solution de ce dernier boit 3 gorgées."</string>
+    <string name="onePlayer38" formatted="false">"L'apéro ne fait que commencer! %s désigne un joueur. Ce joueur est le seul à ne pas boire 4 gorgées!"</string>
+    <string name="onePlayer39" formatted="false">"Si %s est un musicien il boit 3 gorgées, sinon il les distribue."</string>
+    <string name="onePlayer40" formatted="false">"%s crée une règle qui devra être respecter jusqu'à la fin de la partie."</string>
+
+    //Array of phrases with one player in it.
+    <string-array name="onePlayerArray">
+        <item>@string/onePlayer1</item>
+        <item>@string/onePlayer2</item>
+        <item>@string/onePlayer3</item>
+        <item>@string/onePlayer4</item>
+        <item>@string/onePlayer5</item>
+        <item>@string/onePlayer6</item>
+        <item>@string/onePlayer7</item>
+        <item>@string/onePlayer8</item>
+        <item>@string/onePlayer9</item>
+        <item>@string/onePlayer10</item>
+        <item>@string/onePlayer11</item>
+        <item>@string/onePlayer12</item>
+        <item>@string/onePlayer13</item>
+        <item>@string/onePlayer14</item>
+        <item>@string/onePlayer15</item>
+        <item>@string/onePlayer16</item>
+        <item>@string/onePlayer17</item>
+        <item>@string/onePlayer18</item>
+        <item>@string/onePlayer19</item>
+        <item>@string/onePlayer20</item>
+        <item>@string/onePlayer21</item>
+        <item>@string/onePlayer22</item>
+        <item>@string/onePlayer23</item>
+        <item>@string/onePlayer24</item>
+        <item>@string/onePlayer25</item>
+        <item>@string/onePlayer26</item>
+        <item>@string/onePlayer27</item>
+        <item>@string/onePlayer28</item>
+        <item>@string/onePlayer29</item>
+        <item>@string/onePlayer30</item>
+        <item>@string/onePlayer31</item>
+        <item>@string/onePlayer32</item>
+        <item>@string/onePlayer33</item>
+        <item>@string/onePlayer34</item>
+        <item>@string/onePlayer35</item>
+        <item>@string/onePlayer36</item>
+        <item>@string/onePlayer37</item>
+        <item>@string/onePlayer38</item>
+        <item>@string/onePlayer39</item>
+        <item>@string/onePlayer40</item>
+    </string-array>
+
+    //Phrases which have only two player in it.
+    <string name="twoPlayer1" formatted="false">"%s devra faire un bruit d’animal après chaque gorgée, %s choisit quel animal
+[10 TOURS]."</string>
+    <string name="twoPlayer2" formatted="false">"%s s’assoit sur les genoux de %s."</string>
+    <string name="twoPlayer3" formatted="false">"Dès que %s parle, %s boit une gorgée, et inversement."</string>
+    <string name="twoPlayer4" formatted="false">"Duel entre %s et %s, celui/celle qui a les plus grandes mains boit 3 gorgées"</string>
+    <string name="twoPlayer5" formatted="false">"cul sec pour %s et %s"</string>
+    <string name="twoPlayer6" formatted="false">"%s boit 4 gorgées dans le verre de %s, et inversement."</string>
+    <string name="twoPlayer7" formatted="false">"%s, si ton verre contient un alcool moins cher que celui de %s, bois 3
+gorgées."</string>
+    <string name="twoPlayer8" formatted="false">"%s fait un bisou sur les fesses de %s ou boit 2 gorgées."</string>
+    <string name="twoPlayer9" formatted="false">"%s, soit tu fais un bisou à %s soit il/elle boit 4 gorgées."</string>
+    <string name="twoPlayer10" formatted="false">"%s fait une action commandée par %s. Si tu refuses tu bois 4 gorgées "</string>
+    <string name="twoPlayer11" formatted="false">"%s défie %s au chifoumi ! le/la perdante boit 4 gorgées"</string>
+    <string name="twoPlayer12" formatted="false">"%s doit maintenant lever le doigt pour parler et c’est %s qui lui donnera la
+parole."</string>
+    <string name="twoPlayer13" formatted="false">"%s donne le signe astrologique de %s ou bois 2 gorgées."</string>
+    <string name="twoPlayer14" formatted="false">"%s et %s échangez de T­shits, ou vous devrez boivent 2 gorgées à chaque
+nouvel évènement [10 tours]"</string>
+    <string name="twoPlayer15" formatted="false">"%s bois le nombre de gorgées que tu veux. %s devra boire le double."</string>
+    <string name="twoPlayer16" formatted="false">"%s et %s buvez ensemble 2 gorgées."</string>
+    <string name="twoPlayer17" formatted="false">"%s et %s buvez ensemble 3 gorgées."</string>
+    <string name="twoPlayer18" formatted="false">"%s et %s buvez ensemble 4 gorgées."</string>
+    <string name="twoPlayer19" formatted="false">"%s  le perroquet ! tu dois répéter tout ce que dit  %s"</string>
+    <string name="twoPlayer20" formatted="false">"%s est le larbin de %s, il doit obéir à 4 ordres de ce dernier."</string>
+
+    //Array of phrases with two players in it.
+    <string-array name="twoPlayersArray">
+        <item>@string/twoPlayer1</item>
+        <item>@string/twoPlayer2</item>
+        <item>@string/twoPlayer3</item>
+        <item>@string/twoPlayer4</item>
+        <item>@string/twoPlayer5</item>
+        <item>@string/twoPlayer6</item>
+        <item>@string/twoPlayer7</item>
+        <item>@string/twoPlayer8</item>
+        <item>@string/twoPlayer9</item>
+        <item>@string/twoPlayer10</item>
+        <item>@string/twoPlayer11</item>
+        <item>@string/twoPlayer12</item>
+        <item>@string/twoPlayer13</item>
+        <item>@string/twoPlayer14</item>
+        <item>@string/twoPlayer15</item>
+        <item>@string/twoPlayer16</item>
+        <item>@string/twoPlayer17</item>
+        <item>@string/twoPlayer18</item>
+        <item>@string/twoPlayer19</item>
+        <item>@string/twoPlayer20</item>
+    </string-array>
+
+    //Phrases which have only three players in it.
+    <string name="threePlayer1" formatted="false">"Cul sec pour %s, %s et %s."</string>
+    <string name="threePlayer2" formatted="false">"Le trio %s,%s et %s boivent tous 3 gorgées"</string>
+    <string name="threePlayer3" formatted="false">"Le trio %s,%s et %s boivent tous 2 gorgées"</string>
+    <string name="threePlayer4" formatted="false">"Le trio %s,%s et %s boivent tous 4 gorgées"</string>
+    <string name="threePlayer5" formatted="false">"Le trio %s,%s et %s distribuent tous 3 gorgées"</string>
+    <string name="threePlayer6" formatted="false">"Le trio %s,%s et %s distribuent tous 2 gorgées"</string>
+    <string name="threePlayer7" formatted="false">"Le trio %s,%s et %s distribuent tous 4 gorgées"</string>
+    <string name="threePlayer8" formatted="false">"%s,%s et %s se classent du plus grand au plus petit. Le plus petit bois 2 gorgées, ainsi de suite jusqu'à 4 gorgées."</string>
+    <string name="threePlayer9" formatted="false">"%s finit le verre de %s, qui finit %s et ainsi de suite."</string>
+    <string name="threePlayer10" formatted="false">"Le trio %s,%s et %s se sert le même verre et le finit en 10 minutes."</string>
+
+    //Array of phrases with three players in it.
+    <string-array name="threePlayersArray">
+        <item>@string/threePlayer1</item>
+        <item>@string/threePlayer2</item>
+        <item>@string/threePlayer3</item>
+        <item>@string/threePlayer4</item>
+        <item>@string/threePlayer5</item>
+        <item>@string/threePlayer6</item>
+        <item>@string/threePlayer7</item>
+        <item>@string/threePlayer8</item>
+        <item>@string/threePlayer9</item>
+        <item>@string/threePlayer10</item>
+    </string-array>three
+
 </resources>
