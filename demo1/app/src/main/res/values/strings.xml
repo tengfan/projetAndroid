@@ -63,21 +63,19 @@
     <string name="noPlayer26" formatted="false">"Celui/celles avec le verre le plus rempli boit 4 gorgées"</string>
     <string name="noPlayer27" formatted="false">"La dernière personne à être allée aux toilettes boit 2 gorgées"</string>
     <string name="noPlayer28" formatted="false">"Ceux/celles qui n’ont pas pris de douche aujourd’hui boivent 4 gorgées"</string>
-    <string name="noPlayer29" formatted="false">"Il faut maintenant prononcer un gros mot à chaque phrase [10 TOURS]"</string>
-    <string name="noPlayer30" formatted="false">"Ni oui, ni non! celui/celle qui prononce l’un des deux mots boit 3 gorgées jusqu’à nouvel
-ordre  [ 10 TOURS]"</string>
+    <string name="noPlayer29" formatted="false">"Citez tour à tour une race de chien, le premier n'en citant pas boit 4 gorgées"</string>
+    <string name="noPlayer30" formatted="false">"Plutôt avoir une aventure avec Michel Drucker ou avec Jean-Pierre Koff? La minorité bois 5 gorgées."</string>
     <string name="noPlayer31" formatted="false">"Désignez tous ensemble le/la plus débile qui devra boire 4 gorgées
 + Fallait pas être débile, 1 gorgée de plus pour la peine "</string>
-    <string name="noPlayer32" formatted="false">"BUFFALO : tout le monde ne peut plus tenir son verre avec sa main directrice, sanction :
-CUL SEC [10 TOURS]"</string>
-    <string name="noPlayer33" formatted="false">"Interdiction de s’adresser à quelqu’un par son prénom [10 TOURS]"</string>
-    <string name="noPlayer34" formatted="false">"Il faut maintenant énoncer la ponctuation (ex : “tu bois une gorgée point”) [10 TOURS]"</string>
+    <string name="noPlayer32" formatted="false">"Plutôt avoir une aventure avec Mirelle Mathieu ou avec Mimie Mathy"</string>
+    <string name="noPlayer33" formatted="false">"Plutôt avoir une aventure avec Xi Jinping ou Kim Jong-Un"</string>
+    <string name="noPlayer34" formatted="false">"Les joueurs dont le nom de famille commence par "B" prennent un CUL SEC!"</string>
     <string name="noPlayer35" formatted="false">Si ton jour d’anniversaire est un nombre impair, bois 3 gorgées"</string>
     <string name="noPlayer36" formatted="false">"Si ton jour d’anniversaire est un nombre pair, bois 3 gorgées"</string>
     <string name="noPlayer37" formatted="false">"3 gorgées pour les fumeurs/fumeuses"</string>
     <string name="noPlayer38" formatted="false">"Le prochain joueur à devoir boire doublera son nombre de gorgées"</string>
     <string name="noPlayer39" formatted="false">"Les gauchers/gauchères boivent 2 gorgées"</string>
-    <string name="noPlayer40" formatted="false">"Il faut maintenant finir de s’adresser à quelqu’un par “Grosse C” [20 tours]"</string>
+    <string name="noPlayer40" formatted="false">"Les joueurs "</string>
     <string name="noPlayer41" formatted="false">"Ceux/celles qui ont les chaussettes trouées boivent 3 gorgées"</string>
     <string name="noPlayer42" formatted="false">"Les personnes en couple font boire 3 gorgées à une seule personne"</string>
     <string name="noPlayer43" formatted="false">"Ceux/celles qui possèdent un paquet de clopes boivent leur nombre de cigarettes restantes
@@ -85,7 +83,7 @@ en gorgées (8 maximum)"</string>
     <string name="noPlayer44" formatted="false">"Les joueurs incapable de toucher le sol ­ debout,jambes tendus ­ boivent 3 gorgées"</string>
     <string name="noPlayer45" formatted="false">"On doit maintenant agripper son/sa voisine de droite lorsqu’on boit"</string>
     <string name="noPlayer46" formatted="false">"Le joueur le plus grand distribue 4 gorgées"</string>
-    <string name="noPlayer47" formatted="false">"Interdiction de boire de la main droite [10 tours]"</string>
+    <string name="noPlayer47" formatted="false">"Plutôt adopter un phacochère ou adopter un serpent pénis. La minorité fini son verre!"</string>
     <string name="noPlayer48" formatted="false">"Remplacer les son “a” par le son “i” (ex : “j’aime mon papa” devient “ j’aime mon pipi”)"</string>
     <string name="noPlayer49" formatted="false">"Chaque mot commençant par C doit être dit "C" (ex : “C’est trop cool l’application de Cbeer”
 devient “C trop C l’application de C”)"</string>
@@ -188,7 +186,7 @@ n’a pas le droit de protester"</string>
 (même toi)"</string>
     <string name="onePlayer29" formatted="false">"%s  chante une chanson avec la bouche pleine, la premiere personne à trouver
 distribue 2 gorgées"</string>
-    <string name="onePlayer30" formatted="false">"%s parle maintenant uniquement anglais! 3 gorgées à chaque erreurs!"</string>
+    <string name="onePlayer30" formatted="false">"%s parle maintenant uniquement anglais pendant 3 minutes! 3 gorgées à chaque erreurs!"</string>
     <string name="onePlayer31" formatted="false">"%s cite le titre d'un film, ceux qui ne l'ont pas vu boivent 3 gorgées."</string>
     <string name="onePlayer32" formatted="false">"%s sifflote un chanson, le premier à trouver le titre distribue 2 gorgées."</string>
     <string name="onePlayer33" formatted="false">"%s échange de verre avec la personne de son choix."</string>
@@ -199,6 +197,20 @@ distribue 2 gorgées"</string>
     <string name="onePlayer38" formatted="false">"L'apéro ne fait que commencer! %s désigne un joueur. Ce joueur est le seul à ne pas boire 4 gorgées!"</string>
     <string name="onePlayer39" formatted="false">"Si %s est un musicien il boit 3 gorgées, sinon il les distribue."</string>
     <string name="onePlayer40" formatted="false">"%s crée une règle qui devra être respecter jusqu'à la fin de la partie."</string>
+    <string name="onePlayer41" formatted="false">"Il faut maintenant prononcer un gros mot à chaque phrase [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer42" formatted="false">"Ni oui, ni non! celui/celle qui prononce l’un des deux mots boit 3 gorgées jusqu’à nouvel
+ordre  [ 10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer43" formatted="false">"C BALO : tout le monde ne peut plus tenir son verre avec sa main directrice, sanction :
+CUL SEC [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer44" formatted="false">"Interdiction de s’adresser à quelqu’un par son prénom [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer45" formatted="false">"Il faut maintenant énoncer la ponctuation (ex : “tu bois une gorgée point”) [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer46" formatted="false">"Il faut maintenant finir de s’adresser à quelqu’un par “Grosse C” [20 tours]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer47" formatted="false">"Interdiction de boire de la main droite [10 tours]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer48" formatted="false">"Comme Yoda, parler vous devez. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer49" formatted="false">"Tout le monde parle sa deuxième langue pendant [5 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer50" formatted="false">"Tout le monde parle comme un commentateur de foot pendant [8 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+
+
 
     //Array of phrases with one player in it.
     <string-array name="onePlayerArray">
@@ -242,6 +254,16 @@ distribue 2 gorgées"</string>
         <item>@string/onePlayer38</item>
         <item>@string/onePlayer39</item>
         <item>@string/onePlayer40</item>
+        <item>@string/onePlayer41</item>
+        <item>@string/onePlayer42</item>
+        <item>@string/onePlayer43</item>
+        <item>@string/onePlayer44</item>
+        <item>@string/onePlayer45</item>
+        <item>@string/onePlayer46</item>
+        <item>@string/onePlayer47</item>
+        <item>@string/onePlayer48</item>
+        <item>@string/onePlayer49</item>
+        <item>@string/onePlayer50</item>
     </string-array>
 
     //Phrases which have only two player in it.
