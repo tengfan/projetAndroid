@@ -11,6 +11,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("MainActivity", "onCreate");
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         //For hiding the navigation buttons and the bar
         View decorView = getWindow().getDecorView();

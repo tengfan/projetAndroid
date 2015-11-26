@@ -12,6 +12,17 @@ public class GameOneActivity extends Activity {
     // Variables Declaration
     TextView textView;
     int numberPlayers;
+    cbeer classCbeer;
+    String[] noPlayerPhrases;
+    String[] onePlayerPhrases;
+    String[] twoPlayersPhrases;
+    String[] threePlayersPhrases;
+    int type;
+    int nmbr;
+    int player1;
+    int player2;
+    int player3;
+    String [] playerNames = new String[8];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +40,10 @@ public class GameOneActivity extends Activity {
         cbeer classCbeer = (cbeer)getApplication();
         numberPlayers = classCbeer.getNumberPlayers();
         textView = (TextView) findViewById(R.id.textGameOne);
+        classCbeer = (cbeer)getApplication();
+        for(int i=0;i<classCbeer.getNumberPlayers();i++){
+            playerNames[i] = classCbeer.getPlayerByNumber(i);
+        }
     }
 
     @Override
@@ -57,12 +72,50 @@ public class GameOneActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
+        noPlayerPhrases = getResources().getStringArray(R.array.noPlayerArray);
+        onePlayerPhrases = getResources().getStringArray(R.array.onePlayerArray);
+        twoPlayersPhrases = getResources().getStringArray(R.array.twoPlayersArray);
+        threePlayersPhrases = getResources().getStringArray(R.array.threePlayersArray);
+
+        type = rndmType(1000);
+
+        if (type == 0) {
+            nmbr = rndmGen(noPlayerPhrases.length);
+        } else if (type == 1) {
+            nmbr = rndmGen(onePlayerPhrases.length);
+            player1 = rndmGen(numberPlayers);
+        } else if (type == 2) {
+            nmbr = rndmGen(twoPlayersPhrases.length);
+            player1 = rndmGen(numberPlayers);
+            player2 = rndmGen(numberPlayers);
+            while (player2 == player1) {
+                player2 = rndmGen(numberPlayers);
+            }
+        } else {
+            nmbr = rndmGen(threePlayersPhrases.length);
+            player1 = rndmGen(numberPlayers);
+            player2 = rndmGen(numberPlayers);
+            while (player2 == player1) {
+                player2 = rndmGen(numberPlayers);
+            }
+            player3 = rndmGen(numberPlayers);
+            while (player3 == player1 || player3 == player2) {
+                player3 = rndmGen(numberPlayers);
+            }
+        }
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                textView.setText("Value : " + rndmType(1000));
-                Log.d("CONTRUCTION PHRASE", String.format("%s et %s sont des grosses C!!", "Clément", "Teng"));
-
+                if (type == 0) {
+                    textView.setText(noPlayerPhrases[nmbr]);
+                } else if (type == 1) {
+                    textView.setText(String.format(onePlayerPhrases[nmbr], playerNames[player1]));
+                } else if (type == 2) {
+                    textView.setText(String.format(twoPlayersPhrases[nmbr], playerNames[player1], playerNames[player2]));
+                } else {
+                    textView.setText(String.format(threePlayersPhrases[nmbr], playerNames[player1], playerNames[player2], playerNames[player3]));
+                }
             }
         });
     }
