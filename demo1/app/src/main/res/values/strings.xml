@@ -30,7 +30,7 @@
     //Phrases which have no player in it.
     <string name="noPlayer1" formatted="false">"Celles et ceux qui ont déjà attaqué l’apéro avant 10h du matin boivent 2 gorgées!"</string>
     <string name="noPlayer2" formatted="false">"Ceux/celles ayant un produit samsung boivent 2 gorgées."</string>
-    <string name="noPlayer3" formatted="false">"Ceux/celles qui se sont déjà masturbé devant un clip de musique boivent 3 gorgées."</string>
+    <string name="noPlayer3" formatted="false">"Ceux/celles qui se sont déjà masturbé(e)s devant un clip de musique boivent 3 gorgées."</string>
     <string name="noPlayer4" formatted="false">"Ceux/celles ayant un produit Apple boivent 2 gorgées."</string>
     <string name="noPlayer5" formatted="false">"Cul sec pour les chauves et les roux."</string>
     <string name="noPlayer6" formatted="false">"Cul sec pour les chinois."</string>
@@ -40,7 +40,7 @@
     <string name="noPlayer10" formatted="false">"4 gorgées pour tout le monde."</string>
     <string name="noPlayer11" formatted="false">"Celui/celle qui enlève deux vêtements en premier distribue 2 gorgées."</string>
     <string name="noPlayer12" formatted="false">"Celles/ceux qui n’ont pas encore distribué de gorgées boivent 3 gorgées."</string>
-    <string name="noPlayer13" formatted="false">"Celles et ceux qui travaillent/étudient dans tout type d’ingénierie boivent 4 gorgées."</string>
+    <string name="noPlayer13" formatted="false">"Celles et ceux qui travaillent/étudient dans l’ingénierie boivent 4 gorgées."</string>
     <string name="noPlayer14" formatted="false">"La personne avec le plus gros cul boit 4 gorgées."</string>
     <string name="noPlayer15" formatted="false">"Jusqu’à la fin du jeu, le premier joueur à dire “oui” prend un cul sec."</string>
     <string name="noPlayer16" formatted="false">"Les personnes tatouées ou ayant un piercing boivent 3 gorgées."</string>
@@ -52,15 +52,15 @@
     <string name="noPlayer22" formatted="false">"Ceux/celles qui arrivent à toucher leur nez avec leur langue distribuent 3 gorgées."</string>
     <string name="noPlayer23" formatted="false">"Celles et ceux qui ont très mal fini à leur dernière soirée boivent 3 gorgées."</string>
     <string name="noPlayer24" formatted="false">"Celles et ceux qui entendent cette phrase boivent 4 gorgées."</string>
-    <string name="noPlayer25" formatted="false">"Celles et ceux qui étaient saouls hier boivent 2 gorgées."</string>
-    <string name="noPlayer26" formatted="false">"Celui/celles avec le verre le plus rempli boit 4 gorgées."</string>
+    <string name="noPlayer25" formatted="false">"Celles et ceux qui étaient saoules hier boivent 2 gorgées."</string>
+    <string name="noPlayer26" formatted="false">"Celui/celle avec le verre le plus rempli boit 4 gorgées."</string>
     <string name="noPlayer27" formatted="false">"La dernière personne à être allée aux toilettes boit 2 gorgées."</string>
     <string name="noPlayer28" formatted="false">"Ceux/celles qui n’ont pas pris de douche aujourd’hui boivent 4 gorgées."</string>
-    <string name="noPlayer29" formatted="false">"Citez tour à tour une race de chien, le premier n'en citant pas boit 4 gorgées."</string>
-    <string name="noPlayer30" formatted="false">"Plutôt avoir une aventure avec Michel Drucker ou avec Jean-Pierre Koff? La minorité bois 5 gorgées."</string>
+    <string name="noPlayer29" formatted="false">"Citez tour à tour une race de chien, le premier qui n'en cite pas boit 4 gorgées."</string>
+    <string name="noPlayer30" formatted="false">"Plutôt avoir une aventure avec Michel Drucker ou avec Jean-Pierre Koff? La minorité boit 5 gorgées."</string>
     <string name="noPlayer31" formatted="false">"Désignez tous ensemble le/la plus débile qui devra boire 4 gorgées. Le débile désigné donne 1 cul sec à un joueur de son choix."</string>
-    <string name="noPlayer32" formatted="false">"Plutôt avoir une aventure avec Mirelle Mathieu ou avec Mimie Mathy? La minorité bois 1 gorgées."</string>
-    <string name="noPlayer33" formatted="false">"Plutôt avoir une aventure avec Xi Jinping ou Kim Jong-Un? La minorité bois 2 gorgées."</string>
+    <string name="noPlayer32" formatted="false">"Plutôt avoir une aventure avec Mireille Mathieu ou avec Mimie Mathy? La minorité boit 1 gorgée."</string>
+    <string name="noPlayer33" formatted="false">"Plutôt avoir une aventure avec Xi Jinping ou Kim Jong-Un? La minorité boit 2 gorgées."</string>
     <string name="noPlayer34" formatted="false">"Les joueurs dont le nom de famille commence par "B" prennent un CUL SEC!"</string>
     <string name="noPlayer35" formatted="false">Si ton jour d’anniversaire est un nombre impair, bois 3 gorgées"</string>
     <string name="noPlayer36" formatted="false">"Si ton jour d’anniversaire est un nombre pair, bois 3 gorgées"</string>
@@ -74,8 +74,8 @@
     <string name="noPlayer44" formatted="false">"Les joueurs incapable de toucher le sol ­ debout,jambes tendus ­ boivent 3 gorgées"</string>
     <string name="noPlayer45" formatted="false">"On doit maintenant agripper son/sa voisine de droite lorsqu’on boit"</string>
     <string name="noPlayer46" formatted="false">"Le joueur le plus grand distribue 4 gorgées"</string>
-    <string name="noPlayer47" formatted="false">"Remplacez les mots commençant par "P" par phacochère dans toute vos phrases. Vous arretez à l'unanimité seulement"</string>
-    <string name="noPlayer48" formatted="false">"Remplacez les son “a” par le son “i” (ex : “j’aime mon papa” devient “ j’aime mon pipi”). Le joueur le plus jeune décide quand ce jeu s'arrete."</string>
+    <string name="noPlayer47" formatted="false">"Remplacez les mots commençant par "P" par phacochère dans toutes vos phrases. Vous arrêtez à l'unanimité seulement"</string>
+    <string name="noPlayer48" formatted="false">"Remplacez le son “a” par le son “i” (ex : “j’aime mon papa” devient “ j’aime mon pipi”). Le joueur le plus jeune décide quand ce jeu s'arrête."</string>
     <string name="noPlayer49" formatted="false">"Chaque mot commençant par C doit être dit "C" (ex : “C’est trop cool” devient “C trop C”)"</string>
     <string name="noPlayer50" formatted="false">"Les mains en l’air ! La dernière personne boit 4 gorgées"</string>
 
@@ -135,57 +135,56 @@
 
 
     //Phrases which have only one player in it.
-    <string name="onePlayer1" formatted="false">"%s choisit un mot qu’il est maintenant interdit de prononcer [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer2" formatted="false">"%s défis qui tu veux à la bataille de pouce, le/la perdante boit 4 gorgées"</string>
-    <string name="onePlayer3" formatted="false">"%s fait le service [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer4" formatted="false">"%s bois autant de gorgées qu’il y a de joueurs"</string>
-    <string name="onePlayer5" formatted="false">"%s doit maintenant parler en chantant avec l’air de “1,2,3 nous irons au bois” [10 TOURS]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer6" formatted="false">"%s choisis ton esclave, tu pourra lui transférer 2 fois tes gorgées"</string>
+    <string name="onePlayer1" formatted="false">"%s choisit un mot qu’il est maintenant interdit de prononcer [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer2" formatted="false">"%s défis qui tu veux à la bataille de pouce, le/la perdant(e) boit 4 gorgées"</string>
+    <string name="onePlayer3" formatted="false">"%s fait le service [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer4" formatted="false">"%s boit autant de gorgées qu’il y a de joueurs"</string>
+    <string name="onePlayer5" formatted="false">"%s doit maintenant parler en chantant avec l’air de “1,2,3 nous irons au bois” [10 TOURS]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer6" formatted="false">"%s choisis ton esclave, tu pourras lui transférer 2 fois tes gorgées"</string>
     <string name="onePlayer7" formatted="false">"%s nomme un accessoire (ceinture, tongues, vernis ...). Les personnes portant cet accessoire boivent 2 gorgées"</string>
-    <string name="onePlayer8" formatted="false">"%s l’horloge parlante ! tu dois annoncer l’heure à chaque nouvelle minute, 3 gorgées à chaque manque [10 tours]. Évidemment il compte les tours, s'il oublie CUL SEC!"</string>
+    <string name="onePlayer8" formatted="false">"%s l’horloge parlante ! tu dois annoncer l’heure à chaque nouvelle minute, 3 gorgées à chaque manque [10 tours]. Évidemment tu comptes les tours, oublie et CUL SEC!"</string>
     <string name="onePlayer9" formatted="false">"%s pose une question. La première personne à répondre distribue 3 gorgées"</string>
     <string name="onePlayer10" formatted="false">"%s doit maintenant dire “c’est clair” à chaque fois que quelqu’un finit de parler sous peine d’une gorgée"</string>
-    <string name="onePlayer11" formatted="false">"Jeu du loup jusqu’à la fin du jeu ! Le loup touche un joueur qui boit une gorgée et qui devient
-loup, ainsi de suite. C’est %s le loup!"</string>
+    <string name="onePlayer11" formatted="false">"Jeu du loup jusqu’à la fin du jeu ! Le loup touche un joueur qui boit une gorgée et qui devient loup, ainsi de suite. C’est %s le loup!"</string>
     <string name="onePlayer12" formatted="false">"1 minute de sourire non stop pour %s, 4 gorgées à chaque manque"</string>
-    <string name="onePlayer13" formatted="false">"%s doit maintenant parler avec un accent africain [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer14" formatted="false">"%s doit maintenant parler avec un accent chinois [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC! "</string>
-    <string name="onePlayer15" formatted="false">"%s est borgne ! ferme un oeil [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer16" formatted="false">"%s tu as 2 secondes pour donner le nombre exact de personnes dans la pièce. Echoue et tu boiras 4 gorgées."</string>
+    <string name="onePlayer13" formatted="false">"%s doit maintenant parler avec un accent africain [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer14" formatted="false">"%s doit maintenant parler avec un accent chinois [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC! "</string>
+    <string name="onePlayer15" formatted="false">"%s est borgne ! ferme un oeil [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer16" formatted="false">"%s tu as 2 secondes pour donner le nombre exact de personnes dans la pièce. Échoue et tu boiras 4 gorgées."</string>
     <string name="onePlayer17" formatted="false">"Cul sec pour %s."</string>
-    <string name="onePlayer18" formatted="false">"%s roi des pouces. Tu peux poser ton pouce sur la table à n’importe quel moment. Le/la dernière à t’imiter boit [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC!"</string>
-    <string name="onePlayer19" formatted="false">"%s a la tourette ! Quand tu cries un gros mot la dernière personne à t’imiter boit 4 gorgées [10 tours]. Il compte aussi les tours, s'il oublie CUL SEC! "</string>
+    <string name="onePlayer18" formatted="false">"%s roi des pouces. Tu peux poser ton pouce sur la table à n’importe quel moment. Le/la dernière à t’imiter boit [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer19" formatted="false">"%s a la tourette ! Quand tu cries un gros mot la dernière personne à t’imiter boit 4 gorgées [10 tours]. Il/elle compte aussi les tours, s'il/si elle oublie CUL SEC! "</string>
     <string name="onePlayer20" formatted="false">"%s si tu as bu moins de 2 verres, tu bois 3 gorgées."</string>
     <string name="onePlayer21" formatted="false">"Honneur à %s qui distribue 4 gorgées."</string>
-    <string name="onePlayer22" formatted="false">"%s dit un truc que t’as jamais fait, ceux qui l’ont fait boivent 4 gorgées."</string>
-    <string name="onePlayer23" formatted="false">"%s est maintenant obligé d’attendre 2 secondes entre chaque mot prononcé ! 2 gorgées à chaque manque."</string>
-    <string name="onePlayer24" formatted="false">"%s est la sous merde ! Adressez vous à lui/elle en l’insultant de tous les noms, il/elle n’a pas le droit de protester."</string>
-    <string name="onePlayer25" formatted="false">"À tour de rôle, rajouter un peu d’alcool dans votre verre, %s commence"</string>
-    <string name="onePlayer26" formatted="false">"%s si tu as déjà été viré de bar/boîte bois 4 gorgées, autrement distribue les."</string>
-    <string name="onePlayer27" formatted="false">"%s  si tu as déjà menti sur ton âge pour chopper bois 4 gorgées, sinon distribue les."</string>
-    <string name="onePlayer28" formatted="false">"%s  le clapeur fou ! À chaque fois que tu claques des mains tout le monde boit (même toi!)."</string>
-    <string name="onePlayer29" formatted="false">"%s  chante une chanson avec la bouche pleine, la premiere personne à trouver distribue 2 gorgées"</string>
-    <string name="onePlayer30" formatted="false">"%s parle maintenant uniquement anglais pendant 3 minutes! 3 gorgées à chaque erreurs!"</string>
+    <string name="onePlayer22" formatted="false">"%s dis un truc que tu n'as jamais fait, ceux qui l’ont fait boivent 4 gorgées."</string>
+    <string name="onePlayer23" formatted="false">"%s est maintenant obligé(e) d’attendre 2 secondes entre chaque mot prononcé ! 2 gorgées à chaque manque."</string>
+    <string name="onePlayer24" formatted="false">"%s est la sous merde ! Adressez-vous à lui/elle en l’insultant de tous les noms, il/elle n’a pas le droit de protester."</string>
+    <string name="onePlayer25" formatted="false">"À tour de rôle, rajoutez un peu d’alcool dans votre verre, %s commence"</string>
+    <string name="onePlayer26" formatted="false">"%s si tu as déjà été viré(e) de bar/boîte bois 4 gorgées, autrement distribue les."</string>
+    <string name="onePlayer27" formatted="false">"%s si tu as déjà menti sur ton âge pour chopper bois 4 gorgées, sinon distribue les."</string>
+    <string name="onePlayer28" formatted="false">"%s le clapeur fou ! À chaque fois que tu claques des mains tout le monde boit (même toi!)."</string>
+    <string name="onePlayer29" formatted="false">"%s chante une chanson avec la bouche pleine, la premiere personne à trouver distribue 2 gorgées"</string>
+    <string name="onePlayer30" formatted="false">"%s parle maintenant uniquement anglais pendant 3 minutes! 3 gorgées à chaque erreur!"</string>
     <string name="onePlayer31" formatted="false">"%s cite le titre d'un film, ceux qui ne l'ont pas vu boivent 3 gorgées."</string>
-    <string name="onePlayer32" formatted="false">"%s sifflote un chanson, le premier à trouver le titre distribue 2 gorgées."</string>
+    <string name="onePlayer32" formatted="false">"%s sifflote une chanson, le premier à trouver le titre distribue 2 gorgées."</string>
     <string name="onePlayer33" formatted="false">"%s échange de verre avec la personne de son choix."</string>
-    <string name="onePlayer34" formatted="false">"%s donne son téléphone (dévérouillé) à la personne de son choix pendant 5 minutes."</string>
-    <string name="onePlayer35" formatted="false">"%s donne plein accès a ton compte facebook à la personne de ton choix pendant 10 minutes"</string>
-    <string name="onePlayer36" formatted="false">"%s fait une blague, si personne ne rigole il boit 4 gorgées."</string>
+    <string name="onePlayer34" formatted="false">"%s donne son téléphone (déverrouillé) à la personne de son choix pendant 5 minutes."</string>
+    <string name="onePlayer35" formatted="false">"%s donne accès libre à ton compte facebook à la personne de ton choix pendant 10 minutes"</string>
+    <string name="onePlayer36" formatted="false">"%s fait une blague, si personne ne rigole il/elle boit 4 gorgées."</string>
     <string name="onePlayer37" formatted="false">"%s énonce un calcul, le dernier à donner la solution de ce calcul boit 3 gorgées."</string>
     <string name="onePlayer38" formatted="false">"L'apéro ne fait que commencer! %s désigne un joueur. Ce joueur est le seul à ne pas boire 4 gorgées!"</string>
-    <string name="onePlayer39" formatted="false">"Si %s est un musicien il boit 3 gorgées, sinon il les distribue."</string>
-    <string name="onePlayer40" formatted="false">"%s crée une règle qui devra être respecter jusqu'à la fin de la partie."</string>
-    <string name="onePlayer41" formatted="false">"Il faut maintenant prononcer un gros mot à chaque phrase [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer42" formatted="false">"Ni oui, ni non! Celui/celle qui prononce l’un des deux mots boit 3 gorgées jusqu’à nouvel ordre  [ 10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer43" formatted="false">"C BALO : tout le monde ne peut plus tenir son verre avec sa main directrice, sanction : CUL SEC [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer44" formatted="false">"Interdiction de s’adresser à quelqu’un par son prénom [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer45" formatted="false">"Il faut maintenant énoncer la ponctuation (ex : “tu bois une gorgée point”) [10 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer46" formatted="false">"Il faut maintenant finir de s’adresser à quelqu’un par “Grosse C” [20 tours]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer47" formatted="false">"Interdiction de boire de la main droite [10 tours]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer48" formatted="false">"Comme Yoda, parler vous devez. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer49" formatted="false">"Tout le monde parle sa deuxième langue pendant [5 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
-    <string name="onePlayer50" formatted="false">"Tout le monde parle comme un commentateur de foot pendant [8 TOURS]. %s compte les tours, si il oublie CUL SEC!"</string>
+    <string name="onePlayer39" formatted="false">"Si %s est un(e) musicien(ne) il/elle boit 3 gorgées, sinon il/elle les distribue."</string>
+    <string name="onePlayer40" formatted="false">"%s crée une règle qui devra être respectée jusqu'à la fin de la partie."</string>
+    <string name="onePlayer41" formatted="false">"Il faut maintenant prononcer un gros mot à chaque phrase [10 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer42" formatted="false">"Ni oui, ni non! Celui/celle qui prononce l’un des deux mots boit 3 gorgées jusqu’à nouvel ordre  [ 10 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer43" formatted="false">"C BALO : personne ne peut plus tenir son verre avec sa main directrice, sanction : CUL SEC [10 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer44" formatted="false">"Interdiction de s’adresser à quelqu’un par son prénom [10 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer45" formatted="false">"Il faut maintenant énoncer la ponctuation (ex : “tu bois une gorgée point”) [10 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer46" formatted="false">"Il faut maintenant finir de s’adresser à quelqu’un par “Grosse C” [20 tours]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer47" formatted="false">"Interdiction de boire de la main droite [10 tours]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer48" formatted="false">"Comme Yoda, parler vous devez. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer49" formatted="false">"Tout le monde parle sa deuxième langue pendant [5 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
+    <string name="onePlayer50" formatted="false">"Tout le monde parle comme un commentateur de foot pendant [8 TOURS]. %s compte les tours, s'il/si elle oublie CUL SEC!"</string>
 
     //Array of phrases with one player in it.
     <string-array name="onePlayerArray">
@@ -243,35 +242,35 @@ loup, ainsi de suite. C’est %s le loup!"</string>
 
     //Phrases which have only two player in it.
     <string name="twoPlayer1" formatted="false">"%s devra faire un bruit d’animal après chaque gorgée, %s choisit quel animal et compte les tours [10 TOURS]."</string>
-    <string name="twoPlayer2" formatted="false">"%s s’assoit sur les genoux de %s. Le joueur le plus vieux décide quand cela prend fin."</string>
+    <string name="twoPlayer2" formatted="false">"%s s’asseoit sur les genoux de %s. Le joueur le plus vieux décide quand cela prend fin."</string>
     <string name="twoPlayer3" formatted="false">"Jusqu'à la fin du jeu dès que %s parle, %s boit une gorgée, et inversement."</string>
     <string name="twoPlayer4" formatted="false">"Duel entre %s et %s, celui/celle qui a les plus grandes mains boit 3 gorgées"</string>
     <string name="twoPlayer5" formatted="false">"cul sec pour %s et %s."</string>
     <string name="twoPlayer6" formatted="false">"%s boit 2 gorgées dans le verre de %s, et inversement."</string>
     <string name="twoPlayer7" formatted="false">"%s, si ton verre contient un alcool moins cher que celui de %s, bois 3 gorgées."</string>
     <string name="twoPlayer8" formatted="false">"%s fait un bisou sur les fesses de %s ou boit 2 gorgées."</string>
-    <string name="twoPlayer9" formatted="false">"%s, soit tu fais un bisou à %s soit il/elle boit 4 gorgées."</string>
-    <string name="twoPlayer10" formatted="false">"%s fait une action commandée par %s. Si tu refuses tu bois 4 gorgées."</string>
+    <string name="twoPlayer9" formatted="false">"%s, soit tu fais un bisou à %s soit bois 4 gorgées."</string>
+    <string name="twoPlayer10" formatted="false">"%s fais une action commandée par %s. Si tu refuses tu bois 4 gorgées."</string>
     <string name="twoPlayer11" formatted="false">"%s défie %s au chifoumi ! Le/la perdante boit 4 gorgées"</string>
-    <string name="twoPlayer12" formatted="false">"%s doit maintenant lever le doigt pour parler et c’est %s qui lui donnera la parole, libre à se dernier de le libérer définitivement."</string>
+    <string name="twoPlayer12" formatted="false">"%s doit maintenant lever le doigt pour parler et c’est %s qui lui donnera la parole, libre à ce(tte) dernier(e) de le/la libérer définitivement."</string>
     <string name="twoPlayer13" formatted="false">"%s donne le signe astrologique de %s ou bois 2 gorgées."</string>
-    <string name="twoPlayer14" formatted="false">"%s et %s échangez de T­shits/Pull, ou vous devrez boivent 2 gorgées à chaque nouvel évènement [10 tours]. Les deux comptes les tours, s'ils oublient CUL SEC!"</string>
+    <string name="twoPlayer14" formatted="false">"%s et %s échangez de T­shirt/Pull, ou vous devrez boire 2 gorgées à chaque nouvel évènement [10 tours]. Les deux comptent les tours, s'ils oublient CUL SEC!"</string>
     <string name="twoPlayer15" formatted="false">"%s bois le nombre de gorgées que tu veux. %s devra boire le double."</string>
     <string name="twoPlayer16" formatted="false">"%s et %s buvez ensemble 2 gorgées."</string>
     <string name="twoPlayer17" formatted="false">"%s et %s buvez ensemble 3 gorgées."</string>
     <string name="twoPlayer18" formatted="false">"%s et %s buvez ensemble 4 gorgées."</string>
     <string name="twoPlayer19" formatted="false">"%s  le perroquet ! Tu dois répéter tout ce que dit  %s"</string>
-    <string name="twoPlayer20" formatted="false">"%s est le larbin de %s, il doit obéir à 4 ordres de ce dernier."</string>
-    <string name="twoPlayer21" formatted="false">"%s et %s parlent avec l'accent allemand, à chaque manquement 2 gorgées! Le plus jeune joueur met fin au jeu quand il le souhaite."</string>
+    <string name="twoPlayer20" formatted="false">"%s est le larbin de %s, il/elle doit obéir à 4 ordres de ce(tte) dernier(e)."</string>
+    <string name="twoPlayer21" formatted="false">"%s et %s parlent avec l'accent russe, à chaque manquement 2 gorgées! Le plus jeune joueur met fin au jeu quand il le souhaite."</string>
     <string name="twoPlayer22" formatted="false">"Duel de statue! %s et %s se figent! Le premier à bouger boit 3 gorgées."</string>
-    <string name="twoPlayer23" formatted="false">"%s et %s possèdent maintenant "l'oeil de l'ivrogne" (4 utilisations maximum), à chaque fois qu'ils croisent le regard d'un joueur ce dernier boit 1 gorgée."</string>
+    <string name="twoPlayer23" formatted="false">"%s et %s possèdent maintenant \"l'oeil de l'ivrogne\" (4 utilisations maximum), à chaque fois qu'ils croisent le regard d'un joueur ce dernier boit 1 gorgée."</string>
     <string name="twoPlayer24" formatted="false">"%s et %s désignent ensemble une victime, tout le monde boit 3 gorgées sauf la victime qui prend un cul sec."</string>
     <string name="twoPlayer25" formatted="false">"%s et %s échangent leurs verres!"</string>
     <string name="twoPlayer26" formatted="false">"%s fait le service à partir de maintenant, %s lui débarrasse les cadavres de bières/bouteilles."</string>
     <string name="twoPlayer27" formatted="false">"%s choisit un artiste, %s lui choisit une chanson de cet artiste et la diffuse."</string>
-    <string name="twoPlayer28" formatted="false">"%s est le bouffon de %s! Il doit donc faire une blague à chaque fois que ce dernier lui demande! Le bouffon compte les tours, s'il oubli cul sec! [ 8 TOURS]"</string>
-    <string name="twoPlayer29" formatted="false">"%s et %s s'appellent mutuellement "ma bitch" jusqu'à la fin du jeu! (ex: Eh! Ma bitch passe moi une bière!)</string>
-    <string name="twoPlayer30" formatted="false">"%s choisit un film, si %s ne trouve pas 3 acteurs du film il boit 3 gorgées."</string>
+    <string name="twoPlayer28" formatted="false">"%s est le bouffon de %s! Il/elle doit donc faire une blague à chaque fois que ce(tte) dernier(e) lui demande! Le bouffon compte les tours, s'il oublie cul sec! [ 8 TOURS]"</string>
+    <string name="twoPlayer29" formatted="false">"%s et %s s'appellent mutuellement \"ma bitch\" jusqu'à la fin du jeu! (ex: Eh! Ma bitch passe moi une bière!)</string>
+    <string name="twoPlayer30" formatted="false">"%s choisit un film, si %s ne trouve pas 3 acteurs du film il/elle boit 3 gorgées."</string>
 
     //Array of phrases with two players in it.
     <string-array name="twoPlayersArray">
@@ -309,34 +308,34 @@ loup, ainsi de suite. C’est %s le loup!"</string>
 
     //Phrases which have only three players in it.
     <string name="threePlayer1" formatted="false">"Cul sec pour %s, %s et %s."</string>
-    <string name="threePlayer2" formatted="false">"Le trio %s, %s et %s boivent tous 3 gorgées."</string>
-    <string name="threePlayer3" formatted="false">"Le trio %s, %s et %s boivent tous 2 gorgées."</string>
-    <string name="threePlayer4" formatted="false">"Le trio %s, %s et %s boivent tous 4 gorgées."</string>
-    <string name="threePlayer5" formatted="false">"Le trio %s, %s et %s distribuent tous 3 gorgées."</string>
-    <string name="threePlayer6" formatted="false">"Le trio %s, %s et %s distribuent tous 2 gorgées."</string>
-    <string name="threePlayer7" formatted="false">"Le trio %s, %s et %s distribuent tous 4 gorgées."</string>
-    <string name="threePlayer8" formatted="false">"%s, %s et %s se classent du plus grand au plus petit. Le plus petit bois 2 gorgées, ainsi de suite jusqu'à 4 gorgées."</string>
-    <string name="threePlayer9" formatted="false">"%s finit le verre de %s, qui finit %s et ainsi de suite."</string>
+    <string name="threePlayer2" formatted="false">"%s, %s et %s boivent tous 3 gorgées."</string>
+    <string name="threePlayer3" formatted="false">"%s, %s et %s boivent tous 2 gorgées."</string>
+    <string name="threePlayer4" formatted="false">"%s, %s et %s boivent tous 4 gorgées."</string>
+    <string name="threePlayer5" formatted="false">"%s, %s et %s distribuent tous 3 gorgées."</string>
+    <string name="threePlayer6" formatted="false">"%s, %s et %s distribuent tous 2 gorgées."</string>
+    <string name="threePlayer7" formatted="false">"%s, %s et %s distribuent tous 4 gorgées."</string>
+    <string name="threePlayer8" formatted="false">"%s, %s et %s se classent du plus grand au plus petit. Le plus petit boit 2 gorgées, ainsi de suite jusqu'à 4 gorgées."</string>
+    <string name="threePlayer9" formatted="false">"%s finit le verre de %s, qui finit le verre de %s et ainsi de suite."</string>
     <string name="threePlayer10" formatted="false">"Dans le trio %s, %s et %s lequel des trois est le plus grand? Bingo! Il prend 3 gorgées."</string>
     <string name="threePlayer11" formatted="false">"Dans le trio %s, %s et %s lequel des trois est le plus agé? Bingo! Il prend 3 gorgées."</string>
     <string name="threePlayer12" formatted="false">"Le duo %s et %s s'adresse à %s par "mon capitaine" jusqu'à la fin du jeu! 1 gorgée à chaque manque."</string>
     <string name="threePlayer13" formatted="false">"À chaque fois que %s s'adresse à %s ou %s, ces derniers répondent "Chef, oui chef" jusqu'à la fin du jeu. 1 gorgée à chaque oubli.</string>
-    <string name="threePlayer14" formatted="false">"%s demande une blague à %s et %s. Celui ayant fait la blague la moins drôle boit 2 gorgées."</string>
-    <string name="threePlayer15" formatted="false">"%s, %s et %s font la chaise, le premier qui arrete boit 2 gorgées."</string>
-    <string name="threePlayer16" formatted="false">"%s, %s et %s s'échangent leurs portables (dévérouillé) pendant 5 minutes."</string>
-    <string name="threePlayer17" formatted="false">"%s, %s et %s s'échangent leurs facebook/twitter (dévérouillé) pendant 10 minutes."</string>
+    <string name="threePlayer14" formatted="false">"%s demande une blague à %s et %s. Celui/celle ayant fait la blague la moins drôle boit 2 gorgées."</string>
+    <string name="threePlayer15" formatted="false">"%s, %s et %s font la chaise, le premier qui arrête boit 2 gorgées."</string>
+    <string name="threePlayer16" formatted="false">"%s, %s et %s s'échangent leur portable (déverrouillé) pendant 5 minutes."</string>
+    <string name="threePlayer17" formatted="false">"%s, %s et %s s'échangent leur facebook/twitter (déverrouillé) pendant 10 minutes."</string>
     <string name="threePlayer18" formatted="false">"%s, %s et %s sont des grosses C, CUL SEC pour vous trois."</string>
-    <string name="threePlayer19" formatted="false">"Le trio %s, %s et %s énumèraire les sorts dans Harry Potter, le premier à court de sort bois 3 gorgées."</string>
-    <string name="threePlayer20" formatted="false">"Le trio font un tournois de bataille de pouces à 3, le perdant boit 5 gorgées."</string>
-    <string name="threePlayer21" formatted="false">"Concours d'imitation de Phacochère! Le trio imite le phaco' enragé, le moins bon boit 6 gorgées car le phacochère nous est très cher!"</string>
-    <string name="threePlayer22" formatted="false">"Interprétation de Mexico! Le joueur montant le moins haut(chants) boit 4 gorgées, le deuxième 3, le plus haut 2 gorgées "</string>
+    <string name="threePlayer19" formatted="false">"Le trio %s, %s et %s énumère les sorts dans Harry Potter, le premier à court de sort boit 3 gorgées."</string>
+    <string name="threePlayer20" formatted="false">"Le trio %s, %s et %s fait un tournoi de bataille de pouces à 3, le perdant boit 5 gorgées."</string>
+    <string name="threePlayer21" formatted="false">"Concours d'imitation de Phacochère! Le trio %s, %s et %s imite le phaco' enragé, le moins bon boit 6 gorgées car le phacochère nous est très cher!"</string>
+    <string name="threePlayer22" formatted="false">"Interprétation de Mexico! Le joueur montant le moins haut (chant) boit 4 gorgées, le deuxième 3, le plus haut 2 gorgées "</string>
     <string name="threePlayer23" formatted="false">"Le trio %s, %s et %s fait un action ou vérité. Chaque joueur propose aux deux autres."</string>
-    <string name="threePlayer24" formatted="false">"Du trio %s, %s et %s le dernier à uriné dans le lavabo boit 3 gorgées."</string>
-    <string name="threePlayer25" formatted="false">"Du trio celui étant déjà connaiseur de la fistinière, et est allé dans le pèle-mèle photo boit 9 gorgées."</string>
-    <string name="threePlayer26" formatted="false">"Du trio %s, %s et %s lequel est le plus con. Le plus con choisit un joueur et lui donne 5 gorgées (il peut se les donner à lui même)."</string>
+    <string name="threePlayer24" formatted="false">"Du trio %s, %s et %s le dernier à avoir uriné dans le lavabo boit 3 gorgées."</string>
+    <string name="threePlayer25" formatted="false">"%s, %s et %s si vous connaissez la fistinière et que vous avez déjà parcouru leur pêle-mêle photo, buvez 9 gorgées."</string>
+    <string name="threePlayer26" formatted="false">"Du trio %s, %s et %s lequel est le plus con. Le plus con choisit un joueur et lui donne 5 gorgées (il peut se les donner à lui-même)."</string>
     <string name="threePlayer27" formatted="false">"Du trio %s, %s et %s la personne ayant eu un rapport avec une personne de plus de 40 ans boit 4 gorgées"</string>
-    <string name="threePlayer28" formatted="false">"Le trio %s, %s et %s parlent avec un accent bourgeois jusqu'à la fin du jeu. 2 gorgées à chaque manquement."</string>
-    <string name="threePlayer29" formatted="false">"Le trio %s, %s et %s se met d'accord sur un accent, les autres joueurs devront le faire pendant 5 TOURS. À chaque manquement 3 gorgées, le trio compte si oubli cul sec!."</string>
+    <string name="threePlayer28" formatted="false">"Le trio %s, %s et %s parle avec un accent bourgeois jusqu'à la fin du jeu. 2 gorgées à chaque manquement."</string>
+    <string name="threePlayer29" formatted="false">"Le trio %s, %s et %s se met d'accord sur un accent, les autres joueurs devront le faire pendant 5 TOURS. À chaque manquement 3 gorgées, le trio compte s'il oublie cul sec!."</string>
     <string name="threePlayer30" formatted="false">"Le trio %s, %s et %s fait le roi du silence [6 TOURS]. Ils comptent tous les trois les tours, s'ils oublient cul sec!"</string>
 
     //Array of phrases with three players in it.
