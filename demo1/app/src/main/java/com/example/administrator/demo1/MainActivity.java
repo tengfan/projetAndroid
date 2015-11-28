@@ -53,6 +53,13 @@ public class MainActivity extends Activity {
         finish();
     }
 
+    public void btGameTwo(View view) throws InterruptedException{
+        Log.d("btGameTwo", "btGameTwo");
+        Intent intent = new Intent(this, GameTwoActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void layoutMain(View view) throws InterruptedException{
         //Hide navigation bar and status bar
         View decorView = getWindow().getDecorView();

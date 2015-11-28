@@ -19,7 +19,7 @@ public class GameOneActivity extends Activity {
     String[] threePlayersPhrases;
     int type;
     int nmbr;
-    int player1;
+    int player1; // PlayerX variable are used to generate random phrases.
     int player2;
     int player3;
     String [] playerNames = new String[8];

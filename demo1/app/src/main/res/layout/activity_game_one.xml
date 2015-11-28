@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="On commence!!!"
+        android:text="On Commence, avec un grand C?!"
         android:gravity="center"
         android:id="@+id/textGameOne"
         android:textSize="30sp"

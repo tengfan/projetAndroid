@@ -33,4 +33,18 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gametwo"
+        android:textSize="35sp"
+        android:id="@+id/buttonGameTwo"
+        android:onClick="btGameTwo"
+        android:visibility="visible"
+        android:width="300dp"
+        android:height="120dp"
+        android:layout_below="@id/buttonGameOne"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
