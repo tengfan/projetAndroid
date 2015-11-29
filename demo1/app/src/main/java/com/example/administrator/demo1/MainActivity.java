@@ -28,15 +28,6 @@ public class MainActivity extends Activity {
     protected void onResume(){
         super.onResume();
         Log.d("MainActivity", "onResume");
-        //For hiding the navigation buttons and the bar
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 
     @Override
@@ -50,14 +41,12 @@ public class MainActivity extends Activity {
         Log.d("btGameOne", "btGameOne");
         Intent intent = new Intent(this, GameOneActivity.class);
         startActivity(intent);
-        finish();
     }
 
     public void btGameTwo(View view) throws InterruptedException{
         Log.d("btGameTwo", "btGameTwo");
         Intent intent = new Intent(this, GameTwoActivity.class);
         startActivity(intent);
-        finish();
     }
 
     public void layoutMain(View view) throws InterruptedException{
@@ -70,5 +59,14 @@ public class MainActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
+    }
+
+    /** Back Button Pressed, by pressing the back button
+     */
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
     }
 }
