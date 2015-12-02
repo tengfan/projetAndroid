@@ -13,16 +13,18 @@ public class GameOneActivity extends Activity {
     // Variables Declaration
     TextView textView;
     int numberPlayers;
-    cbeer classCbeer;
+    int numberTurns;
     String[] noPlayerPhrases;
     String[] onePlayerPhrases;
     String[] twoPlayersPhrases;
     String[] threePlayersPhrases;
+    String endPhrase;
     int type;
     int nmbr;
     int player1; // PlayerX variable are used to generate random phrases.
     int player2;
     int player3;
+    boolean gameOver;
     String [] playerNames = new String[8];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,9 @@ public class GameOneActivity extends Activity {
 
         cbeer classCbeer = (cbeer)getApplication();
         numberPlayers = classCbeer.getNumberPlayers();
+        numberTurns = 0;
+        gameOver = false;
+        endPhrase = getResources().getString(R.string.endPhrase);
         textView = (TextView) findViewById(R.id.textGameOne);
         classCbeer = (cbeer)getApplication();
         for(int i=0;i<classCbeer.getNumberPlayers();i++){
@@ -97,6 +102,11 @@ public class GameOneActivity extends Activity {
             }
         }
 
+        if (gameOver){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -109,6 +119,14 @@ public class GameOneActivity extends Activity {
                 } else {
                     textView.setText(String.format(threePlayersPhrases[nmbr], playerNames[player1], playerNames[player2], playerNames[player3]));
                 }
+
+                if (numberTurns <= 40) {
+                    numberTurns++;
+                } else {
+                    textView.setText(endPhrase);
+                    gameOver = true;
+                }
+
             }
         });
     }
