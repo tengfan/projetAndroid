@@ -29,9 +29,9 @@
         android:id="@+id/buttonGoodOne"
         android:onClick="btGoodOne"
         android:visibility="visible"
-        android:width="110dp"
-        android:height="60dp"
-        android:layout_marginLeft="0dp"
+        android:width="100dp"
+        android:height="70dp"
+        android:layout_alignLeft="@id/imageView"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
@@ -43,11 +43,10 @@
         android:id="@+id/buttonGoodTwo"
         android:onClick="btGoodTwo"
         android:visibility="visible"
-        android:width="110dp"
-        android:height="60dp"
-        android:layout_marginLeft="122dp"
+        android:width="100dp"
+        android:height="70dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -57,9 +56,9 @@
         android:id="@+id/buttonGoodThree"
         android:onClick="btGoodThree"
         android:visibility="visible"
-        android:width="110dp"
-        android:height="60dp"
-        android:layout_marginLeft="244dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:width="100dp"
+        android:height="70dp"
+        android:layout_marginLeft="110dp"
+        android:layout_alignTop="@+id/buttonGoodTwo"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
