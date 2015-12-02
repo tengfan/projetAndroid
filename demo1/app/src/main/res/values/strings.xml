@@ -12,6 +12,9 @@
     <string name="next">Suivant</string>
     <string name="gameone">Ça PICOLE!</string>
     <string name="gametwo">F*ck the dealer</string>
+    <string name="goodone" formatted="false">"tour validé"</string>
+    <string name="goodtwo" formatted="false">"tour validé"</string>
+    <string name="goodthree" formatted="false">"tour validé</string>
     <string name="player1">Joueur 1</string>
     <string name="player2">Joueur 2</string>
     <string name="player3">Joueur 3</string>
@@ -26,6 +29,7 @@
     <string name="buttonAdd">+</string>
     <string name="buttonRemove">-</string>
     <string name="title_activity_gameone">title_activity_gameone</string>
+    <string name="title_activity_gametwo">title_activity_gametwo</string>
     <string name="endPhrase" formatted="false">"Jeu fini! Appuyez sur suivant pour retourner à l'écran d'accueil"</string>
 
     //Phrases which have no player in it.

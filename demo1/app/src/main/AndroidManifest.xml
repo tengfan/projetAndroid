@@ -33,7 +33,11 @@
             android:launchMode="singleTask"
             android:screenOrientation="landscape" >
         </activity>
-        <activity android:name=".GameTwoActivity" >
+        <activity
+            android:name=".GameTwoActivity"
+            android:label="@string/title_activity_gametwo"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
