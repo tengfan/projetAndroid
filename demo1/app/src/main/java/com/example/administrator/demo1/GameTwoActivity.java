@@ -6,14 +6,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GameTwoActivity extends Activity {
     /* Variables Declaration */
-    ArrayList<Integer> cards = new ArrayList<Integer>();
+    ArrayList<Integer> cards = new ArrayList<>();
     ImageView imageView;
-    int numberImage=0;
+    TextView textView;
+    int imageNumber=0;
+    String endOfGame = "Ce tour du jeu est fini. Cliquer sur le bouton Suivant pour recommencer le jeu.";
+    boolean restartGame = false;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +37,7 @@ public class GameTwoActivity extends Activity {
 
         initCards();
         imageView = (ImageView) findViewById(R.id.imageCards);
+        textView = (TextView) findViewById(R.id.textGameTwo);
     }
 
     @Override
@@ -77,13 +84,35 @@ public class GameTwoActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
-        numberImage++;
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                imageView.setImageResource(cards.get(numberImage));
+        if (!cards.isEmpty()) {
+            textView.setVisibility(View.GONE);
+            imageView.setVisibility(View.VISIBLE);
+            imageNumber = rndmGen(cards.size());
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    imageView.setImageResource(cards.get(imageNumber));
+                }
+            });
+            cards.remove(imageNumber);
+        } else {
+            if(!restartGame){
+                textView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView.setText(endOfGame);
+                    }
+                });
+                restartGame = true;
             }
-        });
+            else{
+                initCards();
+                restartGame = false;
+            }
+        }
+        Log.d("btNext2", "btNext2: cards.size = " + cards.size());
     }
 
     /** Cards initialization, we add the 52 cards without the 2 jokers to begin the game
@@ -155,5 +184,11 @@ public class GameTwoActivity extends Activity {
         cards.add(R.drawable.two_of_diamonds_w960);
         cards.add(R.drawable.two_of_hearts_w960);
         cards.add(R.drawable.two_of_spades_w960);
+    }
+
+    //Generate random integer between 0 to max
+    public int rndmGen (int max){
+        Random randomGenerator = new Random();
+        return randomGenerator.nextInt(max);
     }
 }
