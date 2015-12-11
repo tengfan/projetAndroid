@@ -49,8 +49,7 @@
         android:layout_centerHorizontal="true"
         android:visibility="visible"
         android:width="130dp"
-        android:height="50dp"
-        android:layout_marginBottom="15pt" />
+        android:height="50dp"/>
 
     <TextClock
         android:layout_width="wrap_content"

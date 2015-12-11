@@ -12,9 +12,9 @@
     <string name="next">Suivant</string>
     <string name="gameone">Ça PICOLE!</string>
     <string name="gametwo">F*ck the dealer</string>
-    <string name="count" formatted="false">"compteur"</string>
-    <string name="reset" formatted="false">"RAZ compteur"</string>
-    <string name="next2" formatted="false">"suivant</string>
+    <string name="count" formatted="false">"Compteur"</string>
+    <string name="reset" formatted="false">"RAZ Compteur"</string>
+    <string name="next2" formatted="false">"Suivant</string>
     <string name="player1">Joueur 1</string>
     <string name="player2">Joueur 2</string>
     <string name="player3">Joueur 3</string>

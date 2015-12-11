@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,76 +10,79 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".GameTwoActivity"
     android:background="#833534"
-    android:onClick="layoutGameTwo">
+    android:weightSum="10"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageCards"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/four_of_clubs_w960"
-        android:visibility="gone"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="80dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Appuyer sur suivant pour tirer le nouveau maitre du jeu"
-        android:id="@+id/textGameTwo"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:singleLine="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="180dp"
-        android:layout_centerHorizontal="true"
-        android:inputType="textMultiLine"
-        android:maxLines="4"
-        android:minLines="1"
-        android:autoText="true"
-        android:visibility="visible"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageCards"
+            android:src="@drawable/four_of_clubs_w960"
+            android:visibility="gone"
+            android:layout_marginBottom="80dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Appuyer sur suivant pour tirer le nouveau maitre du jeu"
+            android:id="@+id/textGameTwo"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:singleLine="true"
+            android:layout_marginBottom="130dp"
+            android:layout_centerHorizontal="true"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minLines="1"
+            android:autoText="true"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/count"
-        android:textSize="18sp"
-        android:id="@+id/buttonCount"
-        android:onClick="btCount"
-        android:visibility="visible"
-        android:width="100dp"
-        android:height="70dp"
-        android:layout_alignLeft="@id/imageCards"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:weightSum="3"
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/reset"
-        android:textSize="18sp"
-        android:id="@+id/buttonReset"
-        android:onClick="btReset"
-        android:visibility="visible"
-        android:width="100dp"
-        android:height="70dp"
-        android:layout_alignTop="@+id/buttonCount"
-        android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/count"
+            android:textSize="13sp"
+            android:id="@+id/buttonCount"
+            android:onClick="btCount"
+            android:singleLine="true"
+            android:gravity="center"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/next2"
-        android:textSize="18sp"
-        android:id="@+id/buttonNext2"
-        android:onClick="btNext2"
-        android:visibility="visible"
-        android:width="100dp"
-        android:height="70dp"
-        android:layout_marginLeft="110dp"
-        android:layout_alignTop="@+id/buttonReset"
-        android:layout_alignParentEnd="true" />
-</RelativeLayout>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/reset"
+            android:textSize="13sp"
+            android:id="@+id/buttonReset"
+            android:onClick="btReset"
+            android:singleLine="true"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/next2"
+            android:textSize="13sp"
+            android:id="@+id/buttonNext2"
+            android:onClick="btNext2"
+            android:singleLine="true"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
