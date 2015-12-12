@@ -34,8 +34,7 @@
         android:textSize="35sp"
         android:id="@+id/buttonGameOne"
         android:onClick="btGameOne"
-        android:layout_marginTop="40dp"
-        android:drawableEnd="@drawable/cards_game"/>
+        android:layout_marginTop="40dp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -45,7 +44,6 @@
         android:textSize="35sp"
         android:id="@+id/buttonGameTwo"
         android:onClick="btGameTwo"
-        android:layout_marginTop="40dp"
-        android:drawableEnd="@drawable/picolo"/>
+        android:layout_marginTop="40dp"/>
 
 </LinearLayout>
