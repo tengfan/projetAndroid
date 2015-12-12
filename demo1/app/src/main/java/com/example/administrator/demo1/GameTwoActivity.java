@@ -109,70 +109,70 @@ public class GameTwoActivity extends Activity {
     public void initCards(){
         cards.clear();
 
-        cards.add(R.drawable.ace_of_clubs_w960);
-        cards.add(R.drawable.ace_of_diamonds_w960);
-        cards.add(R.drawable.ace_of_hearts_w960);
-        cards.add(R.drawable.ace_of_spades_w960);
+        cards.add(R.drawable.ace_of_clubs_w720);
+        cards.add(R.drawable.ace_of_diamonds_w720);
+        cards.add(R.drawable.ace_of_hearts_w720);
+        cards.add(R.drawable.ace_of_spades_w720);
 
-        cards.add(R.drawable.eight_of_clubs_w960);
-        cards.add(R.drawable.eight_of_diamonds_w960);
-        cards.add(R.drawable.eight_of_hearts_w960);
-        cards.add(R.drawable.eight_of_spades_w960);
+        cards.add(R.drawable.eight_of_clubs_w720);
+        cards.add(R.drawable.eight_of_diamonds_w720);
+        cards.add(R.drawable.eight_of_hearts_w720);
+        cards.add(R.drawable.eight_of_spades_w720);
 
-        cards.add(R.drawable.five_of_clubs_w960);
-        cards.add(R.drawable.five_of_diamonds_w960);
-        cards.add(R.drawable.five_of_hearts_w960);
-        cards.add(R.drawable.five_of_spades_w960);
+        cards.add(R.drawable.five_of_clubs_w720);
+        cards.add(R.drawable.five_of_diamonds_w720);
+        cards.add(R.drawable.five_of_hearts_w720);
+        cards.add(R.drawable.five_of_spades_w720);
 
-        cards.add(R.drawable.four_of_clubs_w960);
-        cards.add(R.drawable.four_of_diamonds_w960);
-        cards.add(R.drawable.four_of_hearts_w960);
-        cards.add(R.drawable.four_of_spades_w960);
+        cards.add(R.drawable.four_of_clubs_w720);
+        cards.add(R.drawable.four_of_diamonds_w720);
+        cards.add(R.drawable.four_of_hearts_w720);
+        cards.add(R.drawable.four_of_spades_w720);
 
-        cards.add(R.drawable.jack_of_clubs_w960);
-        cards.add(R.drawable.jack_of_diamonds_w960);
-        cards.add(R.drawable.jack_of_hearts_w960);
-        cards.add(R.drawable.jack_of_spades_w960);
+        cards.add(R.drawable.jack_of_clubs_w720);
+        cards.add(R.drawable.jack_of_diamonds_w720);
+        cards.add(R.drawable.jack_of_hearts_w720);
+        cards.add(R.drawable.jack_of_spades_w720);
 
-        cards.add(R.drawable.king_of_clubs_w960);
-        cards.add(R.drawable.king_of_diamonds_w960);
-        cards.add(R.drawable.king_of_hearts_w960);
-        cards.add(R.drawable.king_of_spades_w960);
+        cards.add(R.drawable.king_of_clubs_w720);
+        cards.add(R.drawable.king_of_diamonds_w720);
+        cards.add(R.drawable.king_of_hearts_w720);
+        cards.add(R.drawable.king_of_spades_w720);
 
-        cards.add(R.drawable.nine_of_clubs_w960);
-        cards.add(R.drawable.nine_of_diamonds_w960);
-        cards.add(R.drawable.nine_of_hearts_w960);
-        cards.add(R.drawable.nine_of_spades_w960);
+        cards.add(R.drawable.nine_of_clubs_w720);
+        cards.add(R.drawable.nine_of_diamonds_w720);
+        cards.add(R.drawable.nine_of_hearts_w720);
+        cards.add(R.drawable.nine_of_spades_w720);
 
-        cards.add(R.drawable.queen_of_clubs_w960);
-        cards.add(R.drawable.queen_of_diamonds_w960);
-        cards.add(R.drawable.queen_of_hearts_w960);
-        cards.add(R.drawable.queen_of_spades_w960);
+        cards.add(R.drawable.queen_of_clubs_w720);
+        cards.add(R.drawable.queen_of_diamonds_w720);
+        cards.add(R.drawable.queen_of_hearts_w720);
+        cards.add(R.drawable.queen_of_spades_w720);
 
-        cards.add(R.drawable.seven_of_clubs_w960);
-        cards.add(R.drawable.seven_of_diamonds_w960);
-        cards.add(R.drawable.seven_of_hearts_w960);
-        cards.add(R.drawable.seven_of_spades_w960);
+        cards.add(R.drawable.seven_of_clubs_w720);
+        cards.add(R.drawable.seven_of_diamonds_w720);
+        cards.add(R.drawable.seven_of_hearts_w720);
+        cards.add(R.drawable.seven_of_spades_w720);
 
-        cards.add(R.drawable.six_of_clubs_w960);
-        cards.add(R.drawable.six_of_diamonds_w960);
-        cards.add(R.drawable.six_of_hearts_w960);
-        cards.add(R.drawable.six_of_spades_w960);
+        cards.add(R.drawable.six_of_clubs_w720);
+        cards.add(R.drawable.six_of_diamonds_w720);
+        cards.add(R.drawable.six_of_hearts_w720);
+        cards.add(R.drawable.six_of_spades_w720);
 
-        cards.add(R.drawable.ten_of_clubs_w960);
-        cards.add(R.drawable.ten_of_diamonds_w960);
-        cards.add(R.drawable.ten_of_hearts_w960);
-        cards.add(R.drawable.ten_of_spades_w960);
+        cards.add(R.drawable.ten_of_clubs_w720);
+        cards.add(R.drawable.ten_of_diamonds_w720);
+        cards.add(R.drawable.ten_of_hearts_w720);
+        cards.add(R.drawable.ten_of_spades_w720);
 
-        cards.add(R.drawable.three_of_clubs_w960);
-        cards.add(R.drawable.three_of_diamonds_w960);
-        cards.add(R.drawable.three_of_hearts_w960);
-        cards.add(R.drawable.three_of_spades_w960);
+        cards.add(R.drawable.three_of_clubs_w720);
+        cards.add(R.drawable.three_of_diamonds_w720);
+        cards.add(R.drawable.three_of_hearts_w720);
+        cards.add(R.drawable.three_of_spades_w720);
 
-        cards.add(R.drawable.two_of_clubs_w960);
-        cards.add(R.drawable.two_of_diamonds_w960);
-        cards.add(R.drawable.two_of_hearts_w960);
-        cards.add(R.drawable.two_of_spades_w960);
+        cards.add(R.drawable.two_of_clubs_w720);
+        cards.add(R.drawable.two_of_diamonds_w720);
+        cards.add(R.drawable.two_of_hearts_w720);
+        cards.add(R.drawable.two_of_spades_w720);
     }
 
     //Generate random integer between 0 to max
