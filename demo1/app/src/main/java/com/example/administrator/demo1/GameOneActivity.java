@@ -26,6 +26,7 @@ public class GameOneActivity extends Activity {
     int player3;
     boolean gameOver;
     String [] playerNames = new String[8];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,6 @@ public class GameOneActivity extends Activity {
         gameOver = false;
         endPhrase = getResources().getString(R.string.endPhrase);
         textView = (TextView) findViewById(R.id.textGameOne);
-        classCbeer = (cbeer)getApplication();
         for(int i=0;i<classCbeer.getNumberPlayers();i++){
             playerNames[i] = classCbeer.getPlayerByNumber(i);
         }

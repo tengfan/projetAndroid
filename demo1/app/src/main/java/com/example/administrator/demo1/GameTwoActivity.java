@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,8 +19,17 @@ public class GameTwoActivity extends Activity {
     TextView textView;
     int imageNumber=0;
     String endOfGame = "Ce tour du jeu est fini. Cliquer sur le bouton Suivant pour recommencer le jeu.";
+    String changeDealer = "Appuyez sur suivant pour tirer le nouveau dealer!";
+    boolean inGame = false;
     boolean restartGame = false;
-    
+    int count=0;
+    boolean changePlayer = true;
+    boolean needValidate = true;
+    Button countButton;
+    String [] playerNames = new String[8];
+    int numberPlayers;
+    int actualDealer, newDealer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +48,12 @@ public class GameTwoActivity extends Activity {
         initCards();
         imageView = (ImageView) findViewById(R.id.imageCards);
         textView = (TextView) findViewById(R.id.textGameTwo);
+        countButton = (Button) findViewById(R.id.buttonCount);
+        cbeer classCbeer = (cbeer)getApplication();
+        numberPlayers = classCbeer.getNumberPlayers();
+        for(int i=0;i<classCbeer.getNumberPlayers();i++){
+            playerNames[i] = classCbeer.getPlayerByNumber(i);
+        }
     }
 
     @Override
@@ -62,7 +78,7 @@ public class GameTwoActivity extends Activity {
         startActivity(intent);
     }
 
-    public void btNext2(View view) throws InterruptedException {
+    public void btCount(View view) throws InterruptedException {
         //Hide navigation bar and status bar
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
@@ -72,33 +88,123 @@ public class GameTwoActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
-        if (!cards.isEmpty()) {
-            textView.setVisibility(View.GONE);
-            imageView.setVisibility(View.VISIBLE);
-            imageNumber = rndmGen(cards.size());
+        if(inGame && !needValidate) {
+            if (count < 2) {
+                count++;
+                switch (count) {
+                    case 1:
+                        countButton.setText("1/3");
+                        break;
+                    case 2:
+                        countButton.setText("2/3");
+                        break;
+                }
+            } else if (count == 2) {
+                count = 0;
+                changePlayer = true;
+                textView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.GONE);
+                countButton.setText("Compteur");
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView.setText(changeDealer);
+                    }
+                });
+            }
+            needValidate=true;
+        }
+    }
+
+    public void btReset(View view) throws InterruptedException {
+        //Hide navigation bar and status bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        if(inGame && !needValidate) {
+            count = 0;
+            countButton.setText("Compteur");
+            needValidate = true;
+        }
+    }
+
+    public void btNext2(View view) throws InterruptedException {
+        //Hide navigation bar and status bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                                         View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
+        //Starting phase
+        if(!inGame && needValidate && changePlayer) {
+            inGame = true;
+            changePlayer = false;
+            newDealer = rndmGen(numberPlayers);
+            actualDealer = newDealer;
+            textView.setVisibility(View.VISIBLE);
+            imageView.setVisibility(View.GONE);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    imageView.setImageResource(cards.get(imageNumber));
+                    textView.setText(String.format("%s est le Dealer!", playerNames[newDealer]));
                 }
             });
-            cards.remove(imageNumber);
         }
-        else {
-            if(!restartGame){
+        //normal phase
+        else if(needValidate){
+            if(changePlayer){
+                while(newDealer == actualDealer) {
+                    newDealer = rndmGen(numberPlayers);
+                }
+                actualDealer = newDealer;
                 textView.setVisibility(View.VISIBLE);
                 imageView.setVisibility(View.GONE);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        textView.setText(endOfGame);
+                        textView.setText(String.format("%s est le nouveau Dealer!", playerNames[newDealer]));
                     }
                 });
-                restartGame = true;
+                changePlayer = false;
             }
-            else{
-                initCards();
-                restartGame = false;
+            else {
+                needValidate = false;
+                if (!cards.isEmpty()) {
+                    textView.setVisibility(View.GONE);
+                    imageView.setVisibility(View.VISIBLE);
+                    imageNumber = rndmGen(cards.size());
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            imageView.setImageResource(cards.get(imageNumber));
+                        }
+                    });
+                    cards.remove(imageNumber);
+                } else {
+                    if (!restartGame) {
+                        textView.setVisibility(View.VISIBLE);
+                        imageView.setVisibility(View.GONE);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                textView.setText(endOfGame);
+                            }
+                        });
+                        restartGame = true;
+                    } else {
+                        initCards();
+                        restartGame = false;
+                    }
+                }
             }
         }
         Log.d("btNext2", "btNext2: cards.size = " + cards.size());
