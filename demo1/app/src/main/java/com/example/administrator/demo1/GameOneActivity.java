@@ -127,7 +127,7 @@ public class GameOneActivity extends Activity {
         }
 
         if (gameOver){
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, WelcomeActivity.class);
             startActivity(intent);
         }
 

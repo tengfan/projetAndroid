@@ -18,7 +18,7 @@ public class GameTwoActivity extends Activity {
     ImageView imageView;
     TextView textView;
     int imageNumber=0;
-    String endOfGame = "Ce tour du jeu est fini. Cliquer sur le bouton Suivant pour recommencer le jeu.";
+    String endOfGame = "Le jeu est fini. Cliquer sur le bouton Suivant pour à l'écran d'accueil.";
     String changeDealer = "Appuyez sur suivant pour tirer le nouveau dealer!";
     boolean inGame = false;
     boolean restartGame = false;
@@ -227,8 +227,8 @@ public class GameTwoActivity extends Activity {
                         });
                         restartGame = true;
                     } else {
-                        initCards();
-                        restartGame = false;
+                        Intent intent = new Intent(this, WelcomeActivity.class);
+                        startActivity(intent);
                     }
                 }
             }
