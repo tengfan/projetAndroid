@@ -46,4 +46,15 @@
         android:onClick="btGameTwo"
         android:layout_marginTop="40dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:text="@string/help"
+        android:textSize="25sp"
+        android:height="10dp"
+        android:id="@+id/buttonHelp"
+        android:layout_marginTop="40dp"/>
+        android:onClick="btHelp"/>
+
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.demo1" >
+    package="com.example.administrator.demo1">
 
     <application
         android:name=".cbeer"
@@ -9,12 +9,12 @@
         android:label="@string/app_name"
         android:launchMode="singleTask"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-        android:windowSoftInputMode="adjustResize" >
+        android:windowSoftInputMode="adjustResize">
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,20 +25,20 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".GameOneActivity"
             android:label="@string/title_activity_gameone"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".GameTwoActivity"
             android:label="@string/title_activity_gametwo"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"></activity>
     </application>
 
 </manifest>

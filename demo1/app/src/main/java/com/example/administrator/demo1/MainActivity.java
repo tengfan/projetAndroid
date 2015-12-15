@@ -49,6 +49,12 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void btHelp(View view) throws InterruptedException{
+        Log.d("btHelp", "btHelp");
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
+    }
+
     /** Back Button Pressed, by pressing the back button
      */
     @Override
