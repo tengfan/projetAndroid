@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 
+
 public class HelpActivity extends Activity {
 
     @Override
@@ -31,7 +32,7 @@ public class HelpActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this, WelcomeActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
