@@ -268,11 +268,13 @@ public class WelcomeActivity extends Activity {
 
     public void btRemove8(View view) throws InterruptedException{
         Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd8);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd9);
         EditText editText = (EditText)findViewById(R.id.editPlayer8);
         Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove7);
         Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove8);
         editText.setVisibility(View.GONE);
         buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
         numberPlayers = 7;
@@ -280,11 +282,13 @@ public class WelcomeActivity extends Activity {
 
     public void btRemove9(View view) throws InterruptedException{
         Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd9);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd10);
         EditText editText = (EditText)findViewById(R.id.editPlayer9);
         Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove8);
         Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove9);
         editText.setVisibility(View.GONE);
         buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
         numberPlayers = 8;
@@ -292,11 +296,13 @@ public class WelcomeActivity extends Activity {
 
     public void btRemove10(View view) throws InterruptedException{
         Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd10);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd11);
         EditText editText = (EditText)findViewById(R.id.editPlayer10);
         Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove9);
         Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove10);
         editText.setVisibility(View.GONE);
         buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
         numberPlayers = 9;
@@ -304,11 +310,13 @@ public class WelcomeActivity extends Activity {
 
     public void btRemove11(View view) throws InterruptedException{
         Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd11);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd12);
         EditText editText = (EditText)findViewById(R.id.editPlayer11);
         Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove10);
         Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove11);
         editText.setVisibility(View.GONE);
         buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonAddNext.setVisibility(View.GONE);
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
         numberPlayers = 10;
