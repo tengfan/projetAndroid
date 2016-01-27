@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.demo1.MainActivity"
-    android:background="#833534"
+    android:background="@drawable/sea_background"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:weightSum="20">
@@ -15,14 +15,14 @@
         android:id="@+id/help_title_gameOne"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="2.5"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#fdfdfe"
+        android:textColor="#232323"
         android:singleLine="true"
         android:gravity="center"/>
 
@@ -39,28 +39,29 @@
         android:inputType="textMultiLine"
         android:maxLines="4"
         android:minLines="1"
-        android:autoText="true" />
+        android:autoText="true"
+        android:textColor="#232323" />
 
     <TextView
         android:text="F*ck the Dealer:"
         android:id="@+id/help_title_gameTwo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="2.5"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#fdfdfe"
+        android:textColor="#232323"
         android:singleLine="true"
         android:gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9"
+        android:layout_weight="11"
         android:text="@string/help_gameTwo"
         android:gravity="center"
         android:id="@+id/helpGameTwo"
@@ -70,6 +71,7 @@
         android:inputType="textMultiLine"
         android:maxLines="12"
         android:minLines="1"
-        android:autoText="true" />
+        android:autoText="true"
+        android:textColor="#232323" />
 
 </LinearLayout>

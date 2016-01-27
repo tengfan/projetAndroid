@@ -12,6 +12,7 @@
     <string name="next">Suivant</string>
     <string name="gameone">Ça PICOLE!</string>
     <string name="gametwo">F*ck the dealer</string>
+    <string name="gamethree">game three</string>
     <string name="count" formatted="false">"Compteur"</string>
     <string name="reset" formatted="false">"RAZ Compteur"</string>
     <string name="next2" formatted="false">"Suivant</string>
@@ -384,5 +385,7 @@
         <item>@string/threePlayer30</item>
     </string-array>
     <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_game_ther">GameTher</string>
+    <string name="title_activity_game_three">GameThreeActivity</string>
 
 </resources>
