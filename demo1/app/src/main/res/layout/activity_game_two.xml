@@ -86,5 +86,18 @@
             android:singleLine="true"
             android:gravity="center"
             android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/textCounter"
+            android:id="@+id/textCounter"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:textColor="#700"
+            android:singleLine="true"
+            android:gravity="center"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

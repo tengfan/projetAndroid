@@ -2,12 +2,17 @@ package com.example.administrator.demo1;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -17,19 +22,25 @@ public class GameTwoActivity extends Activity {
     ArrayList<Integer> cards = new ArrayList<>();
     ImageView imageView;
     TextView textView;
-    int imageNumber=0;
+    int imageNumber = 0;
     String endOfGame = "Le jeu est fini. Cliquer sur le bouton Suivant pour à l'écran d'accueil.";
     String changeDealer = "Appuyez sur suivant pour tirer le nouveau dealer!";
     boolean inGame = false;
     boolean restartGame = false;
-    int count=0;
+    int count = 0;
     boolean changePlayer = true;
     boolean needValidate = true;
     Button countButton;
     Button btNext2;
-    String [] playerNames = new String[12];
+    TextView textCounter;
+    String[] playerNames = new String[12];
     int numberPlayers;
     int actualDealer, newDealer;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,16 +61,21 @@ public class GameTwoActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.imageCards);
         textView = (TextView) findViewById(R.id.textGameTwo);
         countButton = (Button) findViewById(R.id.buttonCount);
-        cbeer classCbeer = (cbeer)getApplication();
+        cbeer classCbeer = (cbeer) getApplication();
         numberPlayers = classCbeer.getNumberPlayers();
-        for(int i=0;i<classCbeer.getNumberPlayers();i++){
+        for (int i = 0; i < classCbeer.getNumberPlayers(); i++) {
             playerNames[i] = classCbeer.getPlayerByNumber(i);
         }
         newDealer = rndmGen(numberPlayers);
         textView.setText(String.format("%s est le Dealer!", playerNames[newDealer]));
         btNext2 = (Button) findViewById(R.id.buttonNext2);
         btNext2.setVisibility(View.VISIBLE);
+        textCounter = (TextView) findViewById(R.id.textCounter);
+        textCounter.setVisibility(View.GONE);
         inGame = false;
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -78,7 +94,7 @@ public class GameTwoActivity extends Activity {
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         Log.d("GameTwoActivity", "onPause");
         //For hiding the navigation buttons and the bar
@@ -100,7 +116,8 @@ public class GameTwoActivity extends Activity {
         finish();
     }
 
-    /** Back Button Pressed, by pressing the back button
+    /**
+     * Back Button Pressed, by pressing the back button
      */
     @Override
     public void onBackPressed() {
@@ -121,10 +138,10 @@ public class GameTwoActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
         //if(inGame && !needValidate) {
-        if(inGame) {
+        if (inGame) {
             //Changing Player
             //Starting phase
-            if (changePlayer){
+            if (changePlayer) {
                 changePlayer = false;
                 newDealer = rndmGen(numberPlayers);
                 actualDealer = newDealer;
@@ -139,8 +156,8 @@ public class GameTwoActivity extends Activity {
             }
 
             //Normal phase
-            if(changePlayer){
-                while(newDealer == actualDealer) {
+            if (changePlayer) {
+                while (newDealer == actualDealer) {
                     newDealer = rndmGen(numberPlayers);
                 }
                 actualDealer = newDealer;
@@ -153,8 +170,7 @@ public class GameTwoActivity extends Activity {
                     }
                 });
                 changePlayer = false;
-            }
-            else {
+            } else {
                 needValidate = false;
                 if (!cards.isEmpty()) {
                     textView.setVisibility(View.GONE);
@@ -210,6 +226,8 @@ public class GameTwoActivity extends Activity {
                     }
                 });
             }
+            textCounter = (TextView) findViewById(R.id.textCounter);
+            textCounter.setText(Integer.toString(count));
             //needValidate=true;
         }
     }
@@ -225,7 +243,7 @@ public class GameTwoActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
         //if(inGame && !needValidate) {
-        if(inGame) {
+        if (inGame) {
             count = 0;
             runOnUiThread(new Runnable() {
                 @Override
@@ -254,10 +272,12 @@ public class GameTwoActivity extends Activity {
             changePlayer = false;
             btNext2 = (Button) findViewById(R.id.buttonNext2);
             btNext2.setVisibility(View.GONE);
+            textCounter = (TextView) findViewById(R.id.textCounter);
+            textCounter.setVisibility(View.VISIBLE);
+            textCounter.setText(Integer.toString(0));
             textView.setVisibility(View.GONE);
             imageView.setVisibility(View.VISIBLE);
             runOnUiThread(new Runnable() {
-                @Override
                 public void run() {
                     imageView.setImageResource(cards.get(imageNumber));
                 }
@@ -266,9 +286,10 @@ public class GameTwoActivity extends Activity {
         }
     }
 
-    /** Cards initialization, we add the 52 cards without the 2 jokers to begin the game
-     * */
-    public void initCards(){
+    /**
+     * Cards initialization, we add the 52 cards without the 2 jokers to begin the game
+     */
+    public void initCards() {
         cards.clear();
 
         cards.add(R.drawable.ace_of_clubs_w720);
@@ -338,7 +359,7 @@ public class GameTwoActivity extends Activity {
     }
 
     //Generate random integer between 0 to max
-    public int rndmGen (int max){
+    public int rndmGen(int max) {
         Random randomGenerator = new Random();
         return randomGenerator.nextInt(max);
     }

@@ -387,5 +387,6 @@
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_game_ther">GameTher</string>
     <string name="title_activity_game_three">GameThreeActivity</string>
+    <string name="textCounter">0</string>
 
 </resources>
