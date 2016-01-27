@@ -1,284 +1,470 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.demo1.WelcomeActivity"
-    android:background="#833534">
+    tools:context="com.example.administrator.demo1.GameOneActivity"
+    android:background="#833534"
+    android:orientation="vertical"
+    android:onClick="layoutWelcome">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/logoName"
-        android:id="@+id/textLogoName"
-        android:textColor="#fdfdfe"
-        android:textStyle="bold|italic"
-        android:textSize="40sp"
-        android:singleLine="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="15dp" />
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.administrator.demo1.GameOneActivity"
+        android:background="#833534"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/slogan"
-        android:id="@+id/textSlogan"
-        android:layout_below="@+id/textLogoName"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:singleLine="true"
-        android:textStyle="italic"
-        android:textColor="#eeeeee"
-        android:layout_marginBottom="15dp"/>
+        <TextClock
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textClock"
+            android:textSize="12sp"
+            android:gravity="right"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:textSize="20sp"
-        android:id="@+id/buttonStart"
-        android:onClick="btStart"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="visible"
-        android:width="130dp"
-        android:height="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/logoName"
+            android:id="@+id/textLogoName"
+            android:textColor="#fdfdfe"
+            android:textStyle="bold|italic"
+            android:textSize="40sp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="15dp" />
 
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:textSize="12sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/slogan"
+            android:id="@+id/textSlogan"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:textStyle="italic"
+            android:textColor="#eeeeee"
+            android:layout_marginBottom="15dp"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player1"
-        android:ems="12"
-        android:id="@+id/editPlayer1"
-        android:layout_below="@+id/textSlogan"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="visible" />
+    </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player2"
-        android:ems="12"
-        android:id="@+id/editPlayer2"
-        android:layout_below="@+id/editPlayer1"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="visible" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player3"
-        android:ems="12"
-        android:id="@+id/editPlayer3"
-        android:layout_below="@+id/editPlayer2"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="visible" />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="com.example.administrator.demo1.GameOneActivity"
+            android:background="#833534">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player4"
-        android:ems="12"
-        android:id="@+id/editPlayer4"
-        android:layout_below="@+id/editPlayer3"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="gone" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player1"
+                android:ems="12"
+                android:id="@+id/editPlayer1"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="visible" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player5"
-        android:ems="12"
-        android:id="@+id/editPlayer5"
-        android:layout_below="@+id/editPlayer4"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="gone" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player2"
+                android:ems="12"
+                android:id="@+id/editPlayer2"
+                android:layout_below="@+id/editPlayer1"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="visible" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player6"
-        android:ems="12"
-        android:id="@+id/editPlayer6"
-        android:layout_below="@+id/editPlayer5"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="gone" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player3"
+                android:ems="12"
+                android:id="@+id/editPlayer3"
+                android:layout_below="@+id/editPlayer2"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="visible" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player7"
-        android:ems="12"
-        android:id="@+id/editPlayer7"
-        android:layout_below="@+id/editPlayer6"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="gone" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player4"
+                android:ems="12"
+                android:id="@+id/editPlayer4"
+                android:layout_below="@+id/editPlayer3"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/player8"
-        android:ems="12"
-        android:id="@+id/editPlayer8"
-        android:layout_below="@+id/editPlayer7"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:visibility="gone" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player5"
+                android:ems="12"
+                android:id="@+id/editPlayer5"
+                android:layout_below="@+id/editPlayer4"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd4"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="visible"
-        android:onClick="btAdd4"
-        android:layout_alignBottom="@+id/editPlayer3"
-        android:layout_toStartOf="@+id/editPlayer1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player6"
+                android:ems="12"
+                android:id="@+id/editPlayer6"
+                android:layout_below="@+id/editPlayer5"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd5"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="gone"
-        android:onClick="btAdd5"
-        android:layout_alignBottom="@+id/editPlayer4"
-        android:layout_toStartOf="@+id/editPlayer1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player7"
+                android:ems="12"
+                android:id="@+id/editPlayer7"
+                android:layout_below="@+id/editPlayer6"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd6"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="gone"
-        android:onClick="btAdd6"
-        android:layout_alignBottom="@+id/editPlayer5"
-        android:layout_toStartOf="@+id/editPlayer1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player8"
+                android:ems="12"
+                android:id="@+id/editPlayer8"
+                android:layout_below="@+id/editPlayer7"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd7"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="gone"
-        android:onClick="btAdd7"
-        android:layout_alignBottom="@+id/editPlayer6"
-        android:layout_toStartOf="@+id/editPlayer1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player9"
+                android:ems="12"
+                android:id="@+id/editPlayer9"
+                android:layout_below="@+id/editPlayer8"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAdd"
-        android:id="@+id/buttonAdd8"
-        android:width="20pt"
-        android:height="20pt"
-        android:visibility="gone"
-        android:onClick="btAdd8"
-        android:layout_alignBottom="@+id/editPlayer7"
-        android:layout_toStartOf="@+id/editPlayer1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player10"
+                android:ems="12"
+                android:id="@+id/editPlayer10"
+                android:layout_below="@+id/editPlayer9"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove4"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer3"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove4"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player11"
+                android:ems="12"
+                android:id="@+id/editPlayer11"
+                android:layout_below="@+id/editPlayer10"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove5"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer4"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove5"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/player12"
+                android:ems="12"
+                android:id="@+id/editPlayer12"
+                android:layout_below="@+id/editPlayer11"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove6"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer5"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove6"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd4"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="visible"
+                android:onClick="btAdd4"
+                android:layout_alignBottom="@+id/editPlayer3"
+                android:layout_toStartOf="@+id/editPlayer1" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove7"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer6"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove7"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd5"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd5"
+                android:layout_alignBottom="@+id/editPlayer4"
+                android:layout_toStartOf="@+id/editPlayer1" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonRemove"
-        android:id="@+id/buttonRemove8"
-        android:width="20pt"
-        android:height="20pt"
-        android:layout_below="@+id/editPlayer7"
-        android:layout_toEndOf="@+id/editPlayer1"
-        android:visibility="gone"
-        android:onClick="btRemove8"/>
-</RelativeLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd6"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd6"
+                android:layout_alignBottom="@+id/editPlayer5"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd7"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd7"
+                android:layout_alignBottom="@+id/editPlayer6"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd8"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd8"
+                android:layout_alignBottom="@+id/editPlayer7"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd9"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd9"
+                android:layout_alignBottom="@+id/editPlayer8"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd10"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd10"
+                android:layout_alignBottom="@+id/editPlayer9"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd11"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd11"
+                android:layout_alignBottom="@+id/editPlayer10"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAdd"
+                android:id="@+id/buttonAdd12"
+                android:width="20pt"
+                android:height="20pt"
+                android:visibility="gone"
+                android:onClick="btAdd12"
+                android:layout_alignBottom="@+id/editPlayer11"
+                android:layout_toStartOf="@+id/editPlayer1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove4"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer3"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove4"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove5"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer4"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove6"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer5"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove6"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove7"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer6"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove8"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer7"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove8"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove9"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer8"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove9"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove10"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer9"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove10"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove11"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer10"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove11"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonRemove"
+                android:id="@+id/buttonRemove12"
+                android:width="20pt"
+                android:height="20pt"
+                android:layout_below="@+id/editPlayer11"
+                android:layout_toEndOf="@+id/editPlayer1"
+                android:visibility="gone"
+                android:onClick="btRemove12"/>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.administrator.demo1.GameOneActivity"
+        android:background="#833534">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:textSize="20sp"
+            android:id="@+id/buttonStart"
+            android:onClick="btStart"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:width="130dp"
+            android:height="50dp"/>
+    </RelativeLayout>
+</LinearLayout>

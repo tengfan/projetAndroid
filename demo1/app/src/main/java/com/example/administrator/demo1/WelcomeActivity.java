@@ -146,14 +146,70 @@ public class WelcomeActivity extends Activity {
 
     public void btAdd8(View view) throws InterruptedException{
         Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd8);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd9);
         EditText editText = (EditText)findViewById(R.id.editPlayer8);
         Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove7);
         Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove8);
         editText.setVisibility(View.VISIBLE);
         buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
         buttonRemovePrev.setVisibility(View.GONE);
         buttonRemoveNext.setVisibility(View.VISIBLE);
         numberPlayers = 8;
+    }
+
+    public void btAdd9(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd9);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd10);
+        EditText editText = (EditText)findViewById(R.id.editPlayer9);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove8);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove9);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 9;
+    }
+
+    public void btAdd10(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd10);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd11);
+        EditText editText = (EditText)findViewById(R.id.editPlayer10);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove9);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove10);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 10;
+    }
+
+    public void btAdd11(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd11);
+        Button buttonAddNext = (Button)findViewById(R.id.buttonAdd12);
+        EditText editText = (EditText)findViewById(R.id.editPlayer11);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove10);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove11);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonAddNext.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 11;
+    }
+
+    public void btAdd12(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd12);
+        EditText editText = (EditText)findViewById(R.id.editPlayer12);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove11);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove12);
+        editText.setVisibility(View.VISIBLE);
+        buttonAddPrev.setVisibility(View.GONE);
+        buttonRemovePrev.setVisibility(View.GONE);
+        buttonRemoveNext.setVisibility(View.VISIBLE);
+        numberPlayers = 12;
     }
 
     public void btRemove4(View view) throws InterruptedException{
@@ -220,5 +276,66 @@ public class WelcomeActivity extends Activity {
         buttonRemovePrev.setVisibility(View.VISIBLE);
         buttonRemoveNext.setVisibility(View.GONE);
         numberPlayers = 7;
+    }
+
+    public void btRemove9(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd9);
+        EditText editText = (EditText)findViewById(R.id.editPlayer9);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove8);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove9);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 8;
+    }
+
+    public void btRemove10(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd10);
+        EditText editText = (EditText)findViewById(R.id.editPlayer10);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove9);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove10);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 9;
+    }
+
+    public void btRemove11(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd11);
+        EditText editText = (EditText)findViewById(R.id.editPlayer11);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove10);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove11);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 10;
+    }
+
+    public void btRemove12(View view) throws InterruptedException{
+        Button buttonAddPrev = (Button)findViewById(R.id.buttonAdd12);
+        EditText editText = (EditText)findViewById(R.id.editPlayer12);
+        Button buttonRemovePrev = (Button)findViewById(R.id.buttonRemove11);
+        Button buttonRemoveNext = (Button)findViewById(R.id.buttonRemove12);
+        editText.setVisibility(View.GONE);
+        buttonAddPrev.setVisibility(View.VISIBLE);
+        buttonRemovePrev.setVisibility(View.VISIBLE);
+        buttonRemoveNext.setVisibility(View.GONE);
+        numberPlayers = 11;
+    }
+
+    public void layoutWelcome(View view) throws InterruptedException{
+        Log.d("layoutWelcome", "onResume");
+        //For hiding the navigation buttons and the bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
     }
 }
