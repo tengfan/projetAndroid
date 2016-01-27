@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.demo1">
-
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true" />
     <application
         android:name=".cbeer"
         android:allowBackup="true"
@@ -38,10 +38,14 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".HelpActivity"
-            android:label="@string/title_activity_help" />
+            android:label="@string/title_activity_help"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".GameThreeActivity"
-            android:label="@string/title_activity_game_three"></activity>
+            android:label="@string/title_activity_game_three"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

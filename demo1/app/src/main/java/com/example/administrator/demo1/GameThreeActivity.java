@@ -2,80 +2,103 @@ package com.example.administrator.demo1;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Point;
+import android.graphics.RectF;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.TextView;
 
-public class GameThreeActivity extends Activity {
+import java.util.Calendar;
 
-    public float xPosition, xAcceleration,xVelocity = 0.0f;
-    public float yPosition, yAcceleration,yVelocity = 0.0f;
+public class GameThreeActivity extends Activity implements SensorEventListener {
+    public float[] rotationMatrix, orientation, rotation;
+    public float xPosition, xAcceleration = 0.0f;
+    public float yPosition, yAcceleration = 0.0f;
     public float xmax,ymax;
-    private SensorManager sensorManager = null;
-    public float frameTime = 0.666f;
-    private Bitmap mBitmap;
+    public float xcenter,ycenter;
+    public boolean isCenter = false;
+    Calendar c = Calendar.getInstance();
+    public TextView textResult;
+    public TextView textTime;
+    int seconds_prev = 0;
+    int seconds_now = 0;
+    /** Called when the activity is first created. */
+    CustomDrawableView mCustomDrawableView = null;
 
+    public SensorManager sensorManager = null;
+    public Sensor rotationSensor;
+
+    /** Called when the activity is first created. */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(savedInstanceState);
-
-        //Set FullScreen & portrait
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setContentView(R.layout.activity_game_three);
+        textResult  = (TextView) findViewById(R.id.textResult);
+        textTime = (TextView) findViewById(R.id.textTime);
+        textResult.setVisibility(View.GONE);
+        //For hiding the navigation buttons and the bar
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
         // Get a reference to a SensorManager
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensorManager.registerListener((SensorEventListener) this, sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),SensorManager.SENSOR_DELAY_GAME);
-        // setContentView(R.layout.main);
+        rotationSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+        rotationMatrix = new float[9];
+        orientation = new float[3];
+        rotation = new float[3];
 
-        //Calculate Boundry
+        mCustomDrawableView = new CustomDrawableView(this);
+
+        // Calculate Boundry
         Display display = getWindowManager().getDefaultDisplay();
-        xmax = (float)display.getWidth() - 50;
-        ymax = (float)display.getHeight() - 50;
-        setContentView(R.layout.activity_game_three);
+        Point size = new Point();
+        display.getSize(size);
+        xmax = size.x - 50;
+        ymax = size.y - 50;
+
+        xcenter = xmax/2;
+        ycenter = ymax/2;
+        Log.d("x:y center", "onCreate: Xcenter:Ycenter= "+xcenter+":"+ycenter);
+        setContentView(mCustomDrawableView);
     }
 
     // This method will update the UI on new sensor events
-    public void onSensorChanged(SensorEvent sensorEvent)
-    {
-        {
-            if (sensorEvent.sensor.getType() == Sensor.TYPE_ORIENTATION) {
-                //Set sensor values as acceleration
-                yAcceleration = sensorEvent.values[1];
-                xAcceleration = sensorEvent.values[2];
-                updateBall();
-            }
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        /** Get the orientation */
+        System.arraycopy(sensorEvent.values, 0, rotation, 0, 3);
+        SensorManager.getRotationMatrixFromVector(rotationMatrix, rotation);
+        SensorManager.getOrientation(rotationMatrix, orientation);
+
+        xAcceleration = orientation[1]*200;
+        yAcceleration = orientation[2]*200;
+
+        Log.d("x:y", "Acceleration: " + xAcceleration + " : " + yAcceleration);
+        updateBall();
+        if(isCenter) {
+            textResult.setVisibility(View.VISIBLE);
         }
     }
 
     private void updateBall() {
-
-
-        //Calculate new speed
-        xVelocity += (xAcceleration * frameTime);
-        yVelocity += (yAcceleration * frameTime);
-
-        //Calc distance travelled in that time
-        float xS = (xVelocity/2)*frameTime;
-        float yS = (yVelocity/2)*frameTime;
-
         //Add to position negative due to sensor
         //readings being opposite to what we want!
-        xPosition -= xS;
-        yPosition -= yS;
+        xPosition -= xAcceleration;
+        yPosition -= yAcceleration;
 
         if (xPosition > xmax) {
             xPosition = xmax;
@@ -87,51 +110,55 @@ public class GameThreeActivity extends Activity {
         } else if (yPosition < 0) {
             yPosition = 0;
         }
+
+        seconds_now = c.get(Calendar.SECOND);
+        if (xPosition<=xcenter+55 && xPosition >= xcenter-55 && yPosition <= ycenter+55 && yPosition >= ycenter-55) {
+            if(seconds_now - seconds_prev > 20) isCenter = true;
+        }
+        else{
+            isCenter = false;
+            seconds_prev = c.get(Calendar.SECOND);
+        }
+
+        this.runOnUiThread(new Runnable() {
+
+            public void run() {
+                textTime.setText(Integer.toString(seconds_now));
+            }
+        });
+        Log.d("x:y", "updateBall: " + xPosition + " : " + yPosition);
     }
 
     // I've chosen to not implement this method
-    public void onAccuracyChanged(Sensor arg0, int arg1)
-    {
+    public void onAccuracyChanged(Sensor arg0, int arg1) {
         // TODO Auto-generated method stub
+
     }
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
-        sensorManager.registerListener((SensorEventListener) this, sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),SensorManager.SENSOR_DELAY_GAME);
+        // Register this class as a listener for the accelerometer sensor
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR),SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
-    protected void onStop()
-    {
+    protected void onStop() {
         // Unregister the listener
-        sensorManager.unregisterListener((SensorEventListener) this);
+        sensorManager.unregisterListener(this);
         super.onStop();
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        // TODO Auto-generated method stub
-        super.onConfigurationChanged(newConfig);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    }
-
-    public class CustomDrawableView extends View
-    {
-        public CustomDrawableView(Context context)
-        {
+    public class CustomDrawableView extends View {
+        public CustomDrawableView(Context context) {
             super(context);
-            Bitmap football = BitmapFactory.decodeResource(getResources(), R.drawable.football);
-            final int dstWidth = 50;
-            final int dstHeight = 50;
-            mBitmap = Bitmap.createScaledBitmap(football, dstWidth, dstHeight, true);
         }
 
-        protected void onDraw(Canvas canvas)
-        {
-            final Bitmap bitmap = mBitmap;
-            canvas.drawBitmap(bitmap, xPosition, yPosition, null);
+        protected void onDraw(Canvas canvas) {
+            RectF oval = new RectF(xPosition, yPosition, xPosition + 50, yPosition + 50);
+            Paint p = new Paint();
+            p.setColor(Color.BLUE);
+            canvas.drawOval(oval, p);
             invalidate();
         }
     }

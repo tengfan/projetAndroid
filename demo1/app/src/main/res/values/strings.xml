@@ -387,5 +387,7 @@
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_game_ther">GameTher</string>
     <string name="title_activity_game_three">GameThreeActivity</string>
+    <string name="textResult">Tu gagne!</string>
+    <string name="timecounter">Time Counter:</string>
 
 </resources>
