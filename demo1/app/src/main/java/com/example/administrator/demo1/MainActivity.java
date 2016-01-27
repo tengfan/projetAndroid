@@ -73,6 +73,12 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void btGameThree(View view) throws InterruptedException{
+        Log.d("btGameThree", "btGameThree");
+        Intent intent = new Intent(this, GameThreeActivity.class);
+        startActivity(intent);
+    }
+
     public void btHelp(View view) throws InterruptedException{
         Log.d("btHelp", "btHelp");
         Intent intent = new Intent(this, HelpActivity.class);
