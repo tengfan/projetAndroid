@@ -6,7 +6,7 @@ import android.app.Application;
  * Created by Teng on 2015/11/11.
  */
 public class cbeer extends Application {
-    String [] players = new String[8];
+    String [] players = new String[12];
     int numberPlayers;
 
     protected int getNumberPlayers() {
@@ -30,7 +30,7 @@ public class cbeer extends Application {
 
     //If return -1, that means it didn't find the player
     protected int findPlayerNumberByName(String player){
-        for(int i = 0;i<8;i++){
+        for(int i = 0;i<12;i++){
             if(player.equals(players[i])) return i;
         }
         return -1;

@@ -26,7 +26,7 @@ public class GameTwoActivity extends Activity {
     boolean changePlayer = true;
     boolean needValidate = true;
     Button countButton;
-    String [] playerNames = new String[8];
+    String [] playerNames = new String[12];
     int numberPlayers;
     int actualDealer, newDealer;
 
