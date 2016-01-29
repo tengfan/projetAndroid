@@ -127,7 +127,7 @@ public class GameTwoActivity extends Activity {
         if (inGame) {
             //Changing Player
             //Starting phase
-            if (changePlayer) {
+            /*if (changePlayer) {
                 newDealer = rndmGen(numberPlayers);
                 actualDealer = newDealer;
                 textView.setVisibility(View.VISIBLE);
@@ -141,7 +141,7 @@ public class GameTwoActivity extends Activity {
                         textView.setText(String.format("%s est le Dealer!", playerNames[newDealer]));
                     }
                 });
-            }
+            }*/
 
             //Normal phase
             if (changePlayer) {
@@ -190,9 +190,8 @@ public class GameTwoActivity extends Activity {
                 }
             }
 
-
             // Counting part
-            if (count < 2) {
+            if ((count < 2) && (!changePlayer)) {
                 count++;
             } else if (count == 2) {
                 count = 0;
@@ -270,20 +269,24 @@ public class GameTwoActivity extends Activity {
         }
 
         if (changePlayer){
-            changePlayer = false;
             textCounter = (TextView) findViewById(R.id.textCounter);
             textCounter.setVisibility(View.GONE);
             btNext2 = (Button) findViewById(R.id.buttonNext2);
             btNext2.setVisibility(View.VISIBLE);
             textView.setVisibility(View.VISIBLE);
             imageView.setVisibility(View.GONE);
+            while (newDealer == actualDealer) {
+                newDealer = rndmGen(numberPlayers);
+            }
+            actualDealer = newDealer;
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    textView.setText(changeDealer);
+                    textView.setText(String.format("%s est le nouveau Dealer!", playerNames[newDealer]));
                 }
             });
-
+            changePlayer = false;
+            inGame = false;
         }
      }
 

@@ -35,7 +35,7 @@
             android:name=".GameTwoActivity"
             android:label="@string/title_activity_gametwo"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="landscape" />
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
