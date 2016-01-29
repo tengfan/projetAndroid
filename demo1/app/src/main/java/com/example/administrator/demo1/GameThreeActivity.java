@@ -15,36 +15,41 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
-import android.widget.TextView;
 
-import java.util.Calendar;
+import java.util.Random;
 
 public class GameThreeActivity extends Activity implements SensorEventListener {
     public float[] rotationMatrix, orientation, rotation;
     public float xPosition, xAcceleration = 0.0f;
     public float yPosition, yAcceleration = 0.0f;
-    public float xmax,ymax;
-    public float xcenter,ycenter;
-    public boolean isCenter = false;
-    Calendar c = Calendar.getInstance();
-    public TextView textResult;
-    public TextView textTime;
-    int seconds_prev = 0;
-    int seconds_now = 0;
+    public float xCercle, yCercle = 0.0f;
+    public float xMax,yMax = 0.0f;
+    public boolean isInCercle = false;
+    float timePrev = 0;
+    float timeNow = 0;
+    float tourStart = 0;
     /** Called when the activity is first created. */
     CustomDrawableView mCustomDrawableView = null;
-
     public SensorManager sensorManager = null;
     public Sensor rotationSensor;
+    public float ballSize = 200;
+    public float ballSizePlus = 20;
+    public boolean isStartGame = false;
+    public boolean isKeptInCercle = false;
+    public boolean isFailed = false;
+    public String textCounter;
+    public String textScore;
+    public String textInterval;
+    public String textAnnonce;
+    public int score = 0;
+    public float interval1 = 15;
+    public float interval2 = 2;
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_three);
-        textResult  = (TextView) findViewById(R.id.textResult);
-        textTime = (TextView) findViewById(R.id.textTime);
-        textResult.setVisibility(View.GONE);
         //For hiding the navigation buttons and the bar
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(
@@ -62,36 +67,32 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         orientation = new float[3];
         rotation = new float[3];
 
-        mCustomDrawableView = new CustomDrawableView(this);
-
         // Calculate Boundry
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        xmax = size.x - 50;
-        ymax = size.y - 50;
+        xMax = size.x-ballSize;
+        yMax = size.y-ballSize / 2;
 
-        xcenter = xmax/2;
-        ycenter = ymax/2;
-        Log.d("x:y center", "onCreate: Xcenter:Ycenter= "+xcenter+":"+ycenter);
-        setContentView(mCustomDrawableView);
+        xCercle = rndmGenFloat(xMax-ballSizePlus);
+        yCercle = rndmGenFloat(yMax-ballSizePlus);
+
+        timeNow = (float) (System.currentTimeMillis()%100000000)/1000;
     }
 
     // This method will update the UI on new sensor events
     public void onSensorChanged(SensorEvent sensorEvent) {
         /** Get the orientation */
+        if(isStartGame){
+            mCustomDrawableView = new CustomDrawableView(this);
+            setContentView(mCustomDrawableView);
+        }
         System.arraycopy(sensorEvent.values, 0, rotation, 0, 3);
         SensorManager.getRotationMatrixFromVector(rotationMatrix, rotation);
         SensorManager.getOrientation(rotationMatrix, orientation);
-
-        xAcceleration = orientation[1]*200;
-        yAcceleration = orientation[2]*200;
-
+        xAcceleration = orientation[1]*10;
+        yAcceleration = orientation[2]*10;
         Log.d("x:y", "Acceleration: " + xAcceleration + " : " + yAcceleration);
-        updateBall();
-        if(isCenter) {
-            textResult.setVisibility(View.VISIBLE);
-        }
     }
 
     private void updateBall() {
@@ -100,32 +101,41 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         xPosition -= xAcceleration;
         yPosition -= yAcceleration;
 
-        if (xPosition > xmax) {
-            xPosition = xmax;
+        if (xPosition > xMax) {
+            xPosition = xMax;
         } else if (xPosition < 0) {
             xPosition = 0;
         }
-        if (yPosition > ymax) {
-            yPosition = ymax;
+        if (yPosition > yMax) {
+            yPosition = yMax;
         } else if (yPosition < 0) {
             yPosition = 0;
         }
 
-        seconds_now = c.get(Calendar.SECOND);
-        if (xPosition<=xcenter+55 && xPosition >= xcenter-55 && yPosition <= ycenter+55 && yPosition >= ycenter-55) {
-            if(seconds_now - seconds_prev > 20) isCenter = true;
-        }
-        else{
-            isCenter = false;
-            seconds_prev = c.get(Calendar.SECOND);
-        }
-
-        this.runOnUiThread(new Runnable() {
-
-            public void run() {
-                textTime.setText(Integer.toString(seconds_now));
+        timeNow = (float) (System.currentTimeMillis()%100000000)/1000;
+        textScore = "Score: "+Integer.toString(score);
+        Log.d("InCercle","xPosition:yPosition="+xPosition+":"+yPosition+"xCercle:yCercle="+xCercle+":"+yCercle);
+        Log.d("Time","tourStart:"+tourStart+";timeNow:"+timeNow+";timePrev:"+timePrev);
+        if(interval1+(tourStart-timeNow)>=0 && interval1+(tourStart-timeNow)<=15){
+            textInterval = "Il te reste : "+Float.toString(interval1+(tourStart-timeNow))+" sec";
+            if (xPosition<=xCercle+ballSizePlus && xPosition >= xCercle && yPosition <= yCercle+ballSizePlus && yPosition >= yCercle) {
+                isInCercle = true;
+                textCounter = "Counter : "+Float.toString(timeNow-timePrev)+" sec";
+                if(timeNow - timePrev > interval2) {
+                    isKeptInCercle = true;
+                    xCercle = rndmGenFloat(xMax-ballSizePlus);
+                    yCercle = rndmGenFloat(yMax-ballSizePlus);
+                    score+=1;
+                    tourStart = timeNow;
+                }
             }
-        });
+            else{
+                isInCercle = false;
+                isKeptInCercle = false;
+                timePrev = timeNow;
+            }
+        }
+        else isFailed = true;
         Log.d("x:y", "updateBall: " + xPosition + " : " + yPosition);
     }
 
@@ -149,17 +159,66 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         super.onStop();
     }
 
+    public void btStartGameThree(View view) {
+        isStartGame = true;
+        tourStart = (float) (System.currentTimeMillis()%100000000)/1000;
+    }
+
     public class CustomDrawableView extends View {
+        RectF pBallOval;
+        Paint pBall;
+        RectF pCercleOval;
+        Paint pCercle;
+        Paint pText;
+        Paint pText2;
+        float referenceText = 40;
+        float interLine = 50;
+
         public CustomDrawableView(Context context) {
             super(context);
+            pBallOval = new RectF(xPosition, yPosition, xPosition + ballSize, yPosition + ballSize);
+            pBall = new Paint();
+            pBall.setColor(Color.RED);
+            pCercleOval = new RectF(xCercle, yCercle, xCercle+ballSize+ballSizePlus, yCercle+ballSize+ballSizePlus);
+            pCercle = new Paint();
+            pCercle.setColor(Color.BLUE);
+            pText = new Paint();
+            pText2 = new Paint();
+            pText.setTextSize((float) 40);
+            pText.setColor(Color.WHITE);
+            pText2.setColor(Color.WHITE);
+            pText2.setTextSize((float) 120);
+            textAnnonce = "Raté";
         }
 
         protected void onDraw(Canvas canvas) {
-            RectF oval = new RectF(xPosition, yPosition, xPosition + 50, yPosition + 50);
-            Paint p = new Paint();
-            p.setColor(Color.BLUE);
-            canvas.drawOval(oval, p);
-            invalidate();
+            updateBall();
+            pBallOval.set(xPosition, yPosition, xPosition + ballSize, yPosition + ballSize);
+            pCercleOval.set(xCercle, yCercle, xCercle + ballSize + ballSizePlus, yCercle + ballSize + ballSizePlus);
+
+            if(isFailed){
+                canvas.drawText(textAnnonce, xMax/2,yMax/2,pText2);
+            }
+            else{
+                canvas.drawOval(pCercleOval, pCercle);
+                canvas.drawOval(pBallOval, pBall);
+                if(isInCercle){
+                    canvas.drawText(textCounter, xMax-300, referenceText+2*interLine, pText);
+                }
+                canvas.drawText(textScore, xMax - 300, referenceText, pText);
+                canvas.drawText(textInterval, xMax-300, referenceText+interLine, pText);
+                invalidate();
+            }
         }
+    }
+
+    //Generate random float
+    public float rndmGenFloat(float max) {
+        Random randomGenerator = new Random();
+        float result;
+        result = randomGenerator.nextFloat();
+        result = Math.abs(result*max%max);
+        Log.d("rndmGenFloat","result = "+result);
+        return result;
     }
 }

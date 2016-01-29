@@ -8,45 +8,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.demo1.GameThreeActivity"
-    android:background="#888">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/textResult"
-        android:gravity="center"
-        android:id="@+id/textResult"
-        android:textSize="80sp"
-        android:textColor="#fff"
-        android:visibility="gone"/>
+    android:background="#444"
+    android:onClick="btStartGameThree"
+    android:keepScreenOn="true">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:gravity="center"
-        android:id="@+id/textTime"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/timecounter"
-        android:gravity="center"
-        android:id="@+id/textTimeFront"
-        android:textSize="15sp"
-        android:textColor="#fff"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/textTime" />
-
-    <TextView
-        android:layout_width="110px"
-        android:layout_height="110px"
-        android:layout_centerInParent="true"
-        android:background="#000"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/GameThreeExplications"
+        android:textSize="50sp"
+        android:gravity="center"/>
 
 </RelativeLayout>
