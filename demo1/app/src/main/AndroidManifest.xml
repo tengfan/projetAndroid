@@ -45,7 +45,7 @@
             android:name=".GameThreeActivity"
             android:label="@string/title_activity_game_three"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

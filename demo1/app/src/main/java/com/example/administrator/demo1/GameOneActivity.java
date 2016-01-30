@@ -11,21 +11,21 @@ import java.util.Random;
 
 public class GameOneActivity extends Activity {
     // Variables Declaration
-    TextView textView;
-    int numberPlayers;
-    int numberTurns;
-    String[] noPlayerPhrases;
-    String[] onePlayerPhrases;
-    String[] twoPlayersPhrases;
-    String[] threePlayersPhrases;
-    String endPhrase;
-    int type;
-    int nmbr;
-    int player1; // PlayerX variable are used to generate random phrases.
-    int player2;
-    int player3;
-    boolean gameOver;
-    String [] playerNames = new String[8];
+    protected TextView textView;
+    protected int numberPlayers;
+    protected int numberTurns;
+    protected String[] noPlayerPhrases;
+    protected String[] onePlayerPhrases;
+    protected String[] twoPlayersPhrases;
+    protected String[] threePlayersPhrases;
+    protected String endPhrase;
+    protected int type;
+    protected int nmbr;
+    protected int player1; // PlayerX variable are used to generate random phrases.
+    protected int player2;
+    protected int player3;
+    protected boolean gameOver;
+    protected String [] playerNames = new String[12];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +43,15 @@ public class GameOneActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
         cbeer classCbeer = (cbeer)getApplication();
+        //Load player list
         numberPlayers = classCbeer.getNumberPlayers();
+        for(int i=0;i<classCbeer.getNumberPlayers();i++){
+            playerNames[i] = classCbeer.getPlayerByNumber(i);
+        }
         numberTurns = 0;
         gameOver = false;
         endPhrase = getResources().getString(R.string.endPhrase);
         textView = (TextView) findViewById(R.id.textGameOne);
-        for(int i=0;i<classCbeer.getNumberPlayers();i++){
-            playerNames[i] = classCbeer.getPlayerByNumber(i);
-        }
     }
 
     @Override

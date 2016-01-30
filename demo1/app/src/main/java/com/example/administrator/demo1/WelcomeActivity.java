@@ -72,7 +72,7 @@ public class WelcomeActivity extends Activity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         //Creation of table of players
-        EditText [] editPlayers = new EditText[8];
+        EditText [] editPlayers = new EditText[12];
         editPlayers[0] = (EditText) findViewById(R.id.editPlayer1);
         editPlayers[1] = (EditText) findViewById(R.id.editPlayer2);
         editPlayers[2] = (EditText) findViewById(R.id.editPlayer3);
@@ -81,6 +81,11 @@ public class WelcomeActivity extends Activity {
         editPlayers[5] = (EditText) findViewById(R.id.editPlayer6);
         editPlayers[6] = (EditText) findViewById(R.id.editPlayer7);
         editPlayers[7] = (EditText) findViewById(R.id.editPlayer8);
+        editPlayers[8] = (EditText) findViewById(R.id.editPlayer9);
+        editPlayers[9] = (EditText) findViewById(R.id.editPlayer10);
+        editPlayers[10] = (EditText) findViewById(R.id.editPlayer11);
+        editPlayers[11] = (EditText) findViewById(R.id.editPlayer12);
+
 
         //Set players' names to application
         cbeer application = (cbeer) getApplication();
