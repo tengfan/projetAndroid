@@ -3,11 +3,13 @@ package com.example.administrator.demo1;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
-import android.graphics.RectF;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -28,7 +30,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     protected float[] rotationMatrix, orientation, rotation;
     protected float xPosition, xAcceleration = 0.0f;
     protected float yPosition, yAcceleration = 0.0f;
-    protected float xCercle, yCercle = 0.0f;
+    protected float xCible, yCible = 0.0f;
     protected float xMax,yMax = 0.0f;
     protected boolean isInCercle = false;
     protected float timePrev = 0;
@@ -63,6 +65,16 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     protected RadioGroup radioGroup;
     protected RadioButton radioButton;
     protected Button btValid;
+    Resources teng;
+    Bitmap teng_bitmap;
+    Resources clem;
+    Bitmap clem_bitmap;
+    Resources flav;
+    Bitmap flav_bitmap;
+    Resources beer;
+    Bitmap beer_bitmap;
+    Bitmap cible_bitmap;
+    Bitmap ball_bitmap;
 
     /** Called when the activity is first created. */
     @Override
@@ -103,12 +115,23 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         xPosition = xMax/2;
         yPosition = yMax/2;
 
-        xCercle = rndmGenFloat(xMax-ballSizePlus);
-        yCercle = rndmGenFloat(yMax-ballSizePlus);
+        xCible = rndmGenFloat(xMax-ballSizePlus);
+        yCible = rndmGenFloat(yMax-ballSizePlus);
 
         textStart = (TextView)findViewById(R.id.textStart);
         radioGroup = (RadioGroup)findViewById(R.id.radioDifficulty);
         btValid = (Button)findViewById(R.id.btValid);
+
+        //Load Resources
+        teng = getResources();
+        teng_bitmap = BitmapFactory.decodeResource(teng, R.drawable.teng);
+        clem = getResources();
+        clem_bitmap = BitmapFactory.decodeResource(clem, R.drawable.clem);
+        flav = getResources();
+        flav_bitmap = BitmapFactory.decodeResource(flav, R.drawable.flav);
+        beer = getResources();
+        beer_bitmap = BitmapFactory.decodeResource(beer, R.drawable.beer_game_3_goal);
+        ball_bitmap = Bitmap.createScaledBitmap(beer_bitmap, (int)ballSize, (int)ballSize, false);
     }
 
     // This method will update the UI on new sensor events
@@ -142,18 +165,25 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         timeNow = (float) (System.currentTimeMillis()%1000000000)/1000;
         textScore = "Score: "+Integer.toString(score);
         textPlayer = "Nom du joueur: "+playerNow;
-        Log.d("InCercle","xPosition:yPosition="+xPosition+":"+yPosition+"xCercle:yCercle="+xCercle+":"+yCercle);
+        Log.d("InCercle","xPosition:yPosition="+xPosition+":"+yPosition+"xCible:yCible="+xCible+":"+yCible);
         Log.d("Time","tourStart:"+tourStart+";timeNow:"+timeNow+";timePrev:"+timePrev);
         if(isGameOn){
             if(interval1+(tourStart-timeNow)>=0 && interval1+(tourStart-timeNow)<=interval1){
-                textInterval = "Il te reste : "+Float.toString(interval1+(tourStart-timeNow))+" sec";
-                if (xPosition<=xCercle+ballSizePlus && xPosition >= xCercle && yPosition <= yCercle+ballSizePlus && yPosition >= yCercle) {
+                textInterval = "Il te reste : "+String.format("%.2f", interval1 + (tourStart - timeNow))+" sec";
+                if (xPosition<=xCible+ballSizePlus && xPosition >= xCible && yPosition <= yCible+ballSizePlus && yPosition >= yCible) {
                     isInCercle = true;
-                    textCounter = "Counter : "+Float.toString(timeNow-timePrev)+" sec";
+                    textCounter = "Counter : "+String.format("%.2f", timeNow - timePrev)+" sec";
                     if(timeNow - timePrev > interval2) {
                         isKeptInCercle = true;
-                        xCercle = rndmGenFloat(xMax-ballSizePlus);
-                        yCercle = rndmGenFloat(yMax-ballSizePlus);
+                        int number = rndmGen(3);
+                        switch (number){
+                            case 0:cible_bitmap = Bitmap.createScaledBitmap(teng_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                            case 1:cible_bitmap = Bitmap.createScaledBitmap(flav_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                            case 2:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                            default:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                        }
+                        xCible = rndmGenFloat(xMax-ballSizePlus);
+                        yCible = rndmGenFloat(yMax-ballSizePlus);
                         score+=1;
                         tourStart = timeNow;
                     }
@@ -227,6 +257,13 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         if(isGameOn) {
             Log.d("btScreenTouch","mCustomDrawableView");
             tourStart = (float) (System.currentTimeMillis()%1000000000)/1000;
+            int number = rndmGen(3);
+            switch (number){
+                case 0:cible_bitmap = Bitmap.createScaledBitmap(teng_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                case 1:cible_bitmap = Bitmap.createScaledBitmap(flav_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                case 2:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+                default:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
+            }
             mCustomDrawableView = new CustomDrawableView(this);
             setContentView(mCustomDrawableView);
         }
@@ -273,7 +310,6 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                     touchCounter = 1;
                 }
             }
-
             score=0;
         }
     }
@@ -295,22 +331,16 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     }
 
     public class CustomDrawableView extends View {
-        RectF pBallOval;
+        Paint pCible;
         Paint pBall;
-        RectF pCercleOval;
-        Paint pCercle;
         Paint pText;
         float referenceText = 40;
         float interLine = 50;
 
         public CustomDrawableView(Context context) {
             super(context);
-            pBallOval = new RectF(xPosition, yPosition, xPosition + ballSize, yPosition + ballSize);
             pBall = new Paint();
-            pBall.setColor(Color.RED);
-            pCercleOval = new RectF(xCercle, yCercle, xCercle+ballSize+ballSizePlus, yCercle+ballSize+ballSizePlus);
-            pCercle = new Paint();
-            pCercle.setColor(Color.BLUE);
+            pCible = new Paint();
             pText = new Paint();
             pText.setTextSize((float) 40);
             pText.setColor(Color.WHITE);
@@ -318,9 +348,6 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
 
         protected void onDraw(Canvas canvas) {
             updateBall();
-            pBallOval.set(xPosition, yPosition, xPosition + ballSize, yPosition + ballSize);
-            pCercleOval.set(xCercle, yCercle, xCercle + ballSize + ballSizePlus, yCercle + ballSize + ballSizePlus);
-
             if(isFailed) {
                 Log.d("onDraw", "activity_game_three");
                 if(playerNames.isEmpty()) isFinished = true;
@@ -329,8 +356,8 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                 scoreList.add(score);
             }
             else{
-                canvas.drawOval(pCercleOval, pCercle);
-                canvas.drawOval(pBallOval, pBall);
+                canvas.drawBitmap(cible_bitmap,xCible,yCible,pCible);
+                canvas.drawBitmap(ball_bitmap, xPosition, yPosition,pBall);
                 if(isInCercle){
                     canvas.drawText(textCounter, xMax-300, referenceText+3*interLine, pText);
                 }
