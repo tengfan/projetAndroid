@@ -13,8 +13,8 @@
     <string name="gameone">Ça PICOLE!</string>
     <string name="gametwo">F*ck the dealer</string>
     <string name="gamethree">game three</string>
-    <string name="count" formatted="false">"Compteur"</string>
-    <string name="reset" formatted="false">"RAZ Compteur"</string>
+    <string name="count" formatted="false">"Le joueur n'a pas deviné"</string>
+    <string name="reset" formatted="false">"Le joueur a deviné"</string>
     <string name="next2" formatted="false">"Suivant</string>
     <string name="player1">Joueur 1</string>
     <string name="player2">Joueur 2</string>

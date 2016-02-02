@@ -126,41 +126,8 @@ public class GameTwoActivity extends Activity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
         if (inGame) {
-            //Changing Player
-            //Starting phase
-            /*if (changePlayer) {
-                newDealer = rndmGen(numberPlayers);
-                actualDealer = newDealer;
-                textView.setVisibility(View.VISIBLE);
-                imageView.setVisibility(View.GONE);
-                btNext2.setVisibility(View.VISIBLE);
-                textCounter.setVisibility(View.GONE);
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        textView.setText(String.format("%s est le Dealer!", playerNames[newDealer]));
-                    }
-                });
-            }*/
-
-            //Normal phase
-            if (changePlayer) {
-                while (newDealer == actualDealer) {
-                    newDealer = rndmGen(numberPlayers);
-                }
-                actualDealer = newDealer;
-                textView.setVisibility(View.VISIBLE);
-                imageView.setVisibility(View.GONE);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        textView.setText(String.format("%s est le nouveau Dealer!", playerNames[newDealer]));
-                    }
-                });
-                changePlayer = false;
-            }else {
-                needValidate = false;
+            if ((count < 2) && (!changePlayer)) {
+                count++;
                 if (!cards.isEmpty()) {
                     textView.setVisibility(View.GONE);
                     imageView.setVisibility(View.VISIBLE);
@@ -188,10 +155,6 @@ public class GameTwoActivity extends Activity {
                         startActivity(intent);
                     }
                 }
-            }
-            // Counting part
-            if ((count < 2) && (!changePlayer)) {
-                count++;
             } else if (count == 2) {
                     count = 0;
                     changePlayer = true;
@@ -207,10 +170,9 @@ public class GameTwoActivity extends Activity {
                             textView.setText(changeDealer);
                         }
                     });
-                }
-                textCounter = (TextView) findViewById(R.id.textCounter);
-                textCounter.setText(Integer.toString(count));
-                //needValidate=true;
+            }
+            textCounter = (TextView) findViewById(R.id.textCounter);
+            textCounter.setText(Integer.toString(count));
         }
     }
 

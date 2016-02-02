@@ -234,20 +234,20 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd4"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="visible"
                 android:onClick="btAdd4"
+                android:background="@drawable/add"
                 android:layout_alignBottom="@+id/editPlayer3"
                 android:layout_toStartOf="@+id/editPlayer1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd5"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -258,8 +258,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd6"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -270,8 +270,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd7"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -282,8 +282,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd8"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -294,8 +294,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd9"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -306,8 +306,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd10"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -318,8 +318,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd11"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -330,8 +330,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAdd"
                 android:id="@+id/buttonAdd12"
+                android:background="@drawable/add"
                 android:width="20pt"
                 android:height="20pt"
                 android:visibility="gone"
@@ -342,8 +342,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove4"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer3"
@@ -354,8 +354,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove5"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer4"
@@ -366,8 +366,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove6"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer5"
@@ -378,8 +378,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove7"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer6"
@@ -390,8 +390,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove8"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer7"
@@ -401,8 +401,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove9"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer8"
@@ -413,8 +413,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove10"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer9"
@@ -425,8 +425,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove11"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer10"
@@ -437,8 +437,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRemove"
                 android:id="@+id/buttonRemove12"
+                android:background="@drawable/minus"
                 android:width="20pt"
                 android:height="20pt"
                 android:layout_below="@+id/editPlayer11"
@@ -461,13 +461,12 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/start"
-            android:textSize="20sp"
             android:id="@+id/buttonStart"
             android:onClick="btStart"
+            android:background="@drawable/start"
             android:layout_centerHorizontal="true"
             android:visibility="visible"
             android:width="130dp"
-            android:height="50dp"/>
+            android:height="130dp"/>
     </RelativeLayout>
 </LinearLayout>

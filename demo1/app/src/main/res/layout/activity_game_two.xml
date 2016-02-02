@@ -16,8 +16,9 @@
     <LinearLayout
         android:layout_height="575dp"
         android:layout_width="0dp"
+        android:orientation="horizontal"
         android:layout_weight="7"
-        android:orientation="horizontal">
+        android:weightSum="7">
 
         <ImageView
             android:layout_height="match_parent"
@@ -25,11 +26,12 @@
             android:id="@+id/imageCards"
             android:src="@drawable/four_of_clubs_w720"
             android:visibility="gone"
-            android:layout_marginBottom="80dp" />
+            android:layout_marginBottom="80dp"
+            android:layout_weight="7"/>
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="523dp"
             android:text="Appuyer sur suivant pour commencer le jeu!"
             android:textColor="#232323"
             android:id="@+id/textGameTwo"
@@ -42,7 +44,8 @@
             android:maxLines="4"
             android:minLines="1"
             android:autoText="true"
-            android:visibility="visible"/>
+            android:visibility="visible"
+            android:layout_weight="7"/>
 
     </LinearLayout>
 
@@ -57,8 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/count"
+            android:background="@drawable/ok"
             android:textSize="13sp"
+            android:textColor="#FFFFFF"
             android:id="@+id/buttonCount"
             android:onClick="btCount"
             android:singleLine="true"
@@ -68,8 +72,9 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/reset"
+            android:background="@drawable/raz"
             android:textSize="13sp"
+            android:textColor="#FFFFFF"
             android:id="@+id/buttonReset"
             android:onClick="btReset"
             android:singleLine="true"
@@ -81,6 +86,8 @@
             android:layout_weight="1"
             android:text="@string/next2"
             android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/buttonshape3"
             android:id="@+id/buttonNext2"
             android:onClick="btNext2"
             android:singleLine="true"
