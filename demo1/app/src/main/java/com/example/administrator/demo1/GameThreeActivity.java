@@ -10,6 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -75,6 +76,8 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     Bitmap beer_bitmap;
     Bitmap cible_bitmap;
     Bitmap ball_bitmap;
+    Resources background;
+    Bitmap background_bitmap;
 
     /** Called when the activity is first created. */
     @Override
@@ -131,7 +134,10 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         flav_bitmap = BitmapFactory.decodeResource(flav, R.drawable.flav);
         beer = getResources();
         beer_bitmap = BitmapFactory.decodeResource(beer, R.drawable.beer_game_3_goal);
-        ball_bitmap = Bitmap.createScaledBitmap(beer_bitmap, (int)ballSize, (int)ballSize, false);
+        ball_bitmap = Bitmap.createScaledBitmap(beer_bitmap, (int) ballSize, (int) ballSize, false);
+        background = getResources();
+        background_bitmap = BitmapFactory.decodeResource(beer, R.drawable.background_game_3);
+        background_bitmap = Bitmap.createScaledBitmap(background_bitmap, (int) (xMax+ballSize), (int) (yMax+ballSize/2), false);
     }
 
     // This method will update the UI on new sensor events
@@ -264,6 +270,8 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                 case 2:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
                 default:cible_bitmap = Bitmap.createScaledBitmap(clem_bitmap, (int)(ballSize+ballSizePlus), (int) (ballSize+ballSizePlus), false);break;
             }
+            xCible = rndmGenFloat(xMax-ballSizePlus);
+            yCible = rndmGenFloat(yMax-ballSizePlus);
             mCustomDrawableView = new CustomDrawableView(this);
             setContentView(mCustomDrawableView);
         }
@@ -333,6 +341,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     public class CustomDrawableView extends View {
         Paint pCible;
         Paint pBall;
+        Paint pBackground;
         Paint pText;
         float referenceText = 40;
         float interLine = 50;
@@ -341,8 +350,10 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
             super(context);
             pBall = new Paint();
             pCible = new Paint();
+            pBackground = new Paint();
             pText = new Paint();
             pText.setTextSize((float) 40);
+            pText.setTypeface(Typeface.DEFAULT_BOLD);
             pText.setColor(Color.WHITE);
         }
 
@@ -356,6 +367,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                 scoreList.add(score);
             }
             else{
+                canvas.drawBitmap(background_bitmap,0,0,pBackground);
                 canvas.drawBitmap(cible_bitmap,xCible,yCible,pCible);
                 canvas.drawBitmap(ball_bitmap, xPosition, yPosition,pBall);
                 if(isInCercle){
