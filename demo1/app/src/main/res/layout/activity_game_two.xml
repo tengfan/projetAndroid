@@ -17,7 +17,7 @@
         android:layout_height="575dp"
         android:layout_width="0dp"
         android:orientation="horizontal"
-        android:layout_weight="7"
+        android:layout_weight="8"
         android:weightSum="7">
 
         <ImageView
@@ -52,7 +52,7 @@
     <LinearLayout
         android:layout_height="match_parent"
         android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:weightSum="3"
         android:orientation="vertical">
 
@@ -60,39 +60,41 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/ok"
+            android:background="@drawable/button_ok"
             android:textSize="13sp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonCount"
             android:onClick="btCount"
             android:singleLine="true"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_marginBottom="5dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/raz"
+            android:background="@drawable/button_raz"
             android:textSize="13sp"
             android:textColor="#FFFFFF"
             android:id="@+id/buttonReset"
             android:onClick="btReset"
             android:singleLine="true"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_marginBottom="5dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/next2"
             android:textSize="13sp"
             android:textColor="#FFFFFF"
-            android:background="@drawable/buttonshape3"
+            android:background="@drawable/button_start"
             android:id="@+id/buttonNext2"
             android:onClick="btNext2"
             android:singleLine="true"
             android:gravity="center"
-            android:visibility="visible"/>
+            android:visibility="visible"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
