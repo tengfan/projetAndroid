@@ -9,14 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.demo1.GameThreeActivity"
     android:background="#444"
-    android:onClick="btStartGameThree"
+    android:onClick="btScreenTouch"
     android:keepScreenOn="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/textView"
         android:text="@string/GameThreeExplications"
         android:textSize="50sp"
-        android:gravity="center"/>
-
+        android:gravity="center"
+        android:textColor="#FFF" />
 </RelativeLayout>

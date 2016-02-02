@@ -14,23 +14,23 @@ import java.util.Random;
 
 public class GameTwoActivity extends Activity {
     /* Variables Declaration */
-    ArrayList<Integer> cards = new ArrayList<>();
-    ImageView imageView;
-    TextView textView;
-    int imageNumber = 0;
-    String endOfGame = "Le jeu est fini. Cliquer sur le bouton Suivant pour à l'écran d'accueil.";
-    String changeDealer = "Appuyez sur suivant pour tirer le nouveau dealer!";
-    boolean inGame = false;
-    boolean restartGame = false;
-    int count = 0;
-    boolean changePlayer = false;
-    boolean needValidate = true;
-    Button countButton;
-    Button btNext2;
-    TextView textCounter;
-    String[] playerNames = new String[12];
-    int numberPlayers;
-    int actualDealer, newDealer;
+    protected ArrayList<Integer> cards = new ArrayList<>();
+    protected ImageView imageView;
+    protected TextView textView;
+    protected int imageNumber = 0;
+    protected String endOfGame = "Le jeu est fini. Cliquer sur le bouton Suivant pour à l'écran d'accueil.";
+    protected String changeDealer = "Appuyez sur suivant pour tirer le nouveau dealer!";
+    protected boolean inGame = false;
+    protected boolean restartGame = false;
+    protected int count = 0;
+    protected boolean changePlayer = false;
+    protected boolean needValidate = true;
+    protected Button countButton;
+    protected Button btNext2;
+    protected TextView textCounter;
+    protected String[] playerNames = new String[12];
+    protected int numberPlayers;
+    protected int actualDealer, newDealer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,7 @@ public class GameTwoActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.imageCards);
         textView = (TextView) findViewById(R.id.textGameTwo);
         countButton = (Button) findViewById(R.id.buttonCount);
+        //Load player list
         cbeer classCbeer = (cbeer)getApplication();
         numberPlayers = classCbeer.getNumberPlayers();
         for (int i = 0; i < classCbeer.getNumberPlayers(); i++) {
@@ -158,8 +159,7 @@ public class GameTwoActivity extends Activity {
                     }
                 });
                 changePlayer = false;
-            }
-            else {
+            }else {
                 needValidate = false;
                 if (!cards.isEmpty()) {
                     textView.setVisibility(View.GONE);
@@ -189,29 +189,28 @@ public class GameTwoActivity extends Activity {
                     }
                 }
             }
-
             // Counting part
             if ((count < 2) && (!changePlayer)) {
                 count++;
             } else if (count == 2) {
-                count = 0;
-                changePlayer = true;
-                textView.setVisibility(View.VISIBLE);
-                imageView.setVisibility(View.GONE);
-                btNext2 = (Button) findViewById(R.id.buttonNext2);
-                btNext2.setVisibility(View.VISIBLE);
+                    count = 0;
+                    changePlayer = true;
+                    textView.setVisibility(View.VISIBLE);
+                    imageView.setVisibility(View.GONE);
+                    btNext2 = (Button) findViewById(R.id.buttonNext2);
+                    btNext2.setVisibility(View.VISIBLE);
+                    textCounter = (TextView) findViewById(R.id.textCounter);
+                    textCounter.setVisibility(View.GONE);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            textView.setText(changeDealer);
+                        }
+                    });
+                }
                 textCounter = (TextView) findViewById(R.id.textCounter);
-                textCounter.setVisibility(View.GONE);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        textView.setText(changeDealer);
-                    }
-                });
-            }
-            textCounter = (TextView) findViewById(R.id.textCounter);
-            textCounter.setText(Integer.toString(count));
-            //needValidate=true;
+                textCounter.setText(Integer.toString(count));
+                //needValidate=true;
         }
     }
 

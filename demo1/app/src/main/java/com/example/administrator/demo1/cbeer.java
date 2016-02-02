@@ -6,8 +6,8 @@ import android.app.Application;
  * Created by Teng on 2015/11/11.
  */
 public class cbeer extends Application {
-    String [] players = new String[12];
-    int numberPlayers;
+    protected String [] players = new String[12];
+    protected int numberPlayers;
 
     protected int getNumberPlayers() {
         return numberPlayers;
