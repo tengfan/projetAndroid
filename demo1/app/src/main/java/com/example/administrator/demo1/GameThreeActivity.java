@@ -137,7 +137,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         ball_bitmap = Bitmap.createScaledBitmap(beer_bitmap, (int) ballSize, (int) ballSize, false);
         background = getResources();
         background_bitmap = BitmapFactory.decodeResource(beer, R.drawable.background_game_3);
-        background_bitmap = Bitmap.createScaledBitmap(background_bitmap, (int) (xMax+ballSize), (int) (yMax+ballSize/2), false);
+        background_bitmap = Bitmap.createScaledBitmap(background_bitmap, (int) (xMax+ballSize), (int) (yMax+ballSize), false);
     }
 
     // This method will update the UI on new sensor events
@@ -281,7 +281,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
             if(isFinished){
                 if(!isBlocked) {
                     isBlocked = true;
-                    int index = 0;
+                    int index;
                     textView = (TextView) findViewById(R.id.textView);
                     textView.setTextSize(20);
                     text = "Ce jeu est fini. Voici les résultat.\n\n";
@@ -362,8 +362,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
             if(isFailed) {
                 Log.d("onDraw", "activity_game_three");
                 if(playerNames.isEmpty()) isFinished = true;
-                setContentView(R.layout.activity_game_three);
-                textView = (TextView)findViewById(R.id.textView);
+                setContentView(R.layout.activity_game_three_failed);
                 scoreList.add(score);
             }
             else{
