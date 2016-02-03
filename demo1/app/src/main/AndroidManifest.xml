@@ -7,14 +7,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:launchMode="singleTask"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         android:windowSoftInputMode="adjustResize" >
         <activity
             android:name=".WelcomeActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:process=":Process1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,28 +23,28 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:process=":Process2"/>
         <activity
             android:name=".GameOneActivity"
             android:label="@string/title_activity_gameone"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:process=":Process1"/>
         <activity
             android:name=".GameTwoActivity"
             android:label="@string/title_activity_gametwo"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:process=":Process1"/>
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:process=":Process2"/>
         <activity
             android:name=".GameThreeActivity"
             android:label="@string/title_activity_game_three"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape"
+            android:process=":Process1"/>
     </application>
 
 </manifest>
