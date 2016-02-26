@@ -63,6 +63,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     protected boolean isFinished = false;
     protected boolean isBlocked = false;
     protected TextView textStart;
+    protected TextView textStartDifficulty;
     protected RadioGroup radioGroup;
     protected RadioButton radioButton;
     protected Button btValid;
@@ -323,19 +324,25 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
     }
 
     public void btValid(View view) {
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        radioButton = (RadioButton) findViewById(selectedId);
-        if(radioButton.getText().equals("Facile")){
-            ballSizePlus = 40;
+        if(radioGroup.getCheckedRadioButtonId()!=-1){
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            radioButton = (RadioButton) findViewById(selectedId);
+            if(radioButton.getText().equals("Facile")){
+                ballSizePlus = 40;
+            }
+            if(radioButton.getText().equals("Moyen")){
+                ballSizePlus = 20;
+            }
+            if(radioButton.getText().equals("Difficile")){
+                ballSizePlus = 10;
+            }
+            setContentView(R.layout.activity_game_three);
+            textView = (TextView)findViewById(R.id.textView);
         }
-        if(radioButton.getText().equals("Moyen")){
-            ballSizePlus = 20;
+        else{
+            textStartDifficulty = (TextView)findViewById(R.id.textStart);
+            textStartDifficulty.setText("Choisir une difficulté STP!");
         }
-        if(radioButton.getText().equals("Difficile")){
-            ballSizePlus = 10;
-        }
-        setContentView(R.layout.activity_game_three);
-        textView = (TextView)findViewById(R.id.textView);
     }
 
     public class CustomDrawableView extends View {
