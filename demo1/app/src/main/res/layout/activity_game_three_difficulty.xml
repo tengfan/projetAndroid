@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.demo1.GameThreeActivity"
-    android:background="#444"
+    android:background="@drawable/game_three_background"
     android:keepScreenOn="true">
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
         android:textSize="40sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:textColor="#FFF"/>
+        android:textColor="#000"/>
 
     <RadioGroup
         android:id="@+id/radioDifficulty"
@@ -27,25 +27,28 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
-        android:textColor="#FFF">
+        android:textColor="#000">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40sp"
-            android:text="@string/gameThreeRadioButtonEasy"/>
+            android:text="@string/gameThreeRadioButtonEasy"
+            android:textColor="#000"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40sp"
-            android:text="@string/gameThreeRadioButtonNormal"/>
+            android:text="@string/gameThreeRadioButtonNormal"
+            android:textColor="#000"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="40sp"
-            android:text="@string/gameThreeRadioButtonDifficult"/>
+            android:text="@string/gameThreeRadioButtonDifficult"
+            android:textColor="#000"/>
     </RadioGroup>
     <Button
         android:layout_width="wrap_content"

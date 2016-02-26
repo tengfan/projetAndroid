@@ -8,16 +8,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.demo1.GameThreeActivity"
-    android:background="#444"
     android:onClick="btScreenTouch"
+    android:background="@drawable/game_three_background"
     android:keepScreenOn="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/textView"
-        android:text="@string/GameThreeExplications"
+        android:text="@string/GameThreeStart"
         android:textSize="50sp"
         android:gravity="center"
-        android:textColor="#FFF" />
+        android:textColor="#000" />
 </RelativeLayout>

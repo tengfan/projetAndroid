@@ -14,38 +14,27 @@
     android:background="@drawable/game_two_background">
 
     <LinearLayout
-        android:layout_height="575dp"
+        android:layout_height="match_parent"
         android:layout_width="0dp"
         android:orientation="horizontal"
-        android:layout_weight="8"
-        android:weightSum="7">
+        android:layout_weight="8" >
 
         <ImageView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
+            android:gravity="center"
             android:id="@+id/imageCards"
-            android:src="@drawable/four_of_clubs_w720"
-            android:visibility="gone"
-            android:layout_marginBottom="80dp"
-            android:layout_weight="7"/>
+            android:visibility="gone" />
 
         <TextView
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Appuyer sur suivant pour commencer le jeu!"
+            android:layout_width="match_parent"
+            android:text="Appuyez sur suivant pour commencer le jeu!"
             android:textColor="#232323"
             android:id="@+id/textGameTwo"
-            android:gravity="center"
             android:textSize="30sp"
-            android:singleLine="true"
-            android:layout_gravity="center"
-            android:inputType="textMultiLine"
-            android:maxLines="4"
-            android:minLines="1"
-            android:autoText="true"
-            android:visibility="visible"
-            android:layout_weight="7"/>
-
+            android:gravity="center"
+            android:visibility="visible" />
     </LinearLayout>
 
     <LinearLayout
