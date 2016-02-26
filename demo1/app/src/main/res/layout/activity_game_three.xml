@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/textView"
-        android:text="@string/GameThreeExplications"
+        android:text="@string/GameThreeStart"
         android:textSize="50sp"
         android:gravity="center"
         android:textColor="#FFF" />

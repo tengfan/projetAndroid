@@ -22,18 +22,18 @@
         <ImageView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:id="@+id/imageCards"
             android:visibility="gone" />
 
         <TextView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:text="Appuyer sur suivant pour commencer le jeu!"
+            android:text="Appuyez sur suivant pour commencer le jeu!"
             android:textColor="#232323"
             android:id="@+id/textGameTwo"
             android:textSize="30sp"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:visibility="visible" />
     </LinearLayout>
 

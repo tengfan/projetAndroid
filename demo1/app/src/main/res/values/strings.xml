@@ -390,8 +390,8 @@
     <string name="textResult">Tu gagne!</string>
     <string name="timecounter">Time Counter:</string>
     <string name="textCounter">0</string>
-    <string name="GameThreeExplications">Ici, les instructions</string>
-    <string name="gameThreeDifficulty">Choisir la difficulté</string>
+    <string name="GameThreeStart"  formatted="false">"Appuyez sur l'écran pour tirer le premier joueur"</string>
+    <string name="gameThreeDifficulty"  formatted="false">"Choisir la difficulté"</string>
     <string name="gameThreeRadioButtonEasy">Facile</string>
     <string name="gameThreeRadioButtonNormal">Moyen</string>
     <string name="gameThreeRadioButtonDifficult">Difficile</string>
