@@ -3,4 +3,10 @@
     <item android:drawable="@drawable/bad_pressed" android:state_selected="true"/>
     <item android:drawable="@drawable/bad_pressed" android:state_pressed="true"/>
     <item android:drawable="@drawable/bad"/>
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/bad_disabled" />
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/bad" />
 </selector>
