@@ -391,7 +391,7 @@
     <string name="timecounter">Time Counter:</string>
     <string name="textCounter">0</string>
     <string name="GameThreeStart"  formatted="false">"Appuyez sur l'écran pour tirer le premier joueur"</string>
-    <string name="gameThreeDifficulty"  formatted="false">"Choisir la difficulté"</string>
+    <string name="gameThreeDifficulty"  formatted="false">"Choisissez la difficulté"</string>
     <string name="gameThreeRadioButtonEasy">Facile</string>
     <string name="gameThreeRadioButtonNormal">Moyen</string>
     <string name="gameThreeRadioButtonDifficult">Difficile</string>

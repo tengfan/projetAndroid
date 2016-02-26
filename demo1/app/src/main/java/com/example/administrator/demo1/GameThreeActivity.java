@@ -341,7 +341,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
         }
         else{
             textStartDifficulty = (TextView)findViewById(R.id.textStart);
-            textStartDifficulty.setText("Choisir une difficulté STP!");
+            textStartDifficulty.setText("Choisissez une difficulté!");
         }
     }
 
