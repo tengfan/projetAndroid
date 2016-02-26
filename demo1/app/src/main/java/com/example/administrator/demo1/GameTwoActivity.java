@@ -24,8 +24,8 @@ public class GameTwoActivity extends Activity {
     protected boolean restartGame = false;
     protected int count = 0;
     protected boolean changePlayer = false;
-    protected boolean needValidate = true;
     protected Button countButton;
+    protected Button razButton;
     protected Button btNext2;
     protected TextView textCounter;
     protected String[] playerNames = new String[12];
@@ -51,6 +51,9 @@ public class GameTwoActivity extends Activity {
         imageView = (ImageView) findViewById(R.id.imageCards);
         textView = (TextView) findViewById(R.id.textGameTwo);
         countButton = (Button) findViewById(R.id.buttonCount);
+        countButton.setEnabled(false);
+        razButton = (Button) findViewById(R.id.buttonReset);
+        razButton.setEnabled(false);
         //Load player list
         cbeer classCbeer = (cbeer)getApplication();
         numberPlayers = classCbeer.getNumberPlayers();
@@ -132,6 +135,8 @@ public class GameTwoActivity extends Activity {
                     textView.setVisibility(View.GONE);
                     imageView.setVisibility(View.VISIBLE);
                     imageNumber = rndmGen(cards.size());
+                    countButton.setEnabled(true);
+                    razButton.setEnabled(true);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -141,6 +146,8 @@ public class GameTwoActivity extends Activity {
                     cards.remove(imageNumber);
                 } else {
                     if (!restartGame) {
+                        countButton.setEnabled(false);
+                        razButton.setEnabled(false);
                         textView.setVisibility(View.VISIBLE);
                         imageView.setVisibility(View.GONE);
                         runOnUiThread(new Runnable() {
@@ -158,6 +165,8 @@ public class GameTwoActivity extends Activity {
             } else if (count == 2) {
                     count = 0;
                     changePlayer = true;
+                    countButton.setEnabled(false);
+                    razButton.setEnabled(false);
                     textView.setVisibility(View.VISIBLE);
                     imageView.setVisibility(View.GONE);
                     btNext2 = (Button) findViewById(R.id.buttonNext2);
@@ -216,6 +225,8 @@ public class GameTwoActivity extends Activity {
             inGame = true;
             btNext2 = (Button) findViewById(R.id.buttonNext2);
             btNext2.setVisibility(View.GONE);
+            countButton.setEnabled(true);
+            razButton.setEnabled(true);
             textCounter = (TextView) findViewById(R.id.textCounter);
             textCounter.setVisibility(View.VISIBLE);
             textCounter.setText(Integer.toString(0));
@@ -235,7 +246,9 @@ public class GameTwoActivity extends Activity {
             btNext2 = (Button) findViewById(R.id.buttonNext2);
             btNext2.setVisibility(View.VISIBLE);
             textView.setVisibility(View.VISIBLE);
+            countButton.setEnabled(false);
             imageView.setVisibility(View.GONE);
+
             while (newDealer == actualDealer) {
                 newDealer = rndmGen(numberPlayers);
             }
