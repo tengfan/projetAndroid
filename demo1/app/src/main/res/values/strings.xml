@@ -10,9 +10,6 @@
     <string name="slogan" formatted="false">"Nous avons tous besoin d'une bière"</string>
     <string name="start">Démarrer</string>
     <string name="next">Suivant</string>
-    <string name="gameone">Ça PICOLE!</string>
-    <string name="gametwo">F*ck the dealer</string>
-    <string name="gamethree">game three</string>
     <string name="count" formatted="false">"Le joueur n'a pas deviné"</string>
     <string name="reset" formatted="false">"Le joueur a deviné"</string>
     <string name="next2" formatted="false">"Suivant</string>
@@ -31,6 +28,7 @@
     <string name="help">Aide</string>
     <string name="help_gameOne" formatted="false">"Comme dirais le philosophe : Baisse ta culotte, c'est moi qui pilote! Ou presque..."</string>
     <string name="help_gameTwo" formatted="false">"Le Dealer répond au joueur (2 essais) qui essaye de deviner la carte (les chiffres/figures uniquement). Trois joueurs qui ne devinnent pas et le Dealer change! Les joueurs ne devinant pas boivent la différence entre les deux cartes, et inversement pour le dealer (vis-à-vis de la première carte citée)."</string>
+    <string name="help_gameThree" formatted="false">"Les joueurs s'affrontent sur un jeu d'adresse. Le joueur qui fait le plus petit score aura un défi (que les autres joueurs choisiront) à réaliser! Soyez créatif!"</string>
 
     <string name="choose_game">Choix du jeu</string>
     <string name="action_settings">Settings</string>
@@ -387,7 +385,7 @@
     <string name="title_activity_help">HelpActivity</string>
     <string name="title_activity_game_ther">GameTher</string>
     <string name="title_activity_game_three">GameThreeActivity</string>
-    <string name="textResult">Tu gagne!</string>
+    <string name="textResult">Tu gagnes!</string>
     <string name="timecounter">Time Counter:</string>
     <string name="textCounter">0</string>
     <string name="GameThreeStart"  formatted="false">"Appuyez sur l'écran pour tirer le premier joueur"</string>
