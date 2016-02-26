@@ -23,7 +23,7 @@
             android:gravity="center_horizontal"
             android:weightSum="20">
             <TextView
-                android:text="Ça PICOLE:"
+                android:text="C BEER:"
                 android:id="@+id/help_title_gameOne"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -55,7 +55,7 @@
                 android:textColor="#232323" />
 
             <TextView
-                android:text="F*ck the Dealer:"
+                android:text="F*CK THE DEALER:"
                 android:id="@+id/help_title_gameTwo"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -77,6 +77,38 @@
                 android:text="@string/help_gameTwo"
                 android:gravity="center"
                 android:id="@+id/helpGameTwo"
+                android:textSize="24sp"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine"
+                android:maxLines="12"
+                android:minLines="1"
+                android:autoText="true"
+                android:textColor="#232323" />
+
+            <TextView
+                android:text="FEED US:"
+                android:id="@+id/help_title_gameThree"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#232323"
+                android:singleLine="true"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10.5"
+                android:text="@string/help_gameThree"
+                android:gravity="center"
+                android:id="@+id/helpGameThree"
                 android:textSize="24sp"
                 android:singleLine="true"
                 android:layout_gravity="center"
