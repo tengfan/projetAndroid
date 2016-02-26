@@ -301,7 +301,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
             else{
                 if(touchCounter==1) {
                     textView = (TextView) findViewById(R.id.textView);
-                    text = playerNow + ", ton tour est fini et ton score est " + Integer.toString(score) + "\nAppuie pour le tour suivant.";
+                    text = playerNow + ", le tour est fini et le score est " + Integer.toString(score) + "\nAppuyez pour le tour suivant.";
                     textView.setText(text);
                     touchCounter = 2;
                 }
@@ -311,7 +311,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
 
                     Log.d("btScreenTouch", "textView");
                     textView = (TextView) findViewById(R.id.textView);
-                    text = playerNow + " , c'est ton tour à jouer!\nAppuie sur l'écran pour commencer!";
+                    text = playerNow + " , c'est votre tour à jouer!\nAppuyez sur l'écran pour commencer!";
                     textView.setText(text);
                     newPlayerNames.add(playerNow);
                     playerNames.remove(number);
@@ -409,15 +409,10 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
      */
     public int getScoreMax() {
         int index = 0;
-        int i, j, len = scoreList.size();
-        for (i = 0; i < len - 1; i++) {
-            for (j = 0; j < len - 1 - i; j++) {
-                if (scoreList.get(j) > scoreList.get(j + 1)) {
-                    index = scoreList.indexOf(scoreList.get(j));
-                }
-                else{
-                    index = scoreList.indexOf(scoreList.get(j+1));
-                }
+        int i, len = scoreList.size();
+        for (i = 0; i < len; i++) {
+            if (scoreList.get(i) > index) {
+                index = scoreList.indexOf(scoreList.get(i));
             }
         }
         return index;
