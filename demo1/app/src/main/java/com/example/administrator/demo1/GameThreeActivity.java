@@ -409,10 +409,12 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
      */
     public int getScoreMax() {
         int index = 0;
+        int tmp = 0;
         int i, len = scoreList.size();
         for (i = 0; i < len; i++) {
-            if (scoreList.get(i) > index) {
-                index = scoreList.indexOf(scoreList.get(i));
+            if (scoreList.get(i) >= tmp) {
+                tmp = scoreList.get(i);
+                index = scoreList.indexOf(tmp);
             }
         }
         return index;
