@@ -285,7 +285,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                     int index;
                     textView = (TextView) findViewById(R.id.textView);
                     textView.setTextSize(20);
-                    text = "Ce jeu est fini. Voici les résultat.\n\n";
+                    text = "Ce jeu est fini. Voici les résultats.\n\n";
                     for (int i = 0; i < numberPlayers; i++) {
                         index = getScoreMax();
                         Log.d("New PlayerList Index", "=" + index);
