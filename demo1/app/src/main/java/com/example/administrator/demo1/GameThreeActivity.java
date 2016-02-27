@@ -179,7 +179,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                 textInterval = "Il te reste : "+String.format("%.2f", interval1 + (tourStart - timeNow))+" sec";
                 if (xPosition<=xCible+ballSizePlus && xPosition >= xCible && yPosition <= yCible+ballSizePlus && yPosition >= yCible) {
                     isInCercle = true;
-                    textCounter = "Counter : "+String.format("%.2f", timeNow - timePrev)+" sec";
+                    textCounter = "Compteur : "+String.format("%.2f", timeNow - timePrev)+" sec";
                     if(timeNow - timePrev > interval2) {
                         isKeptInCercle = true;
                         int number = rndmGen(3);
@@ -285,7 +285,7 @@ public class GameThreeActivity extends Activity implements SensorEventListener {
                     int index;
                     textView = (TextView) findViewById(R.id.textView);
                     textView.setTextSize(20);
-                    text = "Ce jeu est fini. Voici les résultat.\n\n";
+                    text = "Ce jeu est fini. Voici les résultats.\n\n";
                     for (int i = 0; i < numberPlayers; i++) {
                         index = getScoreMax();
                         Log.d("New PlayerList Index", "=" + index);
